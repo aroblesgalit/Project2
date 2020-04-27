@@ -1,4 +1,4 @@
-# Project 2 Template
+# Project 2 Template - Group 4
 
 ## Scripts
 ### Install
