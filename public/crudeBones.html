@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Career Field Resource Wiki Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/css/uikit.min.css" />
+  <!-- link to our style sheet -->
+  <link rel="stylesheet" href="./public/stylesheets/style.css" />
+
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit-icons.min.js"></script>
+
+  <!-- Ajax and jQuery CDNS -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- My JS file -->
+  <script src="./public/js/logic.js"></script>
+
+</head>
+
+    <!-- Header-->
+    <header class="uk-flex uk-flex-column uk-flex-middle">
+      <h1 class="uk-text-center appLogo uk-position-relative">
+          <div>Career Field Resources</div>
+          <div class="uk-position-absolute">& Wiki</div>
+      </h1>
+      <form id="fieldForm" class="uk-search uk-search-default">
+          <a href="" id="searchIcon" class="uk-search-icon-flip" uk-search-icon></a>
+          <input id="fieldSearchInput" class="uk-search-input" type="search" placeholder="Search for a career field!">
+      </form>
+  </header>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      </div>
+    </div>
+  </nav>
+  <div class="uk-position-relative uk-width-1-1 uk-flex uk-flex-column uk-flex-middle uk-padding-small homeContent">
+        <h2>Login Form</h2>
+        <form class="login">
+          <div class=".uk-input">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="email-input" placeholder="Email">
+          </div>
+          <div class=".uk-input">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="password-input" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-default">Login</button>
+        </form>
+        <br />
+
+        <p>Or sign up <a href="/">here</a></p>
+        <div class="uk-position-relative uk-width-1-1 uk-flex uk-flex-column uk-flex-middle uk-padding-small homeContent">
+          <h2>Sign Up Form</h2>
+          <form class="login">
+            <div class=".uk-input">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="email-input" placeholder="Email">
+            </div>
+            <div class=".uk-input">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="password-input" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-default">Sign Up!</button>
+          </form>
+        <p>Or view all fields <a href="/">here</a></p>
+        <form>
+        <p>Or view all resources for a field <a href="/">            <select class="uk-select">
+          <option>dynamically added field 1...</option>
+          <option>dynamically added field 2...</option>
+          <option>dynamically added field 3...</option>
+          <option>dynamically added field 4...</option>
+          <option>etc.</option>
+      </select></a></p>
+    </form>
+      <form>
+      <p>Or view an Indeed job search for a field & location:<a href="/">            <select class="uk-select">
+        <option>dynamically added field 1...</option>
+        <option>dynamically added field 2...</option>
+        <option>dynamically added field 3...</option>
+        <option>dynamically added field 4...</option>
+        <option>etc.</option>
+    </select></a></p>
+    <div class="uk-margin">
+      <input class="uk-input" type="text" placeholder="City, State, or Zipcode to search:">
+  </div>
+  <button type="submit" class="btn btn-default">Submit Search</button>
+  </form>
+      </div>
+    </div>
+  </div>
+  <form>
+    <fieldset class="uk-fieldset">
+
+        <legend class="uk-legend">Add a new Career Field</legend>
+
+        <div class="uk-margin">
+            <input class="uk-input" type="text" placeholder="Career Field Title goes here">
+        </div>
+
+        <div class="uk-margin">
+            <select class="uk-select">
+                <option>STEM</option>
+                <option>Arts</option>
+                <option>History & Social Sciences</option>
+                <option>Skilled Trades</option>
+                <option>Other</option>
+            </select>
+        </div>
+
+        <div class="uk-margin">
+            <textarea class="uk-textarea" rows="5" placeholder="Enter a description of the new Career Field here"></textarea>
+
+    </fieldset>
+</form>
+<form>
+  <fieldset class="uk-fieldset">
+
+      <legend class="uk-legend">Add a new resource</legend>
+
+      <div class="uk-margin">
+          <input class="uk-input" type="text" placeholder="Resource Title goes here">
+      </div>
+
+      <div class="uk-margin">
+          <select class="uk-select">
+              <option>Link</option>
+              <option>Image</option>
+              <option>Other</option>
+          </select>
+      </div>
+
+      <div class="uk-margin">
+          <textarea class="uk-textarea" rows="5" placeholder="Enter the URL to the resource here"></textarea>
+
+  </fieldset>
+</form>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/login.js"></script>
+
+</body>
+
+</html>
