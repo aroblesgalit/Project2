@@ -43,3 +43,7 @@ form.login {
 #resource-select {
   width: 300px;
 }
+
+.userProfile {
+  margin-right: 20px;
+}
