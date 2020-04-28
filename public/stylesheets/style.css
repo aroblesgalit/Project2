@@ -1,4 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f2f2;
+  min-height: 100vh;
+}
+
+header {
+  margin-bottom: 60px;
+}
+
+.main-heading {
+  margin-right: 40px;
+}
+
+.wiki-container {
+  max-width: 1200px;
+}
+
 form.signup,
 form.login {
   margin-top: 50px;
+}
+
+
+
+
+
+/* Resources */
+.go-button {
+  height: 32px;
+  width: 52px;
+  background-color: #333;
+  color: white;
+  padding: 6px;
+  border: none;
+}
+
+#resource-select {
+  width: 300px;
 }
