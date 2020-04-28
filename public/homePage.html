@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Career Field Resource Wiki Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/css/uikit.min.css" />
+  <!-- link to our style sheet -->
+  <link rel="stylesheet" href="./public/stylesheets/style.css" />
+
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit-icons.min.js"></script>
+
+  <!-- Ajax and jQuery CDNS -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- My JS file -->
+  <script src="./public/js/logic.js"></script>
+
+</head>
+
+<body>
+    <header class="uk-flex uk-flex-column" 
+    style="
+    border:2px solid black; 
+    background-image:url(https://i.imgur.com/kSdaBGb.jpeg);
+    ">
+        <h1 class="uk-text-center uk-position-relative">
+            <div class="uk-flex uk-flex-center@m uk-flex-right@l">
+                <a class="uk-button uk-button-default" href="#">Home</a>
+                <a class="uk-button uk-button-default" href="#">Resources</a>
+                <a class="uk-button uk-button-default" href="#">Job Search</a>
+                <button class="uk-button uk-button-default">Log in</button>
+            </div>
+            <div style="top: -50px;" class="uk-position-relative">Career Field Resources</div>
+            <div style="top: -50px; right: 55px;" class="uk-position-relative">& Wiki</div>
+        </h1>
+<!--        <form id="heroForm" class="uk-search uk-search-default">
+            <a href="" id="searchIcon" class="uk-search-icon-flip" uk-search-icon></a>
+            <input id="heroSearchInput" class="uk-search-input" type="search" placeholder="Search for a superhero!">
+        </form>
+-->
+    </header>
+    <h2 class="uk-text-center" style="
+    border:2px solid black;">
+    What would you like to do?
+
+    </h2>
+    <div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
+        <div>
+            <div style="
+            border:2px solid black;" class="uk-card uk-card-hover uk-card-body">
+                <h3 class="uk-card-title">Resources</h3>
+                <p>Click this card to be sent directly to the resources for a career field!</p>
+            </div>
+        </div>
+        <div>
+            <div style="
+            border:2px solid black;" class="uk-card uk-card-hover uk-card-body">
+                <h3 class="uk-card-title">Job Search</h3>
+                <p>Click this card to be returned a job search for a career field!</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
