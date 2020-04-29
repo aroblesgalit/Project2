@@ -40,12 +40,12 @@ $(document).ready(function() {
   //   }
 
   // This function grabs resources from the database and updates the view
-  function getResources(selectedFieldId) {
+  function getResources(fieldId) {
     // fieldId = field || "";
     // if (fieldId) {
     //   fieldId = "/?field_id=" + fieldId;
     // }
-    $.get("/api/resources/" + selectedFieldId)
+    $.get("/api/resources/" + fieldId)
       .then(function(data) {
         console.log("Resources", data);
         resources = data;
@@ -112,7 +112,7 @@ $(document).ready(function() {
 
   function init() {
     getFields();
-    getResources();
+    getResources(selectedFieldId);
   }
 
   init();
