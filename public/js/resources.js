@@ -66,7 +66,7 @@ $(document).ready(function() {
   function initializeRows() {
     resourceResults.empty();
     var resourcesToAdd = [];
-    for (var i = 0; i < resourcess.length; i++) {
+    for (var i = 0; i < resources.length; i++) {
       resourcesToAdd.push(createNewCard(resources[i]));
     }
     resourceResults.append(resourcesToAdd);
