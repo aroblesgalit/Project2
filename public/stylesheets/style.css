@@ -59,6 +59,10 @@ form.login {
   width: 300px;
 }
 
+#addButton {
+  float: right;
+}
+
 .userProfile {
   margin-right: 20px;
 }
