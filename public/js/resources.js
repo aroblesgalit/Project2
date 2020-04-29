@@ -1,32 +1,32 @@
 $(document).ready(function() {
   // resourceResults holds all of our resources
-  const resourceResults = $(".resource-results");
+  var resourceResults = $(".resource-results");
   // Variable to hold our resources
-  const resources;
+  var resources;
   // Getting references to our form and inputs
-  const resourceSelect = $("#resource-select");
-  
+  var resourceSelect = $("#resource-select");
+
   function getFields() {
     $.get("/api/fields")
-      .then(data => {
-        const select = $("<select>").addClass("uk-select");
+      .then(function(data) {
+        var select = $("<select>").addClass("uk-select");
         // Expecting data to be an array of "fields" as objects
-        for (let i = 0; i < data.length; i++) {
-            const option = $("<option>");
-            option.text(data[i].name);
-            select.append(option);
-        };
+        for (var i = 0; i < data.length; i++) {
+          var option = $("<option>");
+          option.text(data[i].name);
+          select.append(option);
+        }
         resourceSelect.append(select);
-    })
-      .catch(err => {
+      })
+      .catch(function(err) {
         console.log(err);
-    });
-  };
+      });
+  }
 
   // The code below handles the case where we want to get resources for a specific field
   // Looks for a query param in the url for field_id
-  const url = window.location.search;
-  const fieldId;
+  var url = window.location.search;
+  var fieldId;
   if (url.indexOf("?field_id=") !== -1) {
     fieldId = url.split("=")[1];
     getResources(fieldId);
@@ -43,58 +43,74 @@ $(document).ready(function() {
       fieldId = "/?field_id=" + fieldId;
     }
     $.get("/api/resources" + fieldId)
-      .then(data => {
+      .then(function(data) {
         console.log("Resources", data);
         resources = data;
         if (!resources || !resources.length) {
           displayEmpty(field);
-        }
-        else {
+        } else {
           initializeRows();
         }
       })
-      .catch(err => {
-          if (err) throw err;
-      })
+      .catch(function(err) {
+        if (err) {
+          throw err;
+        }
+      });
   }
 
-    // InitializeRows handles appending all of our constructed post HTML inside blogContainer
-    function initializeRows() {
-        resourceResults.empty();
-        var resourcesToAdd = [];
-        for (let i = 0; i < resourcess.length; i++) {
-          resourcesToAdd.push(createNewCard(resources[i]));
-        }
-        resourceResults.append(resourcesToAdd);
-      }
-    
-      // This function constructs a post's HTML
-      function createNewCard(resource) {
-        // Get the date and format it
-        const formattedDate = new Date(resource.createdAt);
-        formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
-        // Create divs
-        const newResourceCard = $("<div>");
-        const resourceCardWrapper = $("<div>").addClass("uk-card uk-card-default");
-        const cardImageDiv = $("<div>").addClass("uk-card-media-top");
-        const cardImage = $("<img>").attr({src: resource.imageUrl, alt: resource.title + " thumbnail."});
-        const bodyDiv = $("<div>").addClass("uk-card-body");
-        const cardTitle = $("<h3>").addClass("uk-card-title").text(resource.title);
-        const descriptionDiv = $("<div>").addClass("descript-button uk-flex");
-        const description = $("<p>").text(resource.description);
-        const resourceButton = $("<button>").addClass("go-button uk-flex uk-flex-center uk-flex-middle");
-        const buttonIcon = $("<span>").attr("uk-icon", "icon: chevron-right");
-        // Append to each other
-        bodyDiv.append(cardTitle).append(descriptionDiv.append(description).append(resourceButton.append(buttonIcon)));
-        newResourceCard.append(resourceCardWrapper.append(cardImageDiv.append(cardImage)).append(bodyDiv));
-        // Return the new resource card
-        return newResourceCard;
-      }
+  // InitializeRows handles appending all of our constructed resource HTML inside resourceResults
+  function initializeRows() {
+    resourceResults.empty();
+    var resourcesToAdd = [];
+    for (var i = 0; i < resourcess.length; i++) {
+      resourcesToAdd.push(createNewCard(resources[i]));
+    }
+    resourceResults.append(resourcesToAdd);
+  }
+
+  // This function constructs a resource's HTML
+  function createNewCard(resource) {
+    // Get the date and format it
+    // var formattedDate = new Date(resource.createdAt);
+    // formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
+    // Create divs
+    var newResourceCard = $("<div>");
+    var resourceCardWrapper = $("<div>").addClass("uk-card uk-card-default");
+    var cardImageDiv = $("<div>").addClass("uk-card-media-top");
+    var cardImage = $("<img>").attr({
+      src: resource.imageUrl,
+      alt: resource.title + " thumbnail."
+    });
+    var bodyDiv = $("<div>").addClass("uk-card-body");
+    var cardTitle = $("<h3>")
+      .addClass("uk-card-title")
+      .text(resource.title);
+    var descriptionDiv = $("<div>").addClass("descript-button uk-flex");
+    var description = $("<p>").text(resource.description);
+    var resourceButton = $("<button>").addClass(
+      "go-button uk-flex uk-flex-center uk-flex-middle"
+    );
+    var buttonIcon = $("<span>").attr("uk-icon", "icon: chevron-right");
+    // Append to each other
+    bodyDiv
+      .append(cardTitle)
+      .append(
+        descriptionDiv
+          .append(description)
+          .append(resourceButton.append(buttonIcon))
+      );
+    newResourceCard.append(
+      resourceCardWrapper.append(cardImageDiv.append(cardImage)).append(bodyDiv)
+    );
+    // Return the new resource card
+    return newResourceCard;
+  }
 
   function init() {
-        getFields();
-        getResources();
-    }; 
+    getFields();
+    getResources();
+  }
 
   init();
 
