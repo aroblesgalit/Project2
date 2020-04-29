@@ -31,9 +31,17 @@
                 <ul class="uk-navbar-nav">
                     <li class="uk-active"><a href="/">Home</a></li>
                     <li><a href="/resources">Resources</a></li>
+                    <li><a href="/fields">Fields</a></li>
                     <li><a href="/jobsearch">Job Search</a></li>
                     <div class="uk-navbar-item" id="loginAvatar">
-                        <button class="uk-button uk-button-default" id="login">Log in</button>
+                        <div id="settings" class="uk-flex uk-flex-center uk-flex-middle"><span uk-icon="icon:  user"></span></div>
+                        <div uk-dropdown>
+                            <ul class="uk-nav uk-dropdown-nav">
+                                <li class="uk-active"><a href="/userProfile">User Profile</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li><a href="/logout">Logout</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </ul>
             </div>

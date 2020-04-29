@@ -8,7 +8,12 @@ module.exports = function(app) {
     db.Resources.findAll({
       where: {
         fields: fieldId
-      }
+      },
+      include: [
+        {
+          model: db.Fields
+        }
+      ]
     }).then(function(dbResource) {
       res.json(dbResource);
     });

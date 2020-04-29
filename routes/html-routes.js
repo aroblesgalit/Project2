@@ -7,7 +7,7 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 module.exports = function(app) {
   app.get("/resources", function(req, res) {
     if (req.user) {
-      res.send("This is the resource page when logged in.");
+      res.sendFile(path.join(__dirname, "../public/resources-loggedIn.html"));
     } else {
       res.sendFile(path.join(__dirname, "../public/resources.html"));
     }
@@ -37,5 +37,8 @@ module.exports = function(app) {
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/userProfile", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/userProfile.html"));
+  });
+  app.get("/fields", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/fields.html"));
   });
 };
