@@ -27,19 +27,131 @@
                 <a class="uk-navbar-item uk-logo" href="#">Career Field Resource Wiki</a>
             </div>
             <!-- Menu -->
-            <div class="uk-navbar-right">        
+            <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav">
                     <li class="uk-active"><a href="/">Home</a></li>
                     <li><a href="/resources">Resources</a></li>
+                    <li><a href="/fields">Fields</a></li>
                     <li><a href="/jobsearch">Job Search</a></li>
-                    <div class="uk-navbar-item">
-                        <button class="uk-button uk-button-default" id="login">Log in</button>
+                    <div class="uk-navbar-item" id="loginAvatar">
+                        <div id="settings" class="uk-flex uk-flex-center uk-flex-middle"><span uk-icon="icon:  user"></span></div>
+                        <div uk-dropdown>
+                            <ul class="uk-nav uk-dropdown-nav">
+                                <li class="uk-active"><a href="/userProfile">User Profile</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li><a href="/logout">Logout</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </ul>       
-            </div>      
+                </ul>
+            </div>
         </nav>
     </header>
+    <!-- User Profile Card-->
+    <section class="uk-flex uk-flex-center">
+        <div class="wiki-container uk-flex">
+            <div class="uk-card uk-card-default uk-width-1-4@m userProfile">
+                <div class="uk-card-header">
+                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                        <div class="uk-width-auto">
+                            <img class="uk-border-circle" width="80" height="80" src="https://via.placeholder.com/200">
+                        </div>
+                        <div class="uk-width-expand">
+                            <h3 class="uk-card-title uk-margin-remove-bottom">User Profile</h3>
+                            <p class="uk-text-meta uk-margin-remove-top"><time datetime="moment.js">April 28,
+                                    2020</time></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-card-body">
+                    <p>Email: </p>
+                </div>
+                <div class="uk-card-footer">
+                    <a href="#" class="uk-button uk-button-text">Field: Software Development</a>
+                </div>
+            </div>
 
+
+            <!-- Slider section for resources posted cards-->
+            <div uk-slider="center: true" class="uk-width-4-5@m">
+
+                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+
+                    <ul class="uk-slider-items uk-child-width-1-2@s uk-grid">
+                        <li>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-media-top">
+                                    <img src="https://via.placeholder.com/450x200" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Headline</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-media-top">
+                                    <img src="https://via.placeholder.com/450x200" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Headline</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-media-top">
+                                    <img src="https://via.placeholder.com/450x200" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Headline</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-media-top">
+                                    <img src="https://via.placeholder.com/450x200" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Headline</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-media-top">
+                                    <img src="https://via.placeholder.com/450x200" alt="">
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Headline</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+                        uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+                        uk-slider-item="next"></a>
+
+                </div>
+
+                <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+            </div>
+        </div>
+    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/resources.js"></script>
 
