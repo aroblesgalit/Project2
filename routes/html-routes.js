@@ -41,4 +41,10 @@ module.exports = function(app) {
   app.get("/fields", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/fields.html"));
   });
+  app.get("/resources/addForm", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/resources-addForm.html"));
+  });
+  app.get("/fields/addForm", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/fields-addForm.html"));
+  });
 };
