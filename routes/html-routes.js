@@ -12,6 +12,10 @@ module.exports = function(app) {
       res.sendFile(path.join(__dirname, "../public/resources.html"));
     }
   });
+  
+  app.get("/jobsearch", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/jobSearch.html"));
+  });
 
   app.get("/", function(req, res) {
     // If the user already has an account send them to the members page >> User profile

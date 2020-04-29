@@ -81,7 +81,7 @@ form.login {
 
 
 /* Job Search */
-body{
+#jobsearchbody{
   text-align:center;
   font-family: 'ABeeZee';
   font-size: 20px;
@@ -103,4 +103,4 @@ body{
   margin-right:25%;  
 }
 
-a:link,a:visited{text-decoration:none; color:#fff; }
+a:link,a:visited{text-decoration:none; color::#50394c; }
