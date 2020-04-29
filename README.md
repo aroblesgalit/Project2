@@ -39,13 +39,13 @@ jest testing goes here (maybe)
 ### Run (production)
     npm start
 ### Run (dev)
-    npm run watch
+    npm run watch - uses nodemon to run the server continuously through changes
 ### Tests (includes linting)
     npm test
 ### Linting by itself (only detects errors)
-    npm run lint
+    npm run lint - utilizes eslint
 ### Autofix linting errors where pssible (Note: this will not necessarily fix all of them)
-    npm run fix
+    npm run fix - utilizes eslint
 ## Questions
 
 ![avatarImage](https://avatars1.githubusercontent.com/u/38934010?v=4) | [Link to Alvin Galit's GitHub](https://github.com/aroblesgalit)

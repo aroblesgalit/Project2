@@ -34,9 +34,10 @@ $(document).ready(function() {
       })
       .catch(handleLoginErr);
   }
-
+  //this will alert users signing up with an email already being used
   function handleLoginErr(err) {
-    $("#alert .msg").text(err.responseJSON);
+    $("#alert .msg").text(err.responseJSON.original.sqlMessage);
+    //console.log(err);
     $("#alert").fadeIn(500);
   }
 });

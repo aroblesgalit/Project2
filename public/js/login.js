@@ -11,7 +11,8 @@ $(document).ready(function() {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
     };
-
+    // console.log(userData.email);
+    // console.log(userData.password);
     if (!userData.email || !userData.password) {
       return;
     }
@@ -21,8 +22,7 @@ $(document).ready(function() {
     emailInput.val("");
     passwordInput.val("");
   });
-
-  // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
+  // loginUser does a post to our "api/login" route and if successful, redirects us to the userProfile page
   function loginUser(email, password) {
     $.post("/api/login", {
       email: email,
@@ -30,6 +30,10 @@ $(document).ready(function() {
     })
       .then(function() {
         window.location.replace("/userProfile");
+
+        //var email = getElementById(emailInput);
+        //console.log(emailInput);
+        //email.append(userProfileEmailRender);
         // If there's an error, log the error
       })
       .catch(function(err) {
