@@ -30,11 +30,6 @@ $(document).ready(function() {
     })
       .then(function() {
         window.location.replace("/userProfile");
-        //var emailRender = $("#userProfileEmailRender");
-
-        //var email = getElementById(emailInput);
-        console.log(req.user.email);
-        //emailRender.append(req.user.email);
         // If there's an error, log the error
       })
       .catch(function(err) {
