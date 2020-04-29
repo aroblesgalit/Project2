@@ -34,7 +34,14 @@ form.login {
   margin-top: 50px;
 }
 
-
+#settings {
+  height: 40px;
+  width: 40px;
+  background-color: #333;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
 
 
 
