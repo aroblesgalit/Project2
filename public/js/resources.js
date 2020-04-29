@@ -12,7 +12,7 @@ $(document).ready(function() {
         var select = $("<select>").addClass("uk-select");
         // Expecting data to be an array of "fields" as objects
         for (var i = 0; i < data.length; i++) {
-          var option = $("<option>");
+          var option = $("<option>").val(data[i].id);
           option.text(data[i].name);
           select.append(option);
         }
@@ -23,26 +23,29 @@ $(document).ready(function() {
       });
   }
 
+  // Grab the id of the selected field
+  var selectedFieldId = $("#fieldsSelect").val();
+
   // The code below handles the case where we want to get resources for a specific field
   // Looks for a query param in the url for field_id
-  var url = window.location.search;
-  var fieldId;
-  if (url.indexOf("?field_id=") !== -1) {
-    fieldId = url.split("=")[1];
-    getResources(fieldId);
-  }
-  // If there's no fieldId we just get the first one
-  else {
-    getResources(0);
-  }
+  //   var url = window.location.search;
+  //   var fieldId;
+  //   if (url.indexOf("?field_id=") !== -1) {
+  //     fieldId = url.split("=")[1];
+  //     getResources(fieldId);
+  //   }
+  //   // If there's no fieldId we just get the first one
+  //   else {
+  //     getResources(0);
+  //   }
 
   // This function grabs resources from the database and updates the view
-  function getResources(field) {
-    fieldId = field || "";
-    if (fieldId) {
-      fieldId = "/?field_id=" + fieldId;
-    }
-    $.get("/api/resources" + fieldId)
+  function getResources(fieldId) {
+    // fieldId = field || "";
+    // if (fieldId) {
+    //   fieldId = "/?field_id=" + fieldId;
+    // }
+    $.get("/api/resources/" + fieldId)
       .then(function(data) {
         console.log("Resources", data);
         resources = data;
@@ -109,7 +112,7 @@ $(document).ready(function() {
 
   function init() {
     getFields();
-    getResources();
+    getResources(selectedFieldId);
   }
 
   init();
