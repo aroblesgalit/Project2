@@ -21,7 +21,7 @@
 
     <header>
         <!-- Nav bar -->
-        <nav class="uk-navbar-container" uk-navbar>
+        <nav class="main-menu uk-navbar-container" uk-navbar>
             <!-- Logo -->
             <div class="uk-navbar-left">
                 <a class="uk-navbar-item uk-logo" href="#">Career Field Resource Wiki</a>
@@ -47,7 +47,8 @@
                 <h1 class="main-heading">Resources</h1>
                 <form>
                     <fieldset id="resource-select" class="uk-fieldset">
-                        <select class="uk-select">
+                        <!-- Get data from a get request to the /fields endpoint -->
+                        <select id="fieldsSelect" class="uk-select">
                             <option>Option 01</option>
                             <option>Option 02</option>
                         </select>
@@ -56,7 +57,8 @@
             </div>
             <!-- Content -->
             <div class="main-content">
-                <div class="uk-grid-column-small uk-grid-row-large uk-child-width-1-4@s uk-text-left" uk-grid>
+                <div class="resource-results uk-grid-column-small uk-grid-row-large uk-child-width-1-4@s uk-text-left" uk-grid>
+                    <!-- Get data from a get request to the /resources endpoint -->
                     <div>
                         <div class="uk-card uk-card-default">
                             <div class="uk-card-media-top">
