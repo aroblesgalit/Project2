@@ -52,43 +52,49 @@
     <!-- Main content -->
     <section id="resources" class="uk-height-1-1 uk-flex uk-flex-center">
         <div class="wiki-container">
-            <form id="addResource">
-                <fieldset class="uk-fieldset">
-            
-                    <legend class="uk-legend">Legend</legend>
-            
-                    <div class="uk-margin">
-                        <input class="uk-input" type="text" placeholder="Input">
-                    </div>
-            
-                    <div class="uk-margin">
-                        <select class="uk-select">
+            <form id="addResource" class="uk-form-stacked">
+                <legend class="uk-legend">Add a resource</legend>
+
+                <!-- Field -->
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-field">Field:</label>
+                    <div class="uk-form-controls">
+                        <select class="uk-select" id="form-field">
                             <option>Option 01</option>
                             <option>Option 02</option>
                         </select>
                     </div>
-            
-                    <div class="uk-margin">
-                        <textarea class="uk-textarea" rows="5" placeholder="Textarea"></textarea>
+                </div>
+                <!-- Title -->
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-title">Title:</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" id="form-title" type="text" placeholder="Some text...">
                     </div>
-            
-                    <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
-                        <label><input class="uk-radio" type="radio" name="radio2" checked> A</label>
-                        <label><input class="uk-radio" type="radio" name="radio2"> B</label>
+                </div>
+                <!-- Description -->
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-description">Description:</label>
+                    <textarea class="uk-textarea" id="form-description" rows="5" placeholder="Textarea"></textarea>
+                </div>
+                <!-- Link -->
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-link">Link:</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" id="form-link" type="text" placeholder="Some text...">
                     </div>
-            
-                    <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
-                        <label><input class="uk-checkbox" type="checkbox" checked> A</label>
-                        <label><input class="uk-checkbox" type="checkbox"> B</label>
+                </div>
+                <!-- Image Url -->
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-imageUrl">Thumbnail url:</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" id="form-imageUrl" type="text" placeholder="Some text...">
                     </div>
-            
-                    <div class="uk-margin">
-                        <input class="uk-range" type="range" value="2" min="0" max="10" step="0.1">
-                    </div>
-            
-                </fieldset>
+                </div>       
+
+                <button id="addResourceButton" class="uk-button uk-button-default">Add</button>                     
             </form>
-            
+
         </div>
     </section>
 

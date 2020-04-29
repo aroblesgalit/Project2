@@ -63,6 +63,10 @@ form.login {
   float: right;
 }
 
+#addResource {
+  min-width: 600px;
+}
+
 
 /* Fields */
 #fieldTable {
