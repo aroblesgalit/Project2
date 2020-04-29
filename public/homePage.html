@@ -25,27 +25,40 @@
 </head>
 
 <body>
-    <header class="uk-flex uk-flex-column" 
+            <!-- Nav bar -->
+            <nav class="uk-navbar-container" uk-navbar>
+                <!-- Logo -->
+                <div class="uk-navbar-left">
+                    <a class="uk-navbar-item uk-logo" href="#">Career Field Resource Wiki</a>
+                </div>
+                <!-- Menu -->
+                <div class="uk-navbar-right">        
+                    <ul class="uk-navbar-nav">
+                        <li class="uk-active"><a href="/">Home</a></li>
+                        <li><a href="/resources">Resources</a></li>
+                        <li><a href="/jobsearch">Job Search</a></li>
+                        <div class="uk-navbar-item">
+                            <button class="uk-button uk-button-default" id="login">Log in</button>
+                        </div>
+                    </ul>       
+                </div>      
+            </nav>
+    <div class="uk-flex uk-flex-column" 
     style="
     border:2px solid black; 
     background-image:url(https://i.imgur.com/kSdaBGb.jpeg);
+    height: 400px;
     ">
         <h1 class="uk-text-center uk-position-relative">
-            <div class="uk-flex uk-flex-center@m uk-flex-right@l">
-                <a class="uk-button uk-button-default" href="#">Home</a>
-                <a class="uk-button uk-button-default" href="#">Resources</a>
-                <a class="uk-button uk-button-default" href="#">Job Search</a>
-                <button class="uk-button uk-button-default">Log in</button>
-            </div>
-            <div style="top: -50px;" class="uk-position-relative">Career Field Resources</div>
-            <div style="top: -50px; right: 55px;" class="uk-position-relative">& Wiki</div>
+            <div class="uk-position-relative">Career Field Resources</div>
+            <div style="right: 55px;" class="uk-position-relative">& Wiki</div>
         </h1>
 <!--        <form id="heroForm" class="uk-search uk-search-default">
             <a href="" id="searchIcon" class="uk-search-icon-flip" uk-search-icon></a>
             <input id="heroSearchInput" class="uk-search-input" type="search" placeholder="Search for a superhero!">
         </form>
 -->
-    </header>
+</div>
     <h2 class="uk-text-center" style="
     border:2px solid black;">
     What would you like to do?
