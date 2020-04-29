@@ -1,0 +1,48 @@
+MVC
+
+Model
+    Representing the data of the application
+    ORM
+    DB
+
+View
+    Presenting the data to be seen
+    Public folder
+        index.html
+        style.css
+        js - renders templates
+        assets > images
+
+Controller
+    Orchestrating and manipulating the data
+    Routes
+        Controller
+
+
+Setup Phase
+    Connect to our database - know how our database is configured (Model /config/db)
+    What port am I listening to
+    What are my environment variables (.env)
+    Register the routes that will listen for: HTML, Static, API
+    Listen
+
+Operational Phase configured
+    Requests comes in
+        -> any middle ware we have gets a hold of it
+        -> routed to correct handler
+        -> The request is handled (often with a trip to the db)
+        -> and a resopnse is returned
+
+
+master
+ -> git checkout -b branch-name
+      -> make changes
+      -> git add .
+      -> git commit -m "comment"
+      -> (first commit) git push -u origin branchname
+
+      -> make a pull request on github
+      -> git checkout master
+      -> git pull (get changes from github)
+      -> git checkout branchname
+      -> git merge master (local branch should be updated now)
