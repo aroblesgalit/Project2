@@ -1,5 +1,5 @@
 module.exports = function(sequelize, Datatypes) {
-  //creat
+  //creates the resources table"s columns
   var Resources = sequelize.define("Resources", {
     fields: {
       type: Datatypes.STRING,
