@@ -1,7 +1,6 @@
 module.exports = function(sequelize, Datatypes) {
   //creates the resources table"s columns
   var Resources = sequelize.define("Resources", {
-    
     title: {
       type: Datatypes.STRING,
       allowNull: false,
@@ -42,13 +41,13 @@ module.exports = function(sequelize, Datatypes) {
   // };
 
   //makes the respourses belong to the user table as well
-//   Resources.associate = function(models) {
-    //   Resources.belongsTo(models.User, {
-    //     foreignKey: {
-    //       allowNull: false
-    //     }
-    //   });
-    // };
+  //   Resources.associate = function(models) {
+  //   Resources.belongsTo(models.User, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   });
+  // };
 
   return Resources;
 };
