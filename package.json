@@ -34,6 +34,7 @@
     "mocha": "^7.1.2",
     "nodemon": "^2.0.3",
     "prettier": "^1.13.7",
+    "travis": "^0.1.1",
     "travis-ci": "^2.2.0"
   },
   "repository": {
