@@ -13,9 +13,15 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     // The password cannot be null
+    // The password is validated with a regular expression. Numbers, letters, and some symbols
+    // The password checks for a password length between 8-64 characters
     password: {
+      allowNull: false,
       type: DataTypes.STRING,
-      allowNull: false
+      validate: {
+        is: ["^[a-z,0-9,!,@,#,$,%,^,&,*,(,),-]+$", "i"],
+        len: [8, 64]
+      }
     }
   });
   // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
