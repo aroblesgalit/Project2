@@ -30,10 +30,6 @@ $(document).ready(function() {
     })
       .then(function() {
         window.location.replace("/userProfile");
-
-        //var email = getElementById(emailInput);
-        //console.log(emailInput);
-        //email.append(userProfileEmailRender);
         // If there's an error, log the error
       })
       .catch(function(err) {
