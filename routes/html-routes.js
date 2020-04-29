@@ -12,7 +12,7 @@ module.exports = function(app) {
       res.sendFile(path.join(__dirname, "../public/resources.html"));
     }
   });
-  
+  /* Job Search path*/
   app.get("/jobsearch", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/jobSearch.html"));
   });
