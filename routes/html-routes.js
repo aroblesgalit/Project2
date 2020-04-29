@@ -7,7 +7,7 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 module.exports = function(app) {
   app.get("/resources", function(req, res) {
     if (req.user) {
-      res.send("This is the resource page when logged in.")
+      res.send("This is the resource page when logged in.");
     } else {
       res.sendFile(path.join(__dirname, "../public/resources.html"));
     }
