@@ -23,26 +23,29 @@ $(document).ready(function() {
       });
   }
 
+  // Grab the id of the selected field
+  var selectedFieldId = $("#fieldsSelect").val();
+
   // The code below handles the case where we want to get resources for a specific field
   // Looks for a query param in the url for field_id
-  var url = window.location.search;
-  var fieldId;
-  if (url.indexOf("?field_id=") !== -1) {
-    fieldId = url.split("=")[1];
-    getResources(fieldId);
-  }
-  // If there's no fieldId we just get the first one
-  else {
-    getResources(0);
-  }
+  //   var url = window.location.search;
+  //   var fieldId;
+  //   if (url.indexOf("?field_id=") !== -1) {
+  //     fieldId = url.split("=")[1];
+  //     getResources(fieldId);
+  //   }
+  //   // If there's no fieldId we just get the first one
+  //   else {
+  //     getResources(0);
+  //   }
 
   // This function grabs resources from the database and updates the view
-  function getResources(field) {
-    fieldId = field || "";
-    if (fieldId) {
-      fieldId = "/?field_id=" + fieldId;
-    }
-    $.get("/api/resources" + fieldId)
+  function getResources(selectedFieldId) {
+    // fieldId = field || "";
+    // if (fieldId) {
+    //   fieldId = "/?field_id=" + fieldId;
+    // }
+    $.get("/api/resources/" + selectedFieldId)
       .then(function(data) {
         console.log("Resources", data);
         resources = data;
