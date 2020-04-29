@@ -1,21 +1,22 @@
 // Creating our Field model
-module.exports = function (sequelize, Datatypes) {
-    var Fields = sequelize.define("Fields", {
-        fields: {
+export default function (sequelize, Datatypes) {
+    let Titles = sequelize.define("Titles", {
+        titles: {
             type: Datatypes.STRING,
             validate: {
                 len: [1]
             }
         }
     });
-    Fields.associate = function (models) {
-        Fields.belongsTo(models.Resources, {
+
+    Titles.associate = function (models) {
+        Titles.belongsTo(models.Resources, {
             foreignKey: {
                 allowNull: false
             }
-        });
+        })
     };
 
-    return Fields;
+    return Titles;
 };
 
