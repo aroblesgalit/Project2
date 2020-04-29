@@ -5,18 +5,19 @@ module.exports = function(sequelize, Datatypes) {
       type: Datatypes.STRING,
       allowNull: false,
       validate: {
-        len: [1]
+        len: [1 - 160]
       }
     },
     title: {
       type: Datatypes.STRING,
       allowNull: false,
       validate: {
-        len: [1]
+        len: [1 - 160]
       }
     },
+    //changed this to be a .text type
     description: {
-      type: Datatypes.STRING,
+      type: Datatypes.TEXT,
       allowNull: false,
       validate: {
         len: [1]

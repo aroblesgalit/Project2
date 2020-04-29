@@ -3,6 +3,7 @@ $(document).ready(function() {
   var loginForm = $("form.login");
   var emailInput = $("input#email-input");
   var passwordInput = $("input#password-input");
+  var emailRender = $("#userProfileEmailRender");
 
   // When the form is submitted, we validate there's an email and password entered
   loginForm.on("submit", function(event) {
@@ -32,7 +33,7 @@ $(document).ready(function() {
         window.location.replace("/userProfile");
 
         //var email = getElementById(emailInput);
-        //console.log(emailInput);
+        console.log(emailRender);
         //email.append(userProfileEmailRender);
         // If there's an error, log the error
       })
