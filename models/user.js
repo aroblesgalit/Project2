@@ -14,12 +14,13 @@ module.exports = function(sequelize, DataTypes) {
     },
     // The password cannot be null
     // The password is validated with a regular expression. Numbers, letters, and some symbols
-    // The password so far doesn't check for upper or lowercase, and the range between 8-64
+    // The password checks for a password length between 8-64 characters
     password: {
       allowNull: false,
-      type: DataTypes.STRING(64),
+      type: DataTypes.STRING,
       validate: {
-        is: ["^[a-z,0-9,!,@,#,$,%,^,&,*,(,),-]+$", "i"]
+        is: ["^[a-z,0-9,!,@,#,$,%,^,&,*,(,),-]+$", "i"],
+        len: [8, 64]
       }
     }
   });

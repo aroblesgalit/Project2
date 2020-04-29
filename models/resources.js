@@ -5,36 +5,36 @@ module.exports = function(sequelize, Datatypes) {
       type: Datatypes.STRING,
       allowNull: false,
       validate: {
-        len: [1 - 160]
+        len: [1, 160]
       }
     },
     title: {
       type: Datatypes.STRING,
       allowNull: false,
       validate: {
-        len: [1 - 160]
+        len: [1, 160]
       }
     },
-    //changed this to be a .text type
+    //changed this to be a .text type, maximum characters 500
     description: {
       type: Datatypes.TEXT,
       allowNull: false,
       validate: {
-        len: [1]
+        len: [1, 500]
       }
     },
     link: {
       type: Datatypes.STRING,
       allowNull: false,
       validate: {
-        len: [1]
+        len: [1, 160]
       }
     },
     imageUrl: {
       type: Datatypes.STRING,
       allowNull: false,
       validate: {
-        len: [1]
+        len: [1, 160]
       }
     }
   });
