@@ -78,3 +78,29 @@ form.login {
 .userProfile {
   margin-right: 20px;
 }
+
+
+/* Job Search */
+body{
+  text-align:center;
+  font-family: 'ABeeZee';
+  font-size: 20px;
+  color:#fff;
+  background:#50394c;
+}
+
+#heading{
+  padding-top:5%;
+}
+
+#random{
+  padding:25% 0 2% 0;
+}
+
+#search-bar{
+  padding:0 0 2% 0;
+  margin-left:25%;
+  margin-right:25%;  
+}
+
+a:link,a:visited{text-decoration:none; color:#fff; }
