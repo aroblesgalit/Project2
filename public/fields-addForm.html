@@ -30,12 +30,11 @@
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav">
                     <li><a href="/">Home</a></li>
-                    <li class="uk-active"><a href="/resources">Resources</a></li>
-                    <li><a href="/fields">Fields</a></li>
+                    <li><a href="/resources">Resources</a></li>
+                    <li class="uk-active"><a href="/fields">Fields</a></li>
                     <li><a href="/jobsearch">Job Search</a></li>
                     <div class="uk-navbar-item" id="loginAvatar">
-                        <div id="settings" class="uk-flex uk-flex-center uk-flex-middle"><span
-                                uk-icon="icon:  user"></span></div>
+                        <div id="settings" class="uk-flex uk-flex-center uk-flex-middle"><span uk-icon="icon:  user"></span></div>
                         <div uk-dropdown>
                             <ul class="uk-nav uk-dropdown-nav">
                                 <li class="uk-active"><a href="/userProfile">User Profile</a></li>
@@ -50,21 +49,11 @@
     </header>
 
     <!-- Main content -->
-    <section id="resources" class="uk-height-1-1 uk-flex uk-flex-center">
+    <section id="fields" class="uk-height-1-1 uk-flex uk-flex-center">
         <div class="wiki-container">
-            <form id="addResource" class="uk-form-stacked">
-                <legend class="uk-legend">Add a resource</legend>
+            <form id="addField" class="uk-form-stacked">
+                <legend class="uk-legend">Add a field</legend>
 
-                <!-- Field -->
-                <div class="uk-margin">
-                    <label class="uk-form-label" for="form-field">Field:</label>
-                    <div class="uk-form-controls">
-                        <select class="uk-select" id="form-field">
-                            <option>Option 01</option>
-                            <option>Option 02</option>
-                        </select>
-                    </div>
-                </div>
                 <!-- Title -->
                 <div class="uk-margin">
                     <label class="uk-form-label" for="form-title">Title:</label>
@@ -72,18 +61,7 @@
                         <input class="uk-input" id="form-title" type="text" placeholder="Some text...">
                     </div>
                 </div>
-                <!-- Description -->
-                <div class="uk-margin">
-                    <label class="uk-form-label" for="form-description">Description:</label>
-                    <textarea class="uk-textarea" id="form-description" rows="5" placeholder="Textarea"></textarea>
-                </div>
-                <!-- Link -->
-                <div class="uk-margin">
-                    <label class="uk-form-label" for="form-link">Link:</label>
-                    <div class="uk-form-controls">
-                        <input class="uk-input" id="form-link" type="text" placeholder="Some text...">
-                    </div>
-                </div>
+                
                 <!-- Image Url -->
                 <div class="uk-margin">
                     <label class="uk-form-label" for="form-imageUrl">Thumbnail url:</label>
@@ -91,12 +69,10 @@
                         <input class="uk-input" id="form-imageUrl" type="text" placeholder="Some text...">
                     </div>
                 </div>       
-
                 <div class="uk-flex uk-flex-right">
-                    <button id="cancelResourceButton" class="uk-button uk-button-danger uk-margin-right">Cancel</button><button id="addResourceButton" class="uk-button uk-button-primary">Add</button>  
+                    <button id="cancelFieldButton" class="uk-button uk-button-danger uk-margin-right">Cancel</button><button id="addFieldButton" class="uk-button uk-button-primary">Add</button>  
                 </div>                   
             </form>
-
         </div>
     </section>
 

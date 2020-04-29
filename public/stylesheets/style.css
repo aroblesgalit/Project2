@@ -63,7 +63,7 @@ form.login {
   float: right;
 }
 
-#addResource {
+#addResource, #addField {
   min-width: 600px;
 }
 
