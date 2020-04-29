@@ -12,7 +12,7 @@ $(document).ready(function() {
         var select = $("<select>").addClass("uk-select");
         // Expecting data to be an array of "fields" as objects
         for (var i = 0; i < data.length; i++) {
-          var option = $("<option>");
+          var option = $("<option>").val(data[i].id);
           option.text(data[i].name);
           select.append(option);
         }
