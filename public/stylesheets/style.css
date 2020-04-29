@@ -63,6 +63,14 @@ form.login {
   float: right;
 }
 
+
+/* Fields */
+#fieldTable {
+  width: 100%;
+}
+
+
+/* User Profile */
 .userProfile {
   margin-right: 20px;
 }
