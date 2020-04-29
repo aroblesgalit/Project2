@@ -12,6 +12,10 @@ module.exports = function(app) {
       res.sendFile(path.join(__dirname, "../public/resources.html"));
     }
   });
+  /* Job Search path*/
+  app.get("/jobsearch", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/jobSearch.html"));
+  });
 
   app.get("/", function(req, res) {
     // If the user already has an account send them to the members page >> User profile
@@ -40,5 +44,11 @@ module.exports = function(app) {
   });
   app.get("/fields", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/fields.html"));
+  });
+  app.get("/resources/addForm", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/resources-addForm.html"));
+  });
+  app.get("/fields/addForm", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/fields-addForm.html"));
   });
 };
