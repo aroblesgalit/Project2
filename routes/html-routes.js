@@ -13,7 +13,7 @@ module.exports = function(app) {
     }
   });
 
-  app.get("/userProfile", function(req, res) {
+  app.get("/", function(req, res) {
     // If the user already has an account send them to the members page >> User profile
     if (req.user) {
       return res.redirect("/userProfile");
