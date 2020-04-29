@@ -13,8 +13,16 @@ header {
   margin-bottom: 60px;
 }
 
+.main-menu {
+  width: 100%;
+}
+
+.main-header {
+  margin-bottom: 40px;
+}
+
 .main-heading {
-  margin-right: 40px;
+  margin: 0 40px 0 0;
 }
 
 .wiki-container {
@@ -26,7 +34,14 @@ form.login {
   margin-top: 50px;
 }
 
-
+#settings {
+  height: 40px;
+  width: 40px;
+  background-color: #333;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
 
 
 
@@ -42,4 +57,24 @@ form.login {
 
 #resource-select {
   width: 300px;
+}
+
+#addButton {
+  float: right;
+}
+
+#addResource, #addField {
+  min-width: 600px;
+}
+
+
+/* Fields */
+#fieldTable {
+  width: 100%;
+}
+
+
+/* User Profile */
+.userProfile {
+  margin-right: 20px;
 }
