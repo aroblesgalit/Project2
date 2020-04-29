@@ -1,8 +1,8 @@
 $(document).ready(function() {
   // resourceResults holds all of our resources
-  var resourceResults = $(".resource-results");
+  const resourceResults = $(".resource-results");
   // Variable to hold our resources
-  var resources;
+  const resources;
   // Getting references to our form and inputs
   const resourceSelect = $("#resource-select");
   
