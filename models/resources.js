@@ -1,8 +1,6 @@
 module.exports = function(sequelize, Datatypes) {
   //creates the resources table"s columns
   var Resources = sequelize.define("Resources", {
-
-
     title: {
       type: Datatypes.STRING,
       allowNull: false,
