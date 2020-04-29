@@ -13,8 +13,16 @@ header {
   margin-bottom: 60px;
 }
 
+.main-menu {
+  width: 100%;
+}
+
+.main-header {
+  margin-bottom: 40px;
+}
+
 .main-heading {
-  margin-right: 40px;
+  margin: 0 40px 0 0;
 }
 
 .wiki-container {
