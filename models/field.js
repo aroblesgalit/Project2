@@ -1,6 +1,6 @@
 // Creating our Titles model
 export default function (sequelize, Datatypes) {
-    let Titles = sequelize.define("Titles", {
+    let Fields = sequelize.define("Fields", {
         titles: {
             type: Datatypes.STRING,
             validate: {
@@ -8,16 +8,16 @@ export default function (sequelize, Datatypes) {
             }
         }
     });
-    
+
 // Associate table with Resources table
-    Titles.associate = function (models) {
-        Titles.belongsTo(models.Resources, {
+    Fields.associate = function (models) {
+        Fields.hasMany(models.Resources, {
             foreignKey: {
                 allowNull: false
             }
         })
     };
 
-    return Titles;
+    return Fields;
 };
 
