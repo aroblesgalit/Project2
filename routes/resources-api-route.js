@@ -13,6 +13,11 @@ module.exports = function(app) {
         {
           model: db.Fields
         }
+      ],
+      include: [
+        {
+          model: db.user
+        }
       ]
     }).then(function(dbResource) {
       res.json(dbResource);

@@ -41,14 +41,14 @@ module.exports = function(sequelize, Datatypes) {
   //   });
   // };
 
-  //makes the respourses belong to the user table as well
-  //   Resources.associate = function(models) {
-  //   Resources.belongsTo(models.User, {
-  //     foreignKey: {
-  //       allowNull: false
-  //     }
-  //   });
-  // };
+  //   makes the respourses belong to the user table as well
+  Resources.associate = function(models) {
+    Resources.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
 
   return Resources;
 };
