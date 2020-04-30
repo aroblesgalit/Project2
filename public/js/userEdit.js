@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("#profileImage").click(function(e) {
+  $("#profileImage").click(function() {
     $("#imageUpload").click();
   });
 
