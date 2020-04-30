@@ -4,8 +4,4 @@ $(document).ready(function() {
   $.get("/api/user_data").then(function(data) {
     $("#userProfileEmailRender").append(data.email);
   });
-  // soon we will add the field the user selects as their own to their profile.
-  //   $.get("/api/fields").then(function(data) {
-  //     $("#userFieldRender").append(data.email);
-  //   });
 });
