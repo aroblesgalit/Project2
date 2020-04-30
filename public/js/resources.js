@@ -4,28 +4,36 @@ $(document).ready(function() {
   // Variable to hold our resources
   var resources;
   // Getting references to our form and inputs
-  var resourceSelect = $("#resource-select");
+  var fieldsSelect = $("#fieldsSelect");
+
+  // Render fields select options
+  getFields();
+
+  fieldsSelect.change(function() {
+    // Grab the id of the selected field
+    var selectedFieldId = $(this)
+      .children("option:selected")
+      .val();
+    console.log(selectedFieldId);
+    getResources(selectedFieldId);
+  });
 
   function getFields() {
     $.get("/api/fields")
       .then(function(data) {
         console.log(data);
-        var select = $("<select>").addClass("uk-select");
+
         // Expecting data to be an array of "fields" as objects
         for (var i = 0; i < data.length; i++) {
           var option = $("<option>").val(data[i].id);
           option.text(data[i].title);
-          select.append(option);
+          fieldsSelect.append(option);
         }
-        resourceSelect.append(select);
       })
       .catch(function(err) {
         console.log(err);
       });
   }
-
-  // Grab the id of the selected field
-  var selectedFieldId = $("#fieldsSelect").val();
 
   // The code below handles the case where we want to get resources for a specific field
   // Looks for a query param in the url for field_id
@@ -116,13 +124,6 @@ $(document).ready(function() {
       "<p>No resources posted for this field yet. Log in to add.</p>"
     );
   }
-
-  function init() {
-    getFields();
-    getResources(selectedFieldId);
-  }
-
-  init();
 
   //   // When the form is submitted, we validate there's an email and password entered
   //   loginForm.on("submit", function(event) {

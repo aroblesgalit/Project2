@@ -7,7 +7,7 @@ module.exports = function(app) {
 
     db.Resources.findAll({
       where: {
-        fields: fieldId
+        FieldId: fieldId
       },
       include: [
         {
@@ -16,7 +16,7 @@ module.exports = function(app) {
       ],
       include: [
         {
-          model: db.user
+          model: db.User
         }
       ]
     }).then(function(dbResource) {

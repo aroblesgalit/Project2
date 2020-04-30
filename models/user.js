@@ -53,5 +53,21 @@ module.exports = function(sequelize, DataTypes) {
       onDelete: "cascade"
     });
   };
+  // User has many resources
+  User.associate = function(models) {
+    User.hasMany(models.Resource, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+  // User belongs to a Field
+  User.associate = function(models) {
+    User.belongsTo(models.Field, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
   return User;
 };
