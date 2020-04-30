@@ -2,7 +2,7 @@ var db = require("../models");
 
 module.exports = function(app) {
   //gets all resources for a given field
-  app.get("/api/resources/:fieldId", function(req, res) {
+  app.get("/api/resource/:fieldId", function(req, res) {
     var fieldId = req.params.fieldId;
 
     db.Resources.findAll({
@@ -11,7 +11,7 @@ module.exports = function(app) {
       },
       include: [
         {
-          model: db.Fields
+          model: db.Field
         }
       ],
       include: [
@@ -25,7 +25,7 @@ module.exports = function(app) {
   });
 
   // //retrieves a resource post
-  // app.get("/api/resources/:id", function(req, res) {
+  // app.get("/api/resource/:id", function(req, res) {
   //   db.Resource.findOne({
   //     where: {
   //       id: req.params.id
@@ -37,7 +37,7 @@ module.exports = function(app) {
   // });
 
   //creates and saves new resources
-  // app.post("/api/resources", function(req, res) {
+  // app.post("/api/resource", function(req, res) {
   //   db.Resource.create(req.body).then(function(dbResource) {
   //     res.json(dbResource);
   //   });
