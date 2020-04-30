@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
+var axios = require("axios");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -45,5 +46,18 @@ module.exports = function(app) {
         id: req.user.id
       });
     }
+  });
+  //Route from getting data from linkedIn
+  app.get("/api/jobSearch/:keywords", function(req, res) {
+    const queryUrl = `https://api.linkedin.com/v1/job-search?keywords=${req.params.keywords}`;
+
+    axios
+      .get(queryUrl)
+      .then(function(result) {
+        return result;
+      })
+      .catch(function(err) {
+        console.log(err);
+      });
   });
 };

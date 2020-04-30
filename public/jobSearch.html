@@ -31,16 +31,16 @@
   <body id="jobsearchbody">
     <h1 id="heading" class="uk-flex-center" class="uk-heading-medium">Jobs</h1>
     <div class="uk-margin">
-      <form class="uk-search uk-search-default">
-          <span uk-search-icon></span>
-          <input class="uk-search-input" type="search" placeholder="Search Jobs...">
+      <form id="searchForm" class="uk-search uk-search-default">
+          <a id="searchicon" uk-search-icon></a>
+          <input id="keywords" class="uk-search-input" type="search" placeholder="Search Jobs...">
       </form>
   </div>
       <div class="row">
         <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
           <div class="uk-card-media-left uk-cover-container">
-            <img src="https://via.placeholder.com/600x400" alt="" uk-cover>
-              <canvas width="600" height="400"></canvas>
+            <img src="https://via.placeholder.com/400x200" alt="" uk-cover>
+              <canvas width="400" height="200"></canvas>
           </div>
           <div>
               <div class="uk-card-body">
@@ -51,8 +51,8 @@
       </div>
       <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
         <div class="uk-card-media-left uk-cover-container">
-            <img src="images/light.jpg" alt="" uk-cover>
-            <canvas width="600" height="400"></canvas>
+            <img src="https://via.placeholder.com/400x200" alt="" uk-cover>
+            <canvas width="400" height="200"></canvas>
         </div>
         <div>
             <div class="uk-card-body">
@@ -63,8 +63,8 @@
     </div>
     <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
       <div class="uk-card-media-left uk-cover-container">
-          <img src="images/light.jpg" alt="" uk-cover>
-          <canvas width="600" height="400"></canvas>
+        <img src="https://via.placeholder.com/400x200" alt="" uk-cover>
+            <canvas width="400" height="200"></canvas>
       </div>
       <div>
           <div class="uk-card-body">
@@ -73,6 +73,18 @@
           </div>
       </div>
   </div>
+  <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+    <div class="uk-card-media-left uk-cover-container">
+      <img src="https://via.placeholder.com/400x200" alt="" uk-cover>
+          <canvas width="400" height="200"></canvas>
+    </div>
+    <div>
+        <div class="uk-card-body">
+            <h3 class="uk-card-title">Media Left</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+        </div>
+    </div>
+</div>
     
   </body>
 
@@ -86,6 +98,9 @@
 		<div class="footer-logo">
 			<p>Logo Goes Here</p>
 		</div>
-	</footer>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
+    <script type="text/javascript" src="js/jobSearch.js"></script>
    
 </html>
