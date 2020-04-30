@@ -12,10 +12,10 @@ $(document).ready(function() {
       return;
     }
     // Constructing a newPost object to hand to the database
-    var newFieldChoice = {
-      title: fieldTitle.val().trim(),
-      fieldId: authorSelect.val()
-    };
+    // var newFieldChoice = {
+    //   title: fieldTitle.val().trim(),
+    //   fieldId: authorSelect.val()
+    // };
 
     // If we're updating a post run updatePost to update a post
     // Otherwise run submitPost to create a whole new post
@@ -28,16 +28,16 @@ $(document).ready(function() {
   }
 
   //updates the user's chosen field choice, and returns them to their userProfile when done
-  function updateProfile(user) {
-    $.ajax({
-      method: "PUT",
-      url: "/api/userProfile",
-      data: user.fieldChoice,
-      validate: {
-        len: [1]
-      }
-    }).then(function() {
-      window.location.href = "/userProfile";
-    });
-  }
+  //   function updateProfile(user) {
+  //     $.ajax({
+  //       method: "PUT",
+  //       url: "/api/userProfile",
+  //       data: user.fieldChoice,
+  //       validate: {
+  //         len: [1]
+  //       }
+  //     }).then(function() {
+  //       window.location.href = "/userProfile";
+  //     });
+  //   }
 });
