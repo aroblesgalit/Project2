@@ -50,7 +50,7 @@ $(document).ready(function() {
         console.log("Resources", data);
         resources = data;
         if (!resources || !resources.length) {
-          displayEmpty(field);
+          displayEmpty();
         } else {
           initializeRows();
         }
@@ -108,6 +108,12 @@ $(document).ready(function() {
     );
     // Return the new resource card
     return newResourceCard;
+  }
+
+  function displayEmpty() {
+    resourceResults.html(
+      "<p>No resources posted for this field yet. Log in to add.</p>"
+    );
   }
 
   function init() {
