@@ -47,17 +47,38 @@ module.exports = function(app) {
       });
     }
   });
-  //Route from getting data from linkedIn
-  app.get("/api/jobSearch/:keywords", function(req, res) {
-    const queryUrl = `https://api.linkedin.com/v1/job-search?keywords=${req.params.keywords}`;
 
-    axios
+  // PUT route for updating posts
+  // INCOMPLETE
+  //   app.put("/api/userProfile", function(req, res) {
+  //     db.Post.update(req.body, {
+  //       where: {
+  //         id: req.body.id
+  //       }
+  //     }).then(function(dbPost) {
+  //       res.json(dbPost);
+  //     });
+  //   });
+
+  app.get("/api/jobSearch/:keywords", function(req, res) {
+    var queryUrl = `
+    http://api.dataatwork.org/v1/jobs/autocomplete?begins_with=${req.params.keywords}
+    `;
+
+    var jobSearchResults = axios
       .get(queryUrl)
-      .then(function(result) {
-        return result;
+      .then(function(res) {
+        console.log(res.data);
+        return res;
       })
       .catch(function(err) {
         console.log(err);
       });
+
+    // Otherwise send back the user's email and id
+    // Sending back a password, even a hashed password, isn't a good idea
+    res.json({
+      jobSearchResults
+    });
   });
 };

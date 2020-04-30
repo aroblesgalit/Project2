@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // const fs = require("fs");
 $(document).ready(function() {
   const searchForm = $("#searchForm");
@@ -14,4 +15,14 @@ $(document).ready(function() {
         console.log(err);
       });
   });
+=======
+$(document).ready(function() {
+  $.get("/api/jobSearch/software")
+    .then(function(data) {
+      console.log(data);
+    })
+    .catch(function(err) {
+      console.log(err);
+    });
+>>>>>>> 5d878d134600e77bef6cf456ca616059e4ebb267
 });
