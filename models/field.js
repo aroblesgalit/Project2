@@ -1,4 +1,4 @@
-// Creating our Field model
+// Creating our Titles model
 export default function (sequelize, Datatypes) {
     let Titles = sequelize.define("Titles", {
         titles: {
@@ -8,7 +8,8 @@ export default function (sequelize, Datatypes) {
             }
         }
     });
-
+    
+// Associate table with Resources table
     Titles.associate = function (models) {
         Titles.belongsTo(models.Resources, {
             foreignKey: {
