@@ -48,34 +48,87 @@
         </nav>
     </header>
 
-    <!-- Main content -->
+    <!-- Main user profile edit content -->
     <section id="fields" class="uk-height-1-1 uk-flex uk-flex-center">
         <div class="wiki-container">
             <form id="addField" class="uk-form-stacked">
-                <legend class="uk-legend">Add a field</legend>
+                <legend class="uk-legend">Choose a career field to display on your profile!</legend>
 
-                <!-- Title -->
+                <!-- Career Field Choice -->
                 <div class="uk-margin">
                     <label class="uk-form-label" for="form-title">Title:</label>
                     <div class="uk-form-controls">
-                        <input class="uk-input" id="form-title" type="text" placeholder="Some text...">
+                        <select id="fieldsSelect" class="uk-select">
+                            <option>Option 01</option>
+                            <option>Option 02</option>
+                        </select>
                     </div>
-                </div>
-                
-                <!-- Image Url -->
+                </div>                 
+            </form>
+            <div class="uk-flex uk-flex-right">
+                <button id="cancelFieldChoiceButton" class="uk-button uk-button-danger uk-margin-right">Cancel</button><button id="addFieldChoiceButton" class="uk-button uk-button-primary">Submit Changes</button>  
+            </div> 
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+        <!-- Add Profile Image -->
+        <section id="fields" class="uk-height-1-1 uk-flex uk-flex-center">
+            <div class="wiki-container">
+                <form id="addField" class="uk-form-stacked">
+                    <legend class="uk-legend">Add a profile Image!</legend>
+                    
+                <!--Profile Image Url -->
                 <div class="uk-margin">
-                    <label class="uk-form-label" for="form-imageUrl">Thumbnail url:</label>
+                    <label class="uk-form-label" for="form-imageUrl">Profile Image url:</label>
                     <div class="uk-form-controls">
                         <input class="uk-input" id="form-imageUrl" type="text" placeholder="Some text...">
                     </div>
                 </div>       
                 <div class="uk-flex uk-flex-right">
-                    <button id="cancelFieldButton" class="uk-button uk-button-danger uk-margin-right">Cancel</button><button id="editFieldButton" class="uk-button uk-button-primary">Edit User</button>  
-                </div>                   
-            </form>
-        </div>
-    </section>
-
+                    <button id="cancelProfileButton" class="uk-button uk-button-danger uk-margin-right">Cancel</button><button id="addProfileButton" class="uk-button uk-button-primary">Submit Changes</button>  
+                </div>                  
+                </form>
+            </div>
+        </section>
+        <br>
+        <br>
+        <br>
+                <!-- Change password -->
+        <section id="fields" class="uk-height-1-1 uk-flex uk-flex-center">
+            <div class="wiki-container">
+                <form id="addField" class="uk-form-stacked">
+                    <legend class="uk-legend">Change your password! Must be between 8-64 digits.</legend>
+                    
+                <!-- Change password form -->
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-imageUrl">Old password:</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" id="form-imageUrl" type="text" placeholder="Some text...">
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-imageUrl">New password:</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" id="form-imageUrl" type="text" placeholder="Some text...">
+                    </div>
+                </div> 
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-imageUrl">Confirm New password:</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" id="form-imageUrl" type="text" placeholder="Some text...">
+                    </div>
+                </div>          
+                <div class="uk-flex uk-flex-right">
+                    <button id="cancelPasswordButton" class="uk-button uk-button-danger uk-margin-right">Cancel</button><button id="addPasswordButton" class="uk-button uk-button-primary">Submit Changes</button>  
+                </div>                  
+                </form>
+            </div>
+        </section>
+        <br>
+        <br>
+        <br>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/userEdit.js"></script>
     <!-- <script type="text/javascript" src="js/loginButton.js"></script> -->
