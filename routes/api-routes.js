@@ -46,4 +46,16 @@ module.exports = function(app) {
       });
     }
   });
+
+  // PUT route for updating posts
+  // INCOMPLETE
+  //   app.put("/api/userProfile", function(req, res) {
+  //     db.Post.update(req.body, {
+  //       where: {
+  //         id: req.body.id
+  //       }
+  //     }).then(function(dbPost) {
+  //       res.json(dbPost);
+  //     });
+  //   });
 };
