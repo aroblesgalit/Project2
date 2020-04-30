@@ -22,18 +22,18 @@ module.exports = function(sequelize, DataTypes) {
         is: ["^[a-z,0-9,!,@,#,$,%,^,&,*,(,),-]+$", "i"],
         len: [8, 64]
       }
-    },
-    // The user's name to display in their profile
-    fullName: {
-      allowNull: true,
-      type: DataTypes.STRING
-    },
-    // The user's chosen field to display in their profile
-    fieldId: {
-      allowNull: true,
-      type: DataTypes.STRING
-      //FOREIGN KEY STUFF HERE
     }
+    // // The user's name to display in their profile
+    // fullName: {
+    //   allowNull: true,
+    //   type: DataTypes.STRING
+    // },
+    // // The user's chosen field to display in their profile
+    // fieldId: {
+    //   allowNull: true,
+    //   type: DataTypes.STRING
+    //   //FOREIGN KEY STUFF HERE
+    // }
   });
   // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
   User.prototype.validPassword = function(password) {
