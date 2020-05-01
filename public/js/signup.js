@@ -40,7 +40,7 @@ $(document).ready(function() {
     var userData = {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim(),
-      FieldId: selectedFieldId[0].value
+      FieldId: parseInt(selectedFieldId[0].value)
     };
     console.log(userData);
 
