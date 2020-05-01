@@ -16,6 +16,11 @@ module.exports = function(sequelize, Datatypes) {
         allowNull: false
       }
     });
+    Field.hasMany(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
   };
 
   return Field;

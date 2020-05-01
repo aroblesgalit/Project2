@@ -9,14 +9,14 @@ $(document).ready(function() {
         // Expecting data to be an array of "fields" as objects
         for (var i = 0; i < data.length; i++) {
           var tr = $("<tr>");
-          var tdName = $("<td>").text(data[i].name);
-          var tdUsers = $("<td>").text(data[i].users);
-          var tdResources = $("<td>").text(data[i].resources);
+          var tdName = $("<td>").text(data[i].title);
+          // var tdUsers = $("<td>").text(data[i].users);
+          // var tdResources = $("<td>").text(data[i].resources);
           var tdCreated = $("<td>").text(data[i].createdAt);
           var tdUpdated = $("<td>").text(data[i].updatedAt);
           tr.append(tdName)
-            .append(tdUsers)
-            .append(tdResources)
+            // .append(tdUsers)
+            // .append(tdResources)
             .append(tdCreated)
             .append(tdUpdated);
           tbody.append(tr);

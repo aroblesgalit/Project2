@@ -2,12 +2,10 @@ var db = require("../models");
 
 module.exports = function(app) {
   //gets all resources for a given field
-  app.get("/api/resource/:fieldId", function(req, res) {
-    var fieldId = req.params.fieldId;
-
-    db.Resources.findAll({
+  app.get("/api/resources/:fieldId", function(req, res) {
+    db.Resource.findAll({
       where: {
-        FieldId: fieldId
+        FieldId: req.params.fieldId
       },
       include: [
         {

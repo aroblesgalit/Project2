@@ -14,7 +14,6 @@ $(document).ready(function() {
     var selectedFieldId = $(this)
       .children("option:selected")
       .val();
-    console.log(selectedFieldId);
     getResources(selectedFieldId);
   });
 
