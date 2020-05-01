@@ -44,6 +44,10 @@ $(document).ready(function() {
   $("#imageUpload").change(function() {
     fasterPreview(this);
   });
+
+  $.get("/api/user_data").then(function(data) {
+    $("#userProfileEmailRender").append(data.email);
+  });
   // //sets our updating variable to false initially
   // var updating = false;
   // //sets this variable to plug into our user's field choice html element
@@ -86,7 +90,5 @@ $(document).ready(function() {
   //   }
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the user's EDIT PROFILE page
-  $.get("/api/user_data").then(function(data) {
-    $("#userProfileEmailRender").append(data.email);
-  });
+
 });
