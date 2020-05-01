@@ -29,6 +29,10 @@ header {
   max-width: 1200px;
 }
 
+.main-content {
+  width: 100%;
+}
+
 form.signup,
 form.login {
   margin-top: 50px;
@@ -85,7 +89,7 @@ form.login {
   text-align:center;
   font-size: 20px;
   color:#fff;
-  background:#50394c;
+  background:#333;
 }
 
 #heading{
@@ -102,7 +106,7 @@ form.login {
   margin-right:25%;  
 }
 
-a:link,a:visited{text-decoration:none; color:#50394c;} 
+a:link,a:visited{text-decoration:none; color:#333} 
 
 /* USER PROFILE EDIT */
 

@@ -2,12 +2,10 @@ var db = require("../models");
 
 module.exports = function(app) {
   //gets all resources for a given field
-  app.get("/api/resource/:fieldId", function(req, res) {
-    var fieldId = req.params.fieldId;
-
-    db.Resources.findAll({
+  app.get("/api/resources/:fieldId", function(req, res) {
+    db.Resource.findAll({
       where: {
-        fields: fieldId
+        FieldId: req.params.fieldId
       },
       include: [
         {
@@ -16,7 +14,7 @@ module.exports = function(app) {
       ],
       include: [
         {
-          model: db.user
+          model: db.User
         }
       ]
     }).then(function(dbResource) {
@@ -36,12 +34,16 @@ module.exports = function(app) {
   //   });
   // });
 
-  //creates and saves new resources
-  // app.post("/api/resource", function(req, res) {
-  //   db.Resource.create(req.body).then(function(dbResource) {
-  //     res.json(dbResource);
-  //   });
-  // });
+  // creates and saves new resources
+  app.post("/api/resources", function(req, res) {
+    db.Resource.create(req.body)
+      .then(function(dbResource) {
+        res.json(dbResource);
+      })
+      .catch(function(err) {
+        console.log(err);
+      });
+  });
 
   //deletes resources
   // app.delete("/api/resource/:id", function(req, res) {

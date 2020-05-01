@@ -1,7 +1,7 @@
 // Creating our Titles model
 module.exports = function(sequelize, Datatypes) {
-  let Fields = sequelize.define("Fields", {
-    titles: {
+  let Field = sequelize.define("Field", {
+    title: {
       type: Datatypes.STRING,
       validate: {
         len: [1]
@@ -10,13 +10,18 @@ module.exports = function(sequelize, Datatypes) {
   });
 
   // Associate table with Resources table
-  Fields.associate = function(models) {
-    Fields.hasMany(models.Resources, {
+  Field.associate = function(models) {
+    Field.hasMany(models.Resource, {
       foreignKey: {
         allowNull: false
       }
     });
+    // Field.hasMany(models.User, {
+    //   foreignKey: {
+    //     allowNull: false
+    //   }
+    // });
   };
 
-  return Fields;
+  return Field;
 };
