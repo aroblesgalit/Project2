@@ -1,9 +1,10 @@
 $(document).ready(function() {
   //sets our updating variable to false initially
-  var updating = false;
-  //sets this variable to plug into our user's field choice html element
-  var userField = $("#userFieldRenderChoice");
+  // var updating = false;
+  // //sets this variable to plug into our user's field choice html element
+  // var userField = $("#userFieldRenderChoice");
   // handles the form submission when the user enters a field and hits submit
+  // HAD TO COMMENT THESE OUT CUZ IT WAS CAUSING ISSUE FOR NOW --ALVIN
   // $(userFieldForm).on("submit", handleFormSubmit);
   // function handleFormSubmit(event) {
   //   event.preventDefault();

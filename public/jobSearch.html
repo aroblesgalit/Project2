@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/css/uikit.min.css" />
 
   <script src="https://code.jquery.com/jquery-3.5.0.min.js"
-  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
   <!-- UIkit JS -->
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit-icons.min.js"></script>
@@ -31,9 +31,9 @@
       <!-- Menu -->
       <div class="uk-navbar-right">
         <ul class="uk-navbar-nav">
-          <li id="heading" class="uk-active"><a href="/">Home</a></li>
-          <li id="heading"><a href="/resources">Resources</a></li>
-          <li id="heading"><a href="/jobsearch">Job Search</a></li>
+          <li class="uk-active"><a href="/">Home</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li class="uk-active"><a href="#">Job Search</a></li>
           <div class="uk-navbar-item">
             <a href="/login"><button class="uk-button uk-button-default" id="login">Log in</button></a>
           </div>
@@ -41,50 +41,56 @@
       </div>
     </nav>
   </header>
-  <h1 id="heading" class="uk-flex-center" class="uk-heading-medium">Jobs</h1>
-  <div class="uk-margin">
-    <form class="uk-search uk-search-default">
-      <span uk-search-icon></span>
-      <input class="uk-search-input" type="search" placeholder="Search Jobs...">
-    </form>
-  </div>
-  <div class="row">
-    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-      <div class="uk-card-media-left uk-cover-container">
-        <img src="https://via.placeholder.com/600x400" alt="" uk-cover>
-        <canvas width="600" height="400"></canvas>
+
+  <section id="resources" class="uk-height-1-1 uk-flex uk-flex-center">
+    <div class="wiki-container">
+      <div class="main-header uk-flex uk-flex-middle">
+        <h1 class="main-heading">Jobs</h1>
+        <form class="uk-search uk-search-default">
+          <span uk-search-icon></span>
+          <input class="uk-search-input" type="search" placeholder="Search Jobs...">
+        </form>
       </div>
-      <div>
-        <div class="uk-card-body">
-          <h3 class="uk-card-title">Media Left</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+
+      <div class="row">
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+          <div class="uk-card-media-left uk-cover-container">
+            <img src="https://via.placeholder.com/600x400" alt="" uk-cover>
+            <canvas width="600" height="400"></canvas>
+          </div>
+          <div>
+            <div class="uk-card-body">
+              <h3 class="uk-card-title">Media Left</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+          </div>
+        </div>
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+          <div class="uk-card-media-left uk-cover-container">
+            <img src="images/light.jpg" alt="" uk-cover>
+            <canvas width="600" height="400"></canvas>
+          </div>
+          <div>
+            <div class="uk-card-body">
+              <h3 class="uk-card-title">Media Left</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+          </div>
+        </div>
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+          <div class="uk-card-media-left uk-cover-container">
+            <img src="images/light.jpg" alt="" uk-cover>
+            <canvas width="600" height="400"></canvas>
+          </div>
+          <div>
+            <div class="uk-card-body">
+              <h3 class="uk-card-title">Media Left</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-      <div class="uk-card-media-left uk-cover-container">
-        <img src="images/light.jpg" alt="" uk-cover>
-        <canvas width="600" height="400"></canvas>
-      </div>
-      <div>
-        <div class="uk-card-body">
-          <h3 class="uk-card-title">Media Left</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-        </div>
-      </div>
-    </div>
-    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-      <div class="uk-card-media-left uk-cover-container">
-        <img src="images/light.jpg" alt="" uk-cover>
-        <canvas width="600" height="400"></canvas>
-      </div>
-      <div>
-        <div class="uk-card-body">
-          <h3 class="uk-card-title">Media Left</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-        </div>
-      </div>
-    </div>
+  </section>
 
 </body>
 
