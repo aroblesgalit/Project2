@@ -29,6 +29,10 @@ header {
   max-width: 1200px;
 }
 
+.main-content {
+  width: 100%;
+}
+
 form.signup,
 form.login {
   margin-top: 50px;

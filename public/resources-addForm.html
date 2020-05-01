@@ -14,7 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit-icons.min.js"></script>
 
-    <link href="stylesheets/style.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -60,8 +60,7 @@
                     <label class="uk-form-label" for="form-field">Field:</label>
                     <div class="uk-form-controls">
                         <select class="uk-select" id="form-field">
-                            <option>Option 01</option>
-                            <option>Option 02</option>
+                            <option>--Select a field--</option>
                         </select>
                     </div>
                 </div>
@@ -93,7 +92,7 @@
                 </div>       
 
                 <div class="uk-flex uk-flex-right">
-                    <button id="cancelResourceButton" class="uk-button uk-button-danger uk-margin-right">Cancel</button><button id="addResourceButton" class="uk-button uk-button-primary">Add</button>  
+                    <button id="cancelResourceButton" class="uk-button uk-button-danger uk-margin-right">Cancel</button><button type="submit" id="addResourceButton" class="uk-button uk-button-primary">Add</button>  
                 </div>                   
             </form>
 
@@ -101,7 +100,7 @@
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/resources.js"></script>
+    <script type="text/javascript" src="/js/resources-addForm.js"></script>
     <!-- <script type="text/javascript" src="js/loginButton.js"></script> -->
 
 </body>
