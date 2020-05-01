@@ -11,16 +11,16 @@ module.exports = function(sequelize, Datatypes) {
 
   // Associate table with Resources table
   Field.associate = function(models) {
-    Field.hasMany(models.Resource, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-    // Field.hasMany(models.User, {
+    // Field.hasMany(models.Resource, {
     //   foreignKey: {
     //     allowNull: false
     //   }
     // });
+    Field.hasMany(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
   };
 
   return Field;

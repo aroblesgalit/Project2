@@ -34,7 +34,8 @@
                     <li><a href="/fields">Fields</a></li>
                     <li><a href="/jobsearch">Job Search</a></li>
                     <div class="uk-navbar-item" id="loginAvatar">
-                        <div id="settings" class="uk-flex uk-flex-center uk-flex-middle"><span uk-icon="icon:  user"></span></div>
+                        <div id="settings" class="uk-flex uk-flex-center uk-flex-middle"><span
+                                uk-icon="icon:  user"></span></div>
                         <div uk-dropdown>
                             <ul class="uk-nav uk-dropdown-nav">
                                 <li class="uk-active"><a href="/userProfile">User Profile</a></li>
@@ -54,10 +55,10 @@
                 <div class="uk-card-header">
                     <div class="uk-grid-small uk-flex-middle" uk-grid>
                         <div id="profile-container">
-                            <image id="profileImage" src="http://lorempixel.com/100/100" />
-                         </div>
-                         <input id="imageUpload" type="file" 
-                                name="profile_photo" placeholder="Photo" required="" capture>
+                            <image id="profileImage" src="https://via.placeholder.com/200x200" />
+                        </div>
+                        <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required=""
+                            capture>
                         <div class="uk-width-expand">
                             <h3 class="uk-card-title uk-margin-remove-bottom">User Profile</h3>
                             <p class="uk-text-meta uk-margin-remove-top"><time datetime="moment.js">April 28,
@@ -69,16 +70,41 @@
                     <p id="userProfileEmailRender">Email: </p>
                 </div>
                 <div class="uk-card-footer">
-                    <a href="#" class="uk-button uk-button-text" id="userFieldRender">Field: Software Development</a>
+                    <p id="userFieldRender">Field: <!--Software Development--></p>
                 </div>
                 <br>
                 <br>
-                <a href="./user-editForm.html"><button class="uk-button uk-button-default uk-flex-middle" id="editButton">Edit profile</button></a>
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                EDIT PROFILE BUTTON, not using yet because we are only allowing the user to edit TWO things which can be done
+                on their profile page. Also, the link to the .js file at the bottom of the page must be changed if used.
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                <!--<a href="./user-editForm.html"><button class="uk-button uk-button-default uk-flex-middle" id="editButton">Edit profile</button></a>-->
             </div>
-
-
-            <!-- Slider section for resources posted cards-->
-            <div uk-slider="center: true" class="uk-width-4-5@m">
+            <div class="resource-results uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-left" uk-grid>
+                <!--<div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="https://via.placeholder.com/400x200" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Media Top</h3>
+                            <div class="descript-button uk-flex">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt.</p>
+                                <a href="google.com">
+                                    <button class="go-button uk-flex uk-flex-center uk-flex-middle">
+                                        <span uk-icon="icon: chevron-right"></span>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- Slider section for resources posted cards-->
+        <!--<div uk-slider="center: true" class="uk-width-4-5@m">
 
                 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
 
@@ -154,12 +180,9 @@
 
                 <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
 
-            </div>
-        </div>
-    </section>
+            </div>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/userProfile.js"></script>
-    <script type="text/javascript" src="js/userEdit.js"></script>
 
 </body>
 
