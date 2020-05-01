@@ -23,8 +23,6 @@ $(document).ready(function() {
   function getFields() {
     $.get("/api/fields")
       .then(function(data) {
-        console.log(data);
-
         // Expecting data to be an array of "fields" as objects
         for (var i = 0; i < data.length; i++) {
           var option = $("<option>").val(data[i].id);
