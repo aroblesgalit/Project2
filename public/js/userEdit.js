@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   //sets our updating variable to false initially
   // var updating = false;
   // //sets this variable to plug into our user's field choice html element
