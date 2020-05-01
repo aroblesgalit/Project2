@@ -10,6 +10,19 @@ module.exports = function(app) {
         res.json(dbFields);
       });
   });
+  //GETs fields based on field id
+  app.get("/api/fields/:id", function(req, res) {
+    db.Field.findOne({
+      where: {
+        id: req.params.id
+      }
+    })
+      // findAll returns all entries for table when used alone
+      .then(function(dbField) {
+        // We can access all resources as argument inside of callback
+        res.json(dbField);
+      });
+  });
 
   // //retrieves a Field post
   // app.get("/api/field/:id", function(req, res) {
