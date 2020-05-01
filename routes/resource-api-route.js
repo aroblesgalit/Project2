@@ -34,12 +34,12 @@ module.exports = function(app) {
   //   });
   // });
 
-  //creates and saves new resources
-  // app.post("/api/resource", function(req, res) {
-  //   db.Resource.create(req.body).then(function(dbResource) {
-  //     res.json(dbResource);
-  //   });
-  // });
+  // creates and saves new resources
+  app.post("/api/resource", function(req, res) {
+    db.Resource.create(req.body).then(function(dbResource) {
+      res.json(dbResource);
+    });
+  });
 
   //deletes resources
   // app.delete("/api/resource/:id", function(req, res) {
