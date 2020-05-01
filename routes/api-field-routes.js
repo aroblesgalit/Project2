@@ -11,32 +11,13 @@ module.exports = function(app) {
       });
   });
 
-  //   // Get route for retrieving a single resource
-  //   app.get("/api/resources/:id", function(req, res) {
-  //     db.Resources.findOne({
-  //       where: {
-  //         id: req.params.id
-  //       }
-  //     }).then(function(dbResources) {
-  //       res.json(dbResources);
-  //     });
-  //   });
-  //   let resourceId = req.params.resourceId;
-
-  //   // Find all associated resources for given field with given title
-  //   db.Titles.findAll({
-  //     where: {
-  //       resource: resourceId
-  //     },
-  //     include: [
-  //       {
-  //         model: db.Resources
-  //       }
-  //     ]
-  //   }).then(function(dbResources) {
-  //     res.json(dbResources);
-  //   });
-  // };
-
-  // app.get("/api/fields");
+  app.post("/api/fields", function(req, res) {
+    db.Field.create(req.body)
+      .then(function(dbField) {
+        res.json(dbField);
+      })
+      .catch(function(err) {
+        console.log(err);
+      });
+  });
 };
