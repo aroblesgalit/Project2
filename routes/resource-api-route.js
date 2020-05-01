@@ -35,10 +35,14 @@ module.exports = function(app) {
   // });
 
   // creates and saves new resources
-  app.post("/api/resource", function(req, res) {
-    db.Resource.create(req.body).then(function(dbResource) {
-      res.json(dbResource);
-    });
+  app.post("/api/resources", function(req, res) {
+    db.Resource.create(req.body)
+      .then(function(dbResource) {
+        res.json(dbResource);
+      })
+      .catch(function(err) {
+        console.log(err);
+      });
   });
 
   //deletes resources
