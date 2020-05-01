@@ -12,8 +12,9 @@ $(document).ready(function() {
       .then(function(data) {
         // Expecting data to be an array of "fields" as objects
         for (var i = 0; i < data.length; i++) {
-          fieldsList.push(data.title);
+          fieldsList.push(data[i].title);
         }
+        console.log(fieldsList);
       })
       .catch(function(err) {
         console.log(err);
@@ -42,7 +43,7 @@ $(document).ready(function() {
       title: title
     })
       .then(function() {
-        window.location.replace("/resources");
+        window.location.replace("/fields");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
       .catch(handleLoginErr);
