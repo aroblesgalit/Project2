@@ -83,4 +83,9 @@ $(document).ready(function() {
   //       window.location.href = "/userProfile";
   //     });
   //   }
+  // This file just does a GET request to figure out which user is logged in
+  // and updates the HTML on the user's EDIT PROFILE page
+  $.get("/api/user_data").then(function(data) {
+    $("#userProfileEmailRender").append(data.email);
+  });
 });
