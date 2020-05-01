@@ -4,6 +4,10 @@ USE resources_db;
 INSERT INTO fields (title, createdAt, updatedAt)
 VALUES ("Front-end Web Dev", NOW(), NOW()),
  ("Graphic Designer", NOW(), NOW());
+ 
+-- USER
+INSERT INTO users (email, password, createdAt, updatedAt, FieldId)
+VALUES ("aroblesgalit@gmail.com", "dbpassword", NOW(), NOW(), 1);
 
 -- USER
 INSERT INTO users (email, password, createdAt, updatedAt, FieldId)
