@@ -53,7 +53,10 @@ $(document).ready(function() {
     var resources;
     //console.log(data.id);
     getResources(data.id);
-
+    //make a get request for user's field
+    $.get("/api/fields/" + data.FieldId).then(function(data) {
+      $("#userFieldRender").append(data.title);
+    });
     // This function grabs resources from the database and updates the view based on a field id
     function getResources(userId) {
       // Make a get request to /api/resources/ plust the field id
