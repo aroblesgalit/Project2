@@ -23,8 +23,6 @@ $(document).ready(function() {
   function getFields() {
     $.get("/api/fields")
       .then(function(data) {
-        console.log(data);
-
         // Expecting data to be an array of "fields" as objects
         for (var i = 0; i < data.length; i++) {
           var option = $("<option>").val(data[i].id);
@@ -95,6 +93,7 @@ $(document).ready(function() {
       .text(resource.title);
     var descriptionDiv = $("<div>").addClass("descript-button uk-flex");
     var description = $("<p>").text(resource.description);
+    var linkUrl = $("<a>").attr("href", resource.link);
     var resourceButton = $("<button>").addClass(
       "go-button uk-flex uk-flex-center uk-flex-middle"
     );
@@ -105,7 +104,7 @@ $(document).ready(function() {
       .append(
         descriptionDiv
           .append(description)
-          .append(resourceButton.append(buttonIcon))
+          .append(linkUrl.append(resourceButton.append(buttonIcon)))
       );
     newResourceCard.append(
       resourceCardWrapper.append(cardImageDiv.append(cardImage)).append(bodyDiv)
