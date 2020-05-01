@@ -1,10 +1,12 @@
 $(document).ready(function() {
+
   //sets our updating variable to false initially
   // var updating = false;
   // //sets this variable to plug into our user's field choice html element
   // var userField = $("#userFieldRenderChoice");
   // handles the form submission when the user enters a field and hits submit
   // HAD TO COMMENT THESE OUT CUZ IT WAS CAUSING ISSUE FOR NOW --ALVIN
+
   // $(userFieldForm).on("submit", handleFormSubmit);
   // function handleFormSubmit(event) {
   //   event.preventDefault();
@@ -83,4 +85,9 @@ $(document).ready(function() {
   //       window.location.href = "/userProfile";
   //     });
   //   }
+  // This file just does a GET request to figure out which user is logged in
+  // and updates the HTML on the user's EDIT PROFILE page
+  $.get("/api/user_data").then(function(data) {
+    $("#userProfileEmailRender").append(data.email);
+  });
 });
