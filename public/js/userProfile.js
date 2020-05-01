@@ -47,6 +47,9 @@ $(document).ready(function() {
 
   $.get("/api/user_data").then(function(data) {
     $("#userProfileEmailRender").append(data.email);
+    $.get("/api/resources/" + data.id).then(function(data) {
+      $("").append(data.resource);
+    });
   });
   // //sets our updating variable to false initially
   // var updating = false;
