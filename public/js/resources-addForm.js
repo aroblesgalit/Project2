@@ -7,11 +7,6 @@ $(document).ready(function() {
   var link = $("#form-link");
   var imageUrl = $("#form-imageUrl");
 
-  // Get user's id
-  var UserId = $.get("/api/user_data").then(function(data) {
-    return data.id;
-  });
-
   // Render field select
   // Getting references to our form and inputs
   var fieldsSelect = $("#form-field");
@@ -40,15 +35,29 @@ $(document).ready(function() {
       .val();
   });
 
+  var UserId;
+  // Get user's id
+  function getUserId() {
+    $.get("/api/user_data")
+      .then(function(data) {
+        UserId = data.id;
+      })
+      .catch(function(err) {
+        console.log(err);
+      });
+  }
+  getUserId();
+
   // When the signup button is clicked, we validate the email and password are not blank
   addForm.on("submit", function(event) {
     event.preventDefault();
+
     var resourceData = {
-      FieldId: selectedFieldId,
-      title: title,
-      description: description,
-      link: link,
-      imageUrl: imageUrl,
+      FieldId: parseInt(selectedFieldId.val()),
+      title: title.val().trim(),
+      description: description.val().trim(),
+      link: link.val().trim(),
+      imageUrl: imageUrl.val().trim(),
       UserId: UserId
     };
     console.log(resourceData);
@@ -67,7 +76,7 @@ $(document).ready(function() {
   // Does a post to the resources/:fieldId route. If successful, we are redirected to the resource page
   // Otherwise we log any errors
   function addResource(FieldId, title, description, link, imageUrl, UserId) {
-    $.post("/api/resources/" + FieldId, {
+    $.post("/api/resources", {
       FieldId: FieldId,
       title: title,
       description: description,
@@ -76,7 +85,7 @@ $(document).ready(function() {
       UserId: UserId
     })
       .then(function() {
-        window.location.replace("/resources/" + selectedFieldId);
+        window.location.replace("/resources");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
       .catch(handleLoginErr);

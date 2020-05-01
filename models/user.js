@@ -51,12 +51,13 @@ module.exports = function(sequelize, DataTypes) {
   //   });
   // };
   // User belongs to a Field
-  // User.associate = function(models) {
-  //   User.belongsTo(models.Field, {
-  //     foreignKey: {
-  //       allowNull: true
-  //     }
-  //   });
-  // };
+  User.associate = function(models) {
+    User.belongsTo(models.Field, {
+      foreignKey: {
+        allowNull: false,
+        defaultValue: 1
+      }
+    });
+  };
   return User;
 };
