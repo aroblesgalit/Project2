@@ -22,6 +22,26 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/resources/:userId", function(req, res) {
+    db.Resource.findAll({
+      where: {
+        userId: req.params.userId
+      },
+      include: [
+        {
+          model: db.Field
+        }
+      ],
+      include: [
+        {
+          model: db.User
+        }
+      ]
+    }).then(function(dbResource) {
+      res.json(dbResource);
+    });
+  });
+
   // //retrieves a resource post
   // app.get("/api/resource/:id", function(req, res) {
   //   db.Resource.findOne({
