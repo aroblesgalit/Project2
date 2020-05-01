@@ -27,7 +27,6 @@ $(document).ready(function() {
   //     submitPost(newPost);
   //   }
   // }
-
   $("#profileImage").click(function() {
     $("#imageUpload").click();
   });
