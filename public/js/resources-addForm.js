@@ -94,4 +94,9 @@ $(document).ready(function() {
     //console.log(err);
     $("#alert").fadeIn(500);
   }
+
+  // Cancel button logic
+  $("#cancelResourceButton").click(function() {
+    window.location.replace("/resources");
+  });
 });

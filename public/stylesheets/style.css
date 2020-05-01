@@ -13,6 +13,10 @@ header {
   margin-bottom: 60px;
 }
 
+section {
+  padding: 20px;
+}
+
 .main-menu {
   width: 100%;
 }
@@ -26,6 +30,7 @@ header {
 }
 
 .wiki-container {
+  width: 1200px;
   max-width: 1200px;
 }
 
@@ -68,7 +73,7 @@ form.login {
 }
 
 #addResource, #addField {
-  min-width: 600px;
+  max-width: 600px;
 }
 
 

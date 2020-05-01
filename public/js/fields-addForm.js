@@ -54,4 +54,9 @@ $(document).ready(function() {
     //console.log(err);
     $("#alert").fadeIn(500);
   }
+
+  // Cancel button logic
+  $("#cancelFieldButton").click(function() {
+    window.location.replace("/fields");
+  });
 });
