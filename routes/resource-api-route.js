@@ -21,7 +21,7 @@ module.exports = function(app) {
       res.json(dbResource);
     });
   });
-
+  // gits the resources for the specfic user
   app.get("/api/resources/:userId", function(req, res) {
     db.Resource.findAll({
       where: {
