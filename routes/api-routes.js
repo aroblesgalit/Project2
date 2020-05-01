@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
+var axios = require("axios");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -16,7 +17,8 @@ module.exports = function(app) {
   app.post("/api/signup", function(req, res) {
     db.User.create({
       email: req.body.email,
-      password: req.body.password
+      password: req.body.password,
+      FieldId: req.body.FieldId
     })
       .then(function() {
         res.redirect(307, "/api/login");
@@ -42,7 +44,8 @@ module.exports = function(app) {
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
         email: req.user.email,
-        id: req.user.id
+        id: req.user.id,
+        FieldId: req.user.FieldId
       });
     }
   });
@@ -58,4 +61,26 @@ module.exports = function(app) {
   //       res.json(dbPost);
   //     });
   //   });
+
+  app.get("/api/jobSearch/:keywords", function(req, res) {
+    var queryUrl = `
+    http://api.dataatwork.org/v1/jobs/autocomplete?begins_with=${req.params.keywords}
+    `;
+
+    var jobSearchResults = axios
+      .get(queryUrl)
+      .then(function(res) {
+        console.log(res.data);
+        return res;
+      })
+      .catch(function(err) {
+        console.log(err);
+      });
+
+    // Otherwise send back the user's email and id
+    // Sending back a password, even a hashed password, isn't a good idea
+    res.json({
+      jobSearchResults
+    });
+  });
 };

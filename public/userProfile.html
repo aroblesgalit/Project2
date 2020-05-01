@@ -24,7 +24,7 @@
         <nav class="uk-navbar-container" uk-navbar>
             <!-- Logo -->
             <div class="uk-navbar-left">
-                <a class="uk-navbar-item uk-logo" href="#">Career Field Resource Wiki</a>
+                <a class="uk-navbar-item uk-logo" href="/">Career Field Resource Wiki</a>
             </div>
             <!-- Menu -->
             <div class="uk-navbar-right">
@@ -53,9 +53,11 @@
             <div class="uk-card uk-card-default uk-width-1-4@m userProfile">
                 <div class="uk-card-header">
                     <div class="uk-grid-small uk-flex-middle" uk-grid>
-                        <div class="uk-width-auto">
-                            <img class="uk-border-circle" width="80" height="80" src="https://via.placeholder.com/200">
-                        </div>
+                        <div id="profile-container">
+                            <image id="profileImage" src="http://lorempixel.com/100/100" />
+                         </div>
+                         <input id="imageUpload" type="file" 
+                                name="profile_photo" placeholder="Photo" required="" capture>
                         <div class="uk-width-expand">
                             <h3 class="uk-card-title uk-margin-remove-bottom">User Profile</h3>
                             <p class="uk-text-meta uk-margin-remove-top"><time datetime="moment.js">April 28,
@@ -69,6 +71,9 @@
                 <div class="uk-card-footer">
                     <a href="#" class="uk-button uk-button-text" id="userFieldRender">Field: Software Development</a>
                 </div>
+                <br>
+                <br>
+                <a href="./user-editForm.html"><button class="uk-button uk-button-default uk-flex-middle" id="editButton">Edit profile</button></a>
             </div>
 
 
@@ -154,6 +159,7 @@
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/userProfile.js"></script>
+    <script type="text/javascript" src="js/userEdit.js"></script>
 
 </body>
 

@@ -1,91 +1,111 @@
-<html>
-  <head>
-    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
-    <!-- UIkit CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/css/uikit.min.css" />
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- UIkit JS -->
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit-icons.min.js"></script>
+<head>
+  <title>Career Field Resource Wiki</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/css/uikit.min.css" />
+
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+    integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit-icons.min.js"></script>
+
+  <link href="stylesheets/style.css" rel="stylesheet">
+
+</head>
+
+<body id="jobsearchbody">
+  <header>
     <!-- Nav bar -->
     <nav class="uk-navbar-container" uk-navbar>
       <!-- Logo -->
       <div class="uk-navbar-left">
-          <a class="uk-navbar-item uk-logo" href="#">Career Field Resource Wiki</a>
+        <a class="uk-navbar-item uk-logo" href="#">Career Field Resource Wiki</a>
       </div>
       <!-- Menu -->
-      <div class="uk-navbar-right">        
-          <ul class="uk-navbar-nav">
-              <li id="heading" class="uk-active"><a href="/">Home</a></li>
-              <li id="heading"><a href="/resources">Resources</a></li>
-              <li id="heading"><a href="/jobsearch">Job Search</a></li>
-              <div class="uk-navbar-item">
-                <a href="/login"><button class="uk-button uk-button-default" id="login">Log in</button></a>
-              </div>
-          </ul>       
-      </div>      
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav">
+          <li class="uk-active"><a href="/">Home</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li class="uk-active"><a href="#">Job Search</a></li>
+          <div class="uk-navbar-item">
+            <a href="/login"><button class="uk-button uk-button-default" id="login">Log in</button></a>
+          </div>
+        </ul>
+      </div>
     </nav>
-  </head>
-  <body id="jobsearchbody">
-    <h1 id="heading" class="uk-flex-center" class="uk-heading-medium">Jobs</h1>
-    <div class="uk-margin">
-      <form class="uk-search uk-search-default">
+  </header>
+
+  <section id="resources" class="uk-height-1-1 uk-flex uk-flex-center">
+    <div class="wiki-container">
+      <div class="main-header uk-flex uk-flex-middle">
+        <h1 class="main-heading">Jobs</h1>
+        <form class="uk-search uk-search-default">
           <span uk-search-icon></span>
           <input class="uk-search-input" type="search" placeholder="Search Jobs...">
-      </form>
-  </div>
+        </form>
+      </div>
+
       <div class="row">
         <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
           <div class="uk-card-media-left uk-cover-container">
             <img src="https://via.placeholder.com/600x400" alt="" uk-cover>
-              <canvas width="600" height="400"></canvas>
+            <canvas width="600" height="400"></canvas>
           </div>
           <div>
-              <div class="uk-card-body">
-                  <h3 class="uk-card-title">Media Left</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-              </div>
-          </div>
-      </div>
-      <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-        <div class="uk-card-media-left uk-cover-container">
-            <img src="images/light.jpg" alt="" uk-cover>
-            <canvas width="600" height="400"></canvas>
-        </div>
-        <div>
             <div class="uk-card-body">
-                <h3 class="uk-card-title">Media Left</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-            </div>
-        </div>
-    </div>
-    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-      <div class="uk-card-media-left uk-cover-container">
-          <img src="images/light.jpg" alt="" uk-cover>
-          <canvas width="600" height="400"></canvas>
-      </div>
-      <div>
-          <div class="uk-card-body">
               <h3 class="uk-card-title">Media Left</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
           </div>
+        </div>
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+          <div class="uk-card-media-left uk-cover-container">
+            <img src="images/light.jpg" alt="" uk-cover>
+            <canvas width="600" height="400"></canvas>
+          </div>
+          <div>
+            <div class="uk-card-body">
+              <h3 class="uk-card-title">Media Left</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+          </div>
+        </div>
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+          <div class="uk-card-media-left uk-cover-container">
+            <img src="images/light.jpg" alt="" uk-cover>
+            <canvas width="600" height="400"></canvas>
+          </div>
+          <div>
+            <div class="uk-card-body">
+              <h3 class="uk-card-title">Media Left</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+          </div>
+        </div>
       </div>
-  </div>
-    
-  </body>
+  </section>
 
-	<footer>
-		<div class="footer-contact-information">
-			<div class="footer-supplemental">
-				<a href="#">Follow Us @ on Twitter</a> |
-				<a href="#">View this Site on GitHub</a>
-			</div>
-		</div>
-		<div class="footer-logo">
-			<p>Logo Goes Here</p>
-		</div>
-	</footer>
-   
+</body>
+
+<footer>
+  <div class="footer-contact-information">
+    <div class="footer-supplemental">
+      <a href="#">Follow Us @ on Twitter</a> |
+      <a href="#">View this Site on GitHub</a>
+    </div>
+  </div>
+  <div class="footer-logo">
+    <p>Logo Goes Here</p>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jobSearch.js"></script>
+
 </html>

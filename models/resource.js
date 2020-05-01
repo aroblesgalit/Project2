@@ -34,16 +34,12 @@ module.exports = function(sequelize, Datatypes) {
   //makes the resources belong to a specific field.
   //Prevents a resource from being created without a field I.D.
   Resource.associate = function(models) {
-    Resource.belongsTo(models.Field, {
+    models.Resource.belongsTo(models.Field, {
       foreignKey: {
         allowNull: false
       }
     });
-  };
-
-  //   makes the respourses belong to the user table as well
-  Resource.associate = function(models) {
-    Resource.belongsTo(models.User, {
+    models.Resource.belongsTo(models.User, {
       foreignKey: {
         allowNull: false
       }

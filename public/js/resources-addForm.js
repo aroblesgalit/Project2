@@ -1,12 +1,20 @@
 $(document).ready(function() {
   // Getting references to our form and input
-  var signUpForm = $("form.signup");
-  var emailInput = $("input#email-input");
-  var passwordInput = $("input#password-input");
+  var addForm = $("#addResource");
+  var selectedFieldId;
+  var title = $("#form-title");
+  var description = $("#form-description");
+  var link = $("#form-link");
+  var imageUrl = $("#form-imageUrl");
+
+  // Get user's id
+  var UserId = $.get("/api/user_data").then(function(data) {
+    return data.id;
+  });
 
   // Render field select
   // Getting references to our form and inputs
-  var fieldsSelect = $("#fieldsSelect");
+  var fieldsSelect = $("#form-field");
 
   // Render fields select options
   getFields();
@@ -32,37 +40,43 @@ $(document).ready(function() {
       .val();
   });
 
-  console.log(selectedFieldId);
-
   // When the signup button is clicked, we validate the email and password are not blank
-  signUpForm.on("submit", function(event) {
+  addForm.on("submit", function(event) {
     event.preventDefault();
-    var userData = {
-      email: emailInput.val().trim(),
-      password: passwordInput.val().trim(),
-      FieldId: selectedFieldId[0].value
+    var resourceData = {
+      FieldId: selectedFieldId,
+      title: title,
+      description: description,
+      link: link,
+      imageUrl: imageUrl,
+      UserId: UserId
     };
-    console.log(userData);
+    console.log(resourceData);
 
-    if (!userData.email || !userData.password) {
-      return;
-    }
-    // If we have an email and password, run the signUpUser function
-    signUpUser(userData.email, userData.password, userData.FieldId);
-    emailInput.val("");
-    passwordInput.val("");
+    // if (!userData.email || !userData.password) {
+    //   return;
+    // }
+    // Add resource
+    addResource();
+    title.val("");
+    description.val("");
+    link.val("");
+    imageUrl.val("");
   });
 
-  // Does a post to the signup route. If successful, we are redirected to the members page
+  // Does a post to the resources/:fieldId route. If successful, we are redirected to the resource page
   // Otherwise we log any errors
-  function signUpUser(email, password, FieldId) {
-    $.post("/api/signup", {
-      email: email,
-      password: password,
-      FieldId: FieldId
+  function addResource(FieldId, title, description, link, imageUrl, UserId) {
+    $.post("/api/resources/" + FieldId, {
+      FieldId: FieldId,
+      title: title,
+      description: description,
+      link: link,
+      imageUrl: imageUrl,
+      UserId: UserId
     })
       .then(function() {
-        window.location.replace("/userProfile");
+        window.location.replace("/resources/" + selectedFieldId);
         // If there's an error, handle it by throwing up a bootstrap alert
       })
       .catch(handleLoginErr);

@@ -29,6 +29,10 @@ header {
   max-width: 1200px;
 }
 
+.main-content {
+  width: 100%;
+}
+
 form.signup,
 form.login {
   margin-top: 50px;
@@ -104,3 +108,31 @@ form.login {
 }
 
 a:link,a:visited{text-decoration:none; color:#50394c;} 
+
+/* USER PROFILE EDIT */
+
+#imageUpload
+{
+    display: none;
+}
+
+#profileImage
+{
+    cursor: pointer;
+}
+
+#profile-container {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#profile-container img {
+    width: 150px;
+    height: 150px;
+}
