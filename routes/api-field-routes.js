@@ -23,14 +23,14 @@ module.exports = function(app) {
     });
   });
 
-//   creates and saves new fields
+  //   creates and saves new fields
   app.post("/api/field", function(req, res) {
     db.Fields.create(req.body).then(function(dbFields) {
       res.json(dbFields);
     });
   });
 
-//   deletes fields
+  //   deletes fields
   app.delete("/api/field/:id", function(req, res) {
     db.Fields.destroy({
       where: {
@@ -41,7 +41,7 @@ module.exports = function(app) {
     });
   });
 
-//   updates fields
+  //   updates fields
   app.put("/api/field", function(req, res) {
     db.Fields.update(req.body, {
       where: {
