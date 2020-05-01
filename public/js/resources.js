@@ -8,6 +8,8 @@ $(document).ready(function() {
 
   // Render fields select options
   getFields();
+  // Render resources based on the first option
+  getResources(1);
 
   // Add an change event to the fieldsSelect dropdown
   fieldsSelect.change(function() {
