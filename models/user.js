@@ -42,19 +42,11 @@ module.exports = function(sequelize, DataTypes) {
       null
     );
   });
-  User.associate = function(models) {
-    User.hasMany(models.Resource, {
-      onDelete: "cascade",
-      foreignKey: {
-        allowNull: true
-      }
-    });
-  };
-  // // User has many resources
   // User.associate = function(models) {
   //   User.hasMany(models.Resource, {
+  //     onDelete: "cascade",
   //     foreignKey: {
-  //       allowNull: false
+  //       allowNull: true
   //     }
   //   });
   // };

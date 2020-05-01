@@ -4,28 +4,28 @@ $(document).ready(function() {
   //sets this variable to plug into our user's field choice html element
   var userField = $("#userFieldRenderChoice");
   // handles the form submission when the user enters a field and hits submit
-  $(userFieldForm).on("submit", handleFormSubmit);
-  function handleFormSubmit(event) {
-    event.preventDefault();
-    // Wont submit the change if we are missing a string
-    if (!userField.val().trim()) {
-      return;
-    }
-    // Constructing a newPost object to hand to the database
-    // var newFieldChoice = {
-    //   title: fieldTitle.val().trim(),
-    //   fieldId: authorSelect.val()
-    // };
+  // $(userFieldForm).on("submit", handleFormSubmit);
+  // function handleFormSubmit(event) {
+  //   event.preventDefault();
+  //   // Wont submit the change if we are missing a string
+  //   if (!userField.val().trim()) {
+  //     return;
+  //   }
+  //   // Constructing a newPost object to hand to the database
+  //   // var newFieldChoice = {
+  //   //   title: fieldTitle.val().trim(),
+  //   //   fieldId: authorSelect.val()
+  //   // };
 
-    // If we're updating a post run updatePost to update a post
-    // Otherwise run submitPost to create a whole new post
-    if (updating) {
-      newPost.id = postId;
-      updatePost(newPost);
-    } else {
-      submitPost(newPost);
-    }
-  }
+  //   // If we're updating a post run updatePost to update a post
+  //   // Otherwise run submitPost to create a whole new post
+  //   if (updating) {
+  //     newPost.id = postId;
+  //     updatePost(newPost);
+  //   } else {
+  //     submitPost(newPost);
+  //   }
+  // }
 
   $("#profileImage").click(function() {
     $("#imageUpload").click();
