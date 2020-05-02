@@ -93,7 +93,9 @@ $(document).ready(function() {
     var cardTitle = $("<h3>")
       .addClass("uk-card-title")
       .text(resource.title);
-    var descriptionDiv = $("<div>").addClass("descript-button uk-flex");
+    var descriptionDiv = $("<div>").addClass(
+      "descript-button uk-flex uk-flex-middle"
+    );
     var description = $("<p>").text(resource.description);
     var linkUrl = $("<a>").attr("href", resource.link);
     var resourceButton = $("<button>").addClass(
