@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+
+/* Theme colors */
 html {
   --color-dark: #12141f;
   --color-blue: #3d5af1;
@@ -16,6 +18,8 @@ body {
   min-height: 100vh;
 }
 
+
+/* Header */
 header {
   margin-bottom: 60px;
   background-color: var(--color-dark);
@@ -33,21 +37,12 @@ header {
   border: 1px solid var(--color-blue);
 }
 
-.tagline {
-  font-size: 22px;
-}
-
 .logo-text {
   color: var(--color-light)
 }
 
 a.nav-link:link, a.nav-link:visited, a.logo-text:link, a.logo-text:visited {
   color: var(--color-light)
-}
-
-.banner-img {
-  height: 600px;
-  padding: 20px;
 }
 
 .mobileMenu-toggle {
@@ -73,9 +68,50 @@ a.nav-link:link, a.nav-link:visited, a.logo-text:link, a.logo-text:visited {
   width: 100%;
 }
 
+#settings {
+  height: 40px;
+  width: 40px;
+  background-color: var(--color-lightblue);
+  border-radius: 20px;
+  color: var(--color-dark);
+  cursor: pointer;
+}
+
+#settings:hover {
+  background-color: var(--color-blue);
+}
+
+a.logout:link, a.logout:visited {
+  color: #666;
+}
+
+
+/* Hero image */
+.tagline {
+  font-size: 22px;
+}
+
+.banner-img {
+  height: 600px;
+  padding: 20px;
+}
+
+
+/* Home page */
 a.home-card-link:link {
   text-decoration: none;
 }
+
+.home-card {
+  border: 1px solid white;
+}
+
+.home-card:hover {
+  border: 1px solid var(--color-lightblue);
+}
+
+
+/* On every page */
 
 .main-header {
   margin-bottom: 40px;
@@ -102,14 +138,8 @@ section h2 {
   margin-bottom: 40px;
 }
 
-.home-card {
-  border: 1px solid white;
-}
 
-.home-card:hover {
-  border: 1px solid var(--color-lightblue);
-}
-
+/* Login */
 .loginForm {
   padding-top: 140px;
 }
@@ -123,28 +153,19 @@ form.login {
   margin-top: 50px;
 }
 
-#settings {
-  height: 40px;
-  width: 40px;
-  background-color: var(--color-lightblue);
-  border-radius: 20px;
-  color: var(--color-dark);
-  cursor: pointer;
-}
-
-#settings:hover {
-  background-color: var(--color-blue);
-}
-
-a.logout:link, a.logout:visited {
-  color: #666;
-}
-
-
 
 /* Resources */
 #resources {
   padding-top: 140px;
+}
+
+.card-title {
+  max-height: 40px;
+}
+
+.card-description {
+  max-height: 80px;
+  margin-top: 0;
 }
 
 .go-button {
@@ -154,6 +175,7 @@ a.logout:link, a.logout:visited {
   color: white;
   padding: 6px;
   border: none;
+  margin: 0;
 }
 
 .go-button:hover {
@@ -257,7 +279,7 @@ a.logout:link, a.logout:visited {
 
 
 
-
+/* Media Queries */
 /* Small devices (Tablets and mobile, 768px and below) */
 @media only screen and (max-width: 768px) {
 
@@ -267,6 +289,18 @@ a.logout:link, a.logout:visited {
 
 .mobileMenu-toggle {
   display: block;
+}
+
+#resources {
+  padding-top: 110px;
+}
+
+.main-heading {
+  margin-bottom: 10px;
+}
+
+#addButton {
+  margin-top: 10px;
 }
 
 }

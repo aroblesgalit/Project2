@@ -17,15 +17,12 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <!-- My JS file -->
-    <!-- <script src="./public/js/logic.js"></script> -->
-
     <!-- link to our style sheet -->
     <link rel="stylesheet" href="stylesheets/style.css" />
-
 </head>
 
 <body>
+    <!-- Header -->
     <header class="uk-position-fixed uk-width-expand">
         <!-- Nav bar -->
         <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar="mode: click">
@@ -35,6 +32,7 @@
             </div>
             <!-- Menu -->
             <div class="uk-navbar-right">
+                <!-- Menu for desktop size screens -->
                 <ul class="desktopMenu-toggle uk-navbar-nav">
                     <li><a class="nav-link" href="/resources">Resources</a></li>
                     <li><a class="nav-link" href="/jobsearch">Job Search</a></li>
@@ -42,6 +40,7 @@
                         <a href="/login"><button class="uk-button uk-button-default" id="login">Log in</button></a>
                     </div>
                 </ul>
+                <!-- Menu for mobile size screens -->
                 <ul class="mobileMenu-toggle uk-navbar-nav">
                     <li class="mobile-menu">
                         <div class="menu-icon uk-flex uk-flex-center" uk-icon="icon: menu"></div>
@@ -59,12 +58,14 @@
         </nav>
     </header>
 
+    <!-- Hero image -->
     <div class="banner-img uk-text-center uk-height-large uk-flex uk-flex-column uk-flex-center uk-flex-middle uk-background-cover uk-light"
         data-src="assets/career_bg.png" uk-img>
         <h1>Career Field Resource Wiki</h1>
         <p class="tagline uk-text-light">Catchy tag line goes here!</p>
     </div>
 
+    <!-- Services -->
     <section class="uk-height-1-1 uk-flex uk-flex-center">
         <div class="wiki-container uk-flex uk-flex-column uk-flex-middle">
             <h2>What would you like to do?</h2>
