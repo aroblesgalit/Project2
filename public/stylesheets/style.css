@@ -47,6 +47,7 @@ a.nav-link:link, a.nav-link:visited, a.logo-text:link, a.logo-text:visited {
 
 .banner-img {
   height: 600px;
+  padding: 20px;
 }
 
 .mobileMenu-toggle {
@@ -72,6 +73,10 @@ a.nav-link:link, a.nav-link:visited, a.logo-text:link, a.logo-text:visited {
   width: 100%;
 }
 
+a.home-card-link:link {
+  text-decoration: none;
+}
+
 .main-header {
   margin-bottom: 40px;
 }
@@ -95,6 +100,10 @@ section {
 
 section h2 {
   margin-bottom: 40px;
+}
+
+.home-card {
+  border: 1px solid white;
 }
 
 .home-card:hover {
