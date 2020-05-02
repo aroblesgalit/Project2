@@ -143,6 +143,10 @@ a.logout:link, a.logout:visited {
 
 
 /* Fields */
+#fields {
+  padding-top: 140px;
+}
+
 #fieldTable {
   width: 100%;
 }
