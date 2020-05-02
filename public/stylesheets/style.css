@@ -87,10 +87,9 @@ form.login {
 /* Job Search */
 #jobsearchbody{
   text-align:center;
-  font-family: 'ABeeZee';
   font-size: 20px;
-  color:#fff;
-  background:#50394c;
+  color:#333;
+  background:#f2f2f2;
 }
 
 #heading{
@@ -104,10 +103,11 @@ form.login {
 #search-bar{
   padding:0 0 2% 0;
   margin-left:25%;
-  margin-right:25%;  
+  margin-right:25%; 
+  color:#333;  
 }
 
-a:link,a:visited{text-decoration:none; color:#50394c;} 
+a:link,a:visited{text-decoration:none; color:#333} 
 
 /* USER PROFILE EDIT */
 
