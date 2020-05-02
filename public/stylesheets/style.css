@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+html {
+  --color-dark: #0e153a;
+  --color-blue: #3d5af1;
+  --color-lightblue: #22d1ee;
+  --color-light: #e2f3f5;
+}
+
 body {
   background-color: #f2f2f2;
   min-height: 100vh;
@@ -11,6 +18,10 @@ body {
 
 header {
   margin-bottom: 60px;
+}
+
+.banner-img {
+  height: 600px;
 }
 
 section {
@@ -57,7 +68,7 @@ form.login {
 /* Resources */
 .go-button {
   height: 32px;
-  width: 52px;
+  width: 32px;
   background-color: #333;
   color: white;
   padding: 6px;
