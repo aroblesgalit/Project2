@@ -19,28 +19,26 @@
 
 <body>
 
-    <header>
+    <header class="uk-position-fixed uk-width-expand">
         <!-- Nav bar -->
-        <nav class="uk-navbar-container" uk-navbar>
+        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
             <!-- Logo -->
             <div class="uk-navbar-left">
-                <a class="uk-navbar-item uk-logo" href="/">Career Field Resource Wiki</a>
+                <a class="logo-text uk-navbar-item uk-logo" href="#">Career Field Resource Wiki</a>
             </div>
             <!-- Menu -->
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav">
-                    <li class="uk-active"><a href="/">Home</a></li>
-                    <li><a href="/resources">Resources</a></li>
-                    <li><a href="/fields">Fields</a></li>
-                    <li><a href="/jobsearch">Job Search</a></li>
+                    <li><a class="nav-link" href="/resources">Resources</a></li>
+                    <li><a class="nav-link" href="/fields">Fields</a></li>
+                    <li><a class="nav-link" href="/jobsearch">Job Search</a></li>
                     <div class="uk-navbar-item" id="loginAvatar">
-                        <div id="settings" class="uk-flex uk-flex-center uk-flex-middle"><span
-                                uk-icon="icon:  user"></span></div>
+                        <div id="settings" class="uk-flex uk-flex-center uk-flex-middle"><span uk-icon="icon:  user"></span></div>
                         <div uk-dropdown>
                             <ul class="uk-nav uk-dropdown-nav">
-                                <li class="uk-active"><a href="/userProfile">User Profile</a></li>
+                                <li class="uk-active"><a href="#">User Profile</a></li>
                                 <li class="uk-nav-divider"></li>
-                                <li><a href="/logout">Logout</a></li>
+                                <li><a class="logoutLink" href="/logout">Logout</a></li>
                             </ul>
                         </div>
                     </div>
@@ -48,8 +46,9 @@
             </div>
         </nav>
     </header>
+
     <!-- User Profile Card-->
-    <section class="uk-flex uk-flex-center">
+    <section id="userSection" class="uk-flex uk-flex-center">
         <div class="wiki-container uk-flex">
             <div class="uk-card uk-card-default uk-width-1-4@m userProfile">
                 <div class="uk-card-header">
@@ -101,9 +100,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
     </section>
-        <!-- Slider section for resources posted cards-->
+        <!--Slider section for resources posted cards-->
         <!--<div uk-slider="center: true" class="uk-width-4-5@m">
 
                 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">

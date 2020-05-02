@@ -162,6 +162,10 @@ a.logout:link, a.logout:visited {
 
 
 /* User Profile */
+#userSection {
+  padding-top: 140px;
+}
+
 .userProfile {
   margin-right: 20px;
 }
