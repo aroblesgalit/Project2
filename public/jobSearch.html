@@ -21,19 +21,19 @@
 </head>
 
 <body id="jobsearchbody">
-  <header>
+
+  <header class="uk-position-fixed uk-width-expand">
     <!-- Nav bar -->
-    <nav class="uk-navbar-container" uk-navbar>
+    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
       <!-- Logo -->
       <div class="uk-navbar-left">
-        <a class="uk-navbar-item uk-logo" href="#">Career Field Resource Wiki</a>
+        <a class="logo-text uk-navbar-item uk-logo" href="/">Career Field Resource Wiki</a>
       </div>
       <!-- Menu -->
       <div class="uk-navbar-right">
         <ul class="uk-navbar-nav">
-          <li class="uk-active"><a href="/">Home</a></li>
-          <li><a href="/resources">Resources</a></li>
-          <li class="uk-active"><a href="#">Job Search</a></li>
+          <li><a class="nav-link" href="/resources">Resources</a></li>
+          <li><a class="nav-link" href="#">Job Search</a></li>
           <div class="uk-navbar-item">
             <a href="/login"><button class="uk-button uk-button-default" id="login">Log in</button></a>
           </div>
@@ -44,8 +44,8 @@
 
   <section id="resources" class="uk-height-1-1 uk-flex uk-flex-center">
     <div class="wiki-container">
-      <div class="main-header uk-flex uk-flex-middle">
-        <h1 class="main-heading">Jobs</h1>
+      <div class="main-header uk-flex uk-flex-middle uk-width-1-1">
+        <h1 class="main-heading">Job Search</h1>
         <form class="uk-search uk-search-default">
           <span uk-search-icon></span>
           <input class="uk-search-input" type="search" placeholder="Search Jobs...">
@@ -89,52 +89,39 @@
             </div>
           </div>
         </div>
-      <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-        <div class="uk-card-media-left uk-cover-container">
-          <img src="https://via.placeholder.com/400x200" alt="" uk-cover>
-          <canvas width="400" height="200"></canvas>
-        </div>
-        <div>
-          <div class="uk-card-body">
-            <h3 class="uk-card-title">Media Left</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+          <div class="uk-card-media-left uk-cover-container">
+            <img src="https://via.placeholder.com/400x200" alt="" uk-cover>
+            <canvas width="400" height="200"></canvas>
+          </div>
+          <div>
+            <div class="uk-card-body">
+              <h3 class="uk-card-title">Media Left</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-        <div class="uk-card-media-left uk-cover-container">
-          <img src="https://via.placeholder.com/400x200" alt="" uk-cover>
-          <canvas width="400" height="200"></canvas>
-        </div>
-        <div>
-          <div class="uk-card-body">
-            <h3 class="uk-card-title">Media Left</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+          <div class="uk-card-media-left uk-cover-container">
+            <img src="https://via.placeholder.com/400x200" alt="" uk-cover>
+            <canvas width="400" height="200"></canvas>
+          </div>
+          <div>
+            <div class="uk-card-body">
+              <h3 class="uk-card-title">Media Left</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
           </div>
         </div>
-    </div>
-      
+
   </section>
 
-</body>
-
-<footer>
-  <div class="footer-contact-information">
-    <div class="footer-supplemental">
-      <a href="#">Follow Us @ on Twitter</a> |
-      <a href="#">View this Site on GitHub</a>
-    </div>
-  </div>
-  <div class="footer-logo">
-    <p>Logo Goes Here</p>
-  </div>
-    
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script> -->
   <script type="text/javascript" src="js/jobSearch.js"></script>
 
-  </body>
+</body>
 
 
-   
+
 </html>

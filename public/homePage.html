@@ -2,85 +2,76 @@
 <html lang="en">
 
 <head>
-  <title>Career Field Resource Wiki Login</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Career Field Resource Wiki Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- UIkit CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/css/uikit.min.css" />
-  <!-- link to our style sheet -->
-  <link rel="stylesheet" href="./public/stylesheets/style.css" />
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/css/uikit.min.css" />
 
-  <!-- UIkit JS -->
-  <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit-icons.min.js"></script>
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit-icons.min.js"></script>
 
-  <!-- Ajax and jQuery CDNS -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Ajax and jQuery CDNS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-  <!-- My JS file -->
-  <!-- <script src="./public/js/logic.js"></script> -->
+    <!-- My JS file -->
+    <!-- <script src="./public/js/logic.js"></script> -->
+
+    <!-- link to our style sheet -->
+    <link rel="stylesheet" href="stylesheets/style.css" />
 
 </head>
 
 <body>
-            <!-- Nav bar -->
-            <nav class="uk-navbar-container" uk-navbar>
-                <!-- Logo -->
-                <div class="uk-navbar-left">
-                    <a class="uk-navbar-item uk-logo" href="#">Career Field Resource Wiki</a>
-                </div>
-                <!-- Menu -->
-                <div class="uk-navbar-right">        
-                    <ul class="uk-navbar-nav">
-                        <li class="uk-active"><a href="/">Home</a></li>
-                        <li><a href="/resources">Resources</a></li>
-                        <li><a href="/jobsearch">Job Search</a></li>
-                        <div class="uk-navbar-item">
-                            <a href="/login"><button class="uk-button uk-button-default" id="login">Log in</button></a>
-                        </div>
-                    </ul>       
-                </div>      
-            </nav>
-    <div class="uk-flex uk-flex-column" 
-    style="
-    border:2px solid black; 
-    background-image:url(https://i.imgur.com/kSdaBGb.jpeg);
-    height: 400px;
-    ">
-        <h1 class="uk-text-center uk-position-relative">
-            <div class="uk-position-relative">Career Field Resources</div>
-            <div style="right: 55px;" class="uk-position-relative">& Wiki</div>
-        </h1>
-<!--        <form id="heroForm" class="uk-search uk-search-default">
-            <a href="" id="searchIcon" class="uk-search-icon-flip" uk-search-icon></a>
-            <input id="heroSearchInput" class="uk-search-input" type="search" placeholder="Search for a superhero!">
-        </form>
--->
-</div>
-    <h2 class="uk-text-center" style="
-    border:2px solid black;">
-    What would you like to do?
-
-    </h2>
-    <div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
-        <div>
-            <div style="
-            border:2px solid black;" class="uk-card uk-card-hover uk-card-body">
-                <h3 class="uk-card-title">Resources</h3>
-                <p>Click this card to be sent directly to the resources for a career field!</p>
+    <header class="uk-position-fixed uk-width-expand">
+        <!-- Nav bar -->
+        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+            <!-- Logo -->
+            <div class="uk-navbar-left">
+                <a class="logo-text uk-navbar-item uk-logo" href="#">Career Field Resource Wiki</a>
             </div>
-        </div>
-        <div>
-            <div style="
-            border:2px solid black;" class="uk-card uk-card-hover uk-card-body">
-                <h3 class="uk-card-title">Job Search</h3>
-                <p>Click this card to be returned a job search for a career field!</p>
+            <!-- Menu -->
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li><a class="nav-link" href="/resources">Resources</a></li>
+                    <li><a class="nav-link" href="/jobsearch">Job Search</a></li>
+                    <div class="uk-navbar-item">
+                        <a href="/login"><button class="uk-button uk-button-default" id="login">Log in</button></a>
+                    </div>
+                </ul>
             </div>
-        </div>
+        </nav>
+    </header>
 
+    <div class="banner-img uk-height-large uk-flex uk-flex-column uk-flex-center uk-flex-middle uk-background-cover uk-light"
+        data-src="assets/career_bg.png" uk-img>
+        <h1>Career Field Resource Wiki</h1>
+        <p class="tagline uk-text-light">Catchy tag line goes here!</p>
     </div>
+
+    <section class="uk-height-1-1 uk-flex uk-flex-center">
+        <div class="wiki-container uk-flex uk-flex-column uk-flex-middle">
+            <h2>What would you like to do?</h2>
+            <div class="uk-child-width-1-2@s uk-grid-small uk-grid-match" uk-grid>
+                <a href="/resources">
+                    <div class="home-card uk-card uk-card-default uk-card-body">
+                        <h3 class="uk-card-title">Resources</h3>
+                        <p>Click this card to be sent directly to the resources for a career field!</p>
+                    </div>
+                </a>
+                <a href="/jobsearch">
+                    <div class="home-card uk-card uk-card-default uk-card-body">
+                        <h3 class="uk-card-title">Job Search</h3>
+                        <p>Click this card to be returned a job search for a career field!</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
 </body>
 
 </html>
