@@ -19,6 +19,7 @@ body {
 header {
   margin-bottom: 60px;
   background-color: var(--color-dark);
+  z-index: 1;
 }
 
 #login {
@@ -167,14 +168,14 @@ a.logout:link, a.logout:visited {
 
 
 /* Job Search */
-#jobsearchbody{
+/* #jobsearchbody{
   text-align:center;
   font-size: 20px;
   color:#333;
   background:#f2f2f2;
-}
+} */
 
-#heading{
+/* #heading{
   padding-top:5%;
 }
 
@@ -188,8 +189,8 @@ a.logout:link, a.logout:visited {
   margin-right:25%; 
   color:#333;  
 }
+ */
 
-a:link,a:visited{text-decoration:none; color:#333} 
 
 /* USER PROFILE EDIT */
 
