@@ -223,6 +223,14 @@ form.login {
 
 
 /* Job Search */
+#jobSearch {
+  padding-top: 140px;
+}
+
+.job-search-form {
+  background-color: white;
+}
+
 /* #jobsearchbody{
   text-align:center;
   font-size: 20px;
@@ -291,7 +299,7 @@ form.login {
   display: block;
 }
 
-#resources, .loginForm {
+#resources, .loginForm, #jobSearch {
   padding-top: 110px;
 }
 
