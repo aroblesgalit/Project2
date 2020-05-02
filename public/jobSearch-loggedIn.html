@@ -33,9 +33,17 @@
       <div class="uk-navbar-right">
         <ul class="desktopMenu-toggle uk-navbar-nav">
           <li><a class="nav-link" href="/resources">Resources</a></li>
+          <li><a class="nav-link" href="/fields">Fields</a></li>
           <li><a class="nav-link" href="#">Job Search</a></li>
-          <div class="uk-navbar-item">
-            <a href="/login"><button class="uk-button uk-button-default" id="login">Log in</button></a>
+          <div class="uk-navbar-item" id="loginAvatar">
+            <div id="settings" class="uk-flex uk-flex-center uk-flex-middle"><span uk-icon="icon:  user"></span></div>
+            <div uk-dropdown="mode: click">
+              <ul class="uk-nav uk-dropdown-nav">
+                <li class="uk-active"><a href="/userProfile">User Profile</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a class="logoutLink" href="/logout">Logout</a></li>
+              </ul>
+            </div>
           </div>
         </ul>
         <ul class="mobileMenu-toggle uk-navbar-nav">
@@ -44,9 +52,11 @@
             <div class="uk-navbar-dropdown">
               <ul class="uk-nav uk-navbar-dropdown-nav">
                 <li><a href="/resources">Resources</a></li>
+                <li><a href="/fields">Fields</a></li>
                 <li><a href="#">Job Search</a></li>
+                <li><a href="/userProfile">User Profile</a></li>
                 <li class="uk-nav-divider"></li>
-                <li><a class="logoutLink" href="/login">Log in</a></li>
+                <li><a class="logoutLink" href="/logout">Logout</a></li>
               </ul>
             </div>
           </li>

@@ -15,7 +15,11 @@ module.exports = function(app) {
 
   /* Job Search path*/
   app.get("/jobsearch", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/jobSearch.html"));
+    if (req.user) {
+      res.sendFile(path.join(__dirname, "../public/jobSearch-loggedIn.html"));
+    } else {
+      res.sendFile(path.join(__dirname, "../public/jobSearch.html"));
+    }
   });
 
   app.get("/", function(req, res) {
