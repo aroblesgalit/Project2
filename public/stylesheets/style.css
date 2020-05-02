@@ -25,12 +25,21 @@ header {
   color: var(--color-lightblue);
   border: 1px solid var(--color-lightblue);
 }
+#login:hover {
+  background-color: var(--color-blue);
+  color: white;
+  border: 1px solid var(--color-blue);
+}
 
 .tagline {
   font-size: 22px;
 }
 
-nav a:link {
+.logo-text {
+  color: var(--color-light)
+}
+
+a.nav-link:link, a.nav-link:visited, a.logo-text:link, a.logo-text:visited {
   color: var(--color-light)
 }
 
@@ -79,22 +88,38 @@ form.login {
 #settings {
   height: 40px;
   width: 40px;
-  background-color: #333;
+  background-color: var(--color-lightblue);
   border-radius: 20px;
-  color: white;
+  color: var(--color-dark);
   cursor: pointer;
+}
+
+#settings:hover {
+  background-color: var(--color-blue);
+}
+
+a.logout:link, a.logout:visited {
+  color: #666;
 }
 
 
 
 /* Resources */
+#resources {
+  padding-top: 140px;
+}
+
 .go-button {
   height: 32px;
   width: 32px;
-  background-color: #333;
+  background-color: var(--color-lightblue);
   color: white;
   padding: 6px;
   border: none;
+}
+
+.go-button:hover {
+  background-color: var(--color-blue);
 }
 
 #resource-select {
@@ -103,6 +128,13 @@ form.login {
 
 #addButton {
   float: right;
+  color: white;
+  background-color: var(--color-lightblue);
+  border: none;
+}
+
+#addButton:hover {
+  background-color: var(--color-blue);
 }
 
 #addResource, #addField {

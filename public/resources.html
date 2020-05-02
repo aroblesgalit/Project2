@@ -19,18 +19,18 @@
 
 <body>
 
-    <header>
+    <header class="uk-position-fixed uk-width-expand">
         <!-- Nav bar -->
-        <nav class="main-menu uk-navbar-container" uk-navbar>
+        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
             <!-- Logo -->
             <div class="uk-navbar-left">
-                <a class="uk-navbar-item uk-logo" href="/">Career Field Resource Wiki</a>
+                <a class="logo-text uk-navbar-item uk-logo" href="/">Career Field Resource Wiki</a>
             </div>
             <!-- Menu -->
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav">
-                    <li class="uk-active"><a href="#">Resources</a></li>
-                    <li><a href="/jobsearch">Job Search</a></li>
+                    <li><a class="nav-link" href="/resources">Resources</a></li>
+                    <li><a class="nav-link" href="/jobsearch">Job Search</a></li>
                     <div class="uk-navbar-item">
                         <a href="/login"><button class="uk-button uk-button-default" id="login">Log in</button></a>
                     </div>
@@ -58,8 +58,9 @@
             <div class="main-content">
                 <div class="resource-results uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-child-width-1-4@m uk-text-left" uk-grid>
                     <!-- Get data from a get request to the /resources endpoint -->
-                    <!-- <p>Select a field to view resources.</p> -->
-                    <div>
+                    <p class="uk-text-muted">Select a field to view resources.</p>
+
+                    <!-- <div>
                         <div class="uk-card uk-card-default">
                             <div class="uk-card-media-top">
                                 <img src="https://via.placeholder.com/400x200" alt="">
@@ -134,7 +135,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
+
                 </div>
             </div>
         </div>
