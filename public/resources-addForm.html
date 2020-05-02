@@ -21,14 +21,14 @@
 
     <header class="uk-position-fixed uk-width-expand">
         <!-- Nav bar -->
-        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar="mode: click">
             <!-- Logo -->
             <div class="uk-navbar-left">
                 <a class="logo-text uk-navbar-item uk-logo" href="/">Career Field Resource Wiki</a>
             </div>
             <!-- Menu -->
             <div class="uk-navbar-right">
-                <ul class="uk-navbar-nav">
+                <ul class="desktopMenu-toggle uk-navbar-nav">
                     <li><a class="nav-link" href="/resources">Resources</a></li>
                     <li><a class="nav-link" href="/fields">Fields</a></li>
                     <li><a class="nav-link" href="/jobsearch">Job Search</a></li>
@@ -42,6 +42,21 @@
                             </ul>
                         </div>
                     </div>
+                </ul>
+                <ul class="mobileMenu-toggle uk-navbar-nav">
+                    <li class="mobile-menu">
+                        <div class="menu-icon uk-flex uk-flex-center" uk-icon="icon: menu"></div>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li><a href="/resources">Resources</a></li>
+                                <li><a href="/fields">Fields</a></li>
+                                <li><a href="/jobsearch">Job Search</a></li>
+                                <li><a href="/userProfile">User Profile</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li><a class="logoutLink" href="/logout">Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </nav>

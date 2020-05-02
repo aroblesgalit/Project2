@@ -20,6 +20,7 @@ header {
   margin-bottom: 60px;
   background-color: var(--color-dark);
   z-index: 1;
+  padding-right: 20px;
 }
 
 #login {
@@ -46,6 +47,25 @@ a.nav-link:link, a.nav-link:visited, a.logo-text:link, a.logo-text:visited {
 
 .banner-img {
   height: 600px;
+}
+
+.mobileMenu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border: 1px solid var(--color-lightblue);
+  cursor: pointer;
+  color: var(--color-lightblue);
+}
+
+.menu-icon:hover {
+  color: var(--color-light);
+  background-color: var(--color-blue);
+  border: none;
 }
 
 .main-menu {
@@ -222,4 +242,22 @@ a.logout:link, a.logout:visited {
 #profile-container img {
     width: 150px;
     height: 150px;
+}
+
+
+
+
+
+
+/* Small devices (Tablets and mobile, 768px and below) */
+@media only screen and (max-width: 768px) {
+
+.desktopMenu-toggle {
+  display: none;
+}
+
+.mobileMenu-toggle {
+  display: block;
+}
+
 }
