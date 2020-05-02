@@ -18,7 +18,7 @@
 </head>
 
 <body>
-
+    <!-- Header -->
     <header class="uk-position-fixed uk-width-expand">
         <!-- Nav bar -->
         <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar="mode: click">
@@ -28,12 +28,14 @@
             </div>
             <!-- Menu -->
             <div class="uk-navbar-right">
+                <!-- Menu for desktop size screens -->
                 <ul class="desktopMenu-toggle uk-navbar-nav">
                     <li><a class="nav-link" href="/resources">Resources</a></li>
                     <li><a class="nav-link" href="#">Fields</a></li>
                     <li><a class="nav-link" href="/jobsearch">Job Search</a></li>
                     <div class="uk-navbar-item" id="loginAvatar">
-                        <div id="settings" class="uk-flex uk-flex-center uk-flex-middle"><span uk-icon="icon:  user"></span></div>
+                        <div id="settings" class="uk-flex uk-flex-center uk-flex-middle"><span
+                                uk-icon="icon:  user"></span></div>
                         <div uk-dropdown="mode: click">
                             <ul class="uk-nav uk-dropdown-nav">
                                 <li class="uk-active"><a href="/userProfile">User Profile</a></li>
@@ -43,6 +45,7 @@
                         </div>
                     </div>
                 </ul>
+                <!-- Menu for mobile size screens -->
                 <ul class="mobileMenu-toggle uk-navbar-nav">
                     <li class="mobile-menu">
                         <div class="menu-icon uk-flex uk-flex-center" uk-icon="icon: menu"></div>
@@ -65,16 +68,16 @@
     <!-- Main content -->
     <section id="fields" class="uk-height-1-1 uk-flex uk-flex-center">
         <div class="wiki-container">
-            <div class="main-header uk-flex uk-flex-between">
-                <div class="uk-flex uk-flex-middle">
-                    <h1 class="main-heading">Fields</h1>
-                </div>
+            <!-- Page header -->
+            <div class="main-header uk-flex uk-flex-between uk-flex-middle">
+                <h1 class="main-heading">Fields</h1>
                 <a href="/fields/addForm"><button class="uk-button uk-button-default" id="addButton">Add</button></a>
             </div>
-            <!-- Content -->
+            <!-- Fields content -->
             <div class="main-content">
                 <div class="field-results uk-overflow-auto">
                     <table id="fieldTable" class="uk-table uk-table-striped uk-table-hover uk-table-middle">
+                        <!-- Fields table head -->
                         <thead>
                             <tr>
                                 <!-- <th class="uk-width-small">Avatar</th> -->
@@ -85,6 +88,7 @@
                                 <th class="uk-width-small">Updated at</th>
                             </tr>
                         </thead>
+                        <!-- Fields table body -->
                         <tbody>
                             <tr>
                                 <!-- <td><img class="uk-preserve-width uk-border-circle" src="https://via.placeholder.com/40" alt=""></td> -->

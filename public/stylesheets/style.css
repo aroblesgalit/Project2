@@ -299,15 +299,16 @@ form.login {
   display: block;
 }
 
-#resources, .loginForm, #jobSearch {
+#resources, .loginForm, #jobSearch, #fields {
   padding-top: 110px;
 }
 
-.main-heading {
+.fields-select {
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
-#addButton {
+.job-search-form {
   margin-top: 10px;
 }
 
