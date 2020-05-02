@@ -80,6 +80,14 @@ section h2 {
   border: 1px solid var(--color-lightblue);
 }
 
+.loginForm {
+  padding-top: 140px;
+}
+
+a.signUpLink:link, a.signUpLink:visited, a.loginLink:link, a.loginLink:visited {
+  color: var(--color-blue)
+}
+
 form.signup,
 form.login {
   margin-top: 50px;
