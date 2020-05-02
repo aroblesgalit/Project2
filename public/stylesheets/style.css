@@ -5,7 +5,7 @@
 }
 
 html {
-  --color-dark: #0e153a;
+  --color-dark: #12141f;
   --color-blue: #3d5af1;
   --color-lightblue: #22d1ee;
   --color-light: #e2f3f5;
@@ -18,14 +18,24 @@ body {
 
 header {
   margin-bottom: 60px;
+  background-color: var(--color-dark);
+}
+
+#login {
+  color: var(--color-lightblue);
+  border: 1px solid var(--color-lightblue);
+}
+
+.tagline {
+  font-size: 22px;
+}
+
+nav a:link {
+  color: var(--color-light)
 }
 
 .banner-img {
   height: 600px;
-}
-
-section {
-  padding: 20px;
 }
 
 .main-menu {
@@ -47,6 +57,18 @@ section {
 
 .main-content {
   width: 100%;
+}
+
+section {
+  padding: 20px;
+}
+
+section h2 {
+  margin-bottom: 40px;
+}
+
+.home-card:hover {
+  border: 1px solid var(--color-lightblue);
 }
 
 form.signup,
