@@ -20,8 +20,8 @@
 
 </head>
 
-<body id="jobsearchbody">
-
+<body>
+  <!-- Header -->
   <header class="uk-position-fixed uk-width-expand">
     <!-- Nav bar -->
     <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar="mode: click">
@@ -31,6 +31,7 @@
       </div>
       <!-- Menu -->
       <div class="uk-navbar-right">
+        <!-- Menu for desktop size screens -->
         <ul class="desktopMenu-toggle uk-navbar-nav">
           <li><a class="nav-link" href="/resources">Resources</a></li>
           <li><a class="nav-link" href="/fields">Fields</a></li>
@@ -46,6 +47,7 @@
             </div>
           </div>
         </ul>
+        <!-- Menu for mobile size screens -->
         <ul class="mobileMenu-toggle uk-navbar-nav">
           <li class="mobile-menu">
             <div class="menu-icon uk-flex uk-flex-center" uk-icon="icon: menu"></div>
@@ -65,16 +67,18 @@
     </nav>
   </header>
 
-  <section id="resources" class="uk-height-1-1 uk-flex uk-flex-center">
+  <!-- Main content -->
+  <section id="jobSearch" class="uk-height-1-1 uk-flex uk-flex-center">
     <div class="wiki-container">
-      <div class="main-header uk-flex uk-flex-middle uk-width-1-1">
+      <!-- Page header -->
+      <div class="main-header uk-flex uk-flex-wrap uk-flex-middle uk-width-1-1">
         <h1 class="main-heading">Job Search</h1>
-        <form class="uk-search uk-search-default">
+        <form class="job-search-form uk-search uk-search-default uk-width-1-2@s">
           <span uk-search-icon></span>
-          <input class="uk-search-input" type="search" placeholder="Search Jobs...">
+          <input class="job-search-input uk-search-input" type="search" placeholder="Search Jobs...">
         </form>
       </div>
-
+      <!-- Job search content -->
       <div class="row">
         <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
           <div class="uk-card-media-left uk-cover-container">
@@ -136,7 +140,8 @@
             </div>
           </div>
         </div>
-
+      </div>
+    </div>
   </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

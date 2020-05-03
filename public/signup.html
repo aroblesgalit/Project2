@@ -27,15 +27,17 @@
 </head>
 
 <body>
+  <!-- Header -->
   <header class="uk-position-fixed uk-width-expand">
     <!-- Nav bar -->
     <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar="mode: click">
       <!-- Logo -->
       <div class="uk-navbar-left">
-        <a class="logo-text uk-navbar-item uk-logo" href="#">Career Field Resource Wiki</a>
+        <a class="logo-text uk-navbar-item uk-logo" href="/">Career Field Resource Wiki</a>
       </div>
       <!-- Menu -->
       <div class="uk-navbar-right">
+        <!-- Menu for desktop size screens -->
         <ul class="desktopMenu-toggle uk-navbar-nav">
           <li><a class="nav-link" href="/resources">Resources</a></li>
           <li><a class="nav-link" href="/jobsearch">Job Search</a></li>
@@ -43,6 +45,7 @@
             <a href="/login"><button class="uk-button uk-button-default" id="login">Log in</button></a>
           </div>
         </ul>
+        <!-- Menu for mobile size screens -->
         <ul class="mobileMenu-toggle uk-navbar-nav">
           <li class="mobile-menu">
             <div class="menu-icon uk-flex uk-flex-center" uk-icon="icon: menu"></div>
@@ -60,6 +63,7 @@
     </nav>
   </header>
 
+  <!-- Signup form -->
   <div class="container loginForm">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
@@ -75,7 +79,7 @@
           </div>
           <div class="form-group">
             <label for="fieldsSelect">Field</label>
-            <!-- Get data from a get request to the /fields endpoint -->
+            <!-- Render data from a get request to the /fields endpoint -->
             <select id="fieldsSelect" class="uk-select">
               <option>Select an field</option>
             </select>

@@ -85,31 +85,29 @@ $(document).ready(function() {
     var newResourceCard = $("<div>");
     var resourceCardWrapper = $("<div>").addClass("uk-card uk-card-default");
     var cardImageDiv = $("<div>").addClass("uk-card-media-top");
-    var cardImage = $("<img>").attr({
-      src: resource.imageUrl,
-      alt: resource.title + " thumbnail."
-    });
-    var bodyDiv = $("<div>").addClass("uk-card-body");
+    var cardImage = $("<img>")
+      .attr({
+        src: resource.imageUrl,
+        alt: resource.title + " thumbnail."
+      })
+      .addClass("uk-responsive-width");
+    var bodyDiv = $("<div>").addClass("uk-card-body uk-flex uk-flex-column");
     var cardTitle = $("<h3>")
-      .addClass("uk-card-title")
+      .addClass("card-title uk-card-title uk-overflow-hidden")
       .text(resource.title);
-    var descriptionDiv = $("<div>").addClass(
-      "descript-button uk-flex uk-flex-middle"
-    );
-    var description = $("<p>").text(resource.description);
+    var description = $("<p>")
+      .addClass("card-description uk-overflow-hidden uk-text-break")
+      .text(resource.description);
     var linkUrl = $("<a>").attr("href", resource.link);
     var resourceButton = $("<button>").addClass(
-      "go-button uk-flex uk-flex-center uk-flex-middle"
+      "go-button uk-flex uk-flex-center uk-flex-middle uk-align-right"
     );
     var buttonIcon = $("<span>").attr("uk-icon", "icon: chevron-right");
     // Append to each other
     bodyDiv
       .append(cardTitle)
-      .append(
-        descriptionDiv
-          .append(description)
-          .append(linkUrl.append(resourceButton.append(buttonIcon)))
-      );
+      .append(description)
+      .append(linkUrl.append(resourceButton.append(buttonIcon)));
     newResourceCard.append(
       resourceCardWrapper.append(cardImageDiv.append(cardImage)).append(bodyDiv)
     );
@@ -119,8 +117,8 @@ $(document).ready(function() {
 
   // This will display a message if there's no data
   function displayEmpty() {
-    resourceResults.html(
-      "<p>No resources posted for this field yet. Sign up or Log in to add.</p>"
+    $(".main-content").html(
+      "<p class='empty-message uk-text-muted uk-text-italic'>No resources posted for this field yet. Sign up or Log in to add.</p>"
     );
   }
 });
