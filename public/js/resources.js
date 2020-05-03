@@ -78,9 +78,6 @@ $(document).ready(function() {
 
   // This function constructs a resource's HTML
   function createNewCard(resource) {
-    // Get the date and format it
-    // var formattedDate = new Date(resource.createdAt);
-    // formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
     // Create the divs
     var newResourceCard = $("<div>").addClass(
       "resource-card uk-overflow-hidden"
