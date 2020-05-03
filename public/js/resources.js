@@ -118,8 +118,8 @@ $(document).ready(function() {
 
   // This will display a message if there's no data
   function displayEmpty() {
-    $(".main-content").html(
-      "<p class='empty-message uk-text-muted uk-text-italic'>No resources posted for this field yet. <a href='/signup'>Sign up</a> or <a href='/login'>Log in</a> to add.</p>"
+    resourceResults.html(
+      "<p class='empty-message uk-text-muted uk-text-italic uk-text-nowrap'>No resources posted for this field yet. <a href='/signup'>Sign up</a> or <a href='/login'>Log in</a> to add.</p>"
     );
   }
 });
