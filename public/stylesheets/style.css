@@ -159,6 +159,10 @@ form.login {
   padding-top: 140px;
 }
 
+.empty-message {
+  font-size: 16px;
+}
+
 .card-title {
   max-height: 40px;
 }
