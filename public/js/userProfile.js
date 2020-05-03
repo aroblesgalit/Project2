@@ -118,7 +118,9 @@ $(document).ready(function() {
           alt: resource.title + " thumbnail."
         })
         .addClass("uk-width-responsive");
-      var bodyDiv = $("<div>").addClass("uk-card-body uk-flex uk-flex-column");
+      var bodyDiv = $("<div>").addClass(
+        "uk-card-body uk-flex uk-flex-column card-body"
+      );
       var cardTitle = $("<h3>")
         .addClass("card-title uk-card-title uk-text-break")
         .text(resource.title);

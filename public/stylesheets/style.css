@@ -176,6 +176,7 @@ form.login {
 .card-title {
   height: 40px;
   overflow: hidden;
+  margin-bottom: 10px;
 }
 
 .card-description {
