@@ -36,7 +36,8 @@ module.exports = function(app) {
         {
           model: db.User
         }
-      ]
+      ],
+      order: [["createdAt", "DESC"]]
     }).then(function(dbResource) {
       res.json(dbResource);
     });
