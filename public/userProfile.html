@@ -70,10 +70,10 @@
         <div class="wiki-container uk-grid-column-small" uk-grid>
 
             <div class="uk-card uk-card-default uk-width-1-4@s userProfile">
-                <div class="uk-card-header">
-                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                <div class="uk-card-header user-card-header">
+                    <div class="uk-grid-small uk-flex-middle uk-flex-column" uk-grid>
                         <div id="profile-container">
-                            <image id="profileImage" src="https://via.placeholder.com/200x200" />
+                            <image id="profileImage" class="uk-border-circle" src="https://via.placeholder.com/200" />
                         </div>
                         <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required=""
                             capture>
@@ -83,10 +83,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="uk-card-body">
+                <div class="uk-card-body user-card-body">
                     <p id="userProfileEmailRender">Email: </p>
                 </div>
-                <div class="uk-card-footer">
+                <div class="uk-card-footer user-card-footer">
                     <p id="userFieldRender">Field:
                         <!--Software Development-->
                     </p>

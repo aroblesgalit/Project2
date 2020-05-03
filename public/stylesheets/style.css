@@ -233,6 +233,22 @@ form.login {
   padding-top: 140px;
 }
 
+.userProfile {
+  padding: 0;
+}
+
+.user-card-header, .user-card-body, .user-card-footer {
+  padding: 20px;
+}
+
+#profileImage
+{
+    cursor: pointer;
+}
+
+#profile-container {
+  margin-bottom: 10px;
+}
 
 /* Job Search */
 #jobSearch {
@@ -273,28 +289,6 @@ form.login {
 {
     display: none;
 }
-
-#profileImage
-{
-    cursor: pointer;
-}
-
-#profile-container {
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
-}
-
-#profile-container img {
-    width: 150px;
-    height: 150px;
-}
-
 
 
 
