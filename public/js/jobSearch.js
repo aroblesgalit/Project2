@@ -15,11 +15,19 @@
 //       });
 //   });
 $(document).ready(function() {
-  $.get("/api/jobSearch/software")
-    .then(function(data) {
-      console.log(data);
-    })
-    .catch(function(err) {
-      console.log(err);
-    });
+  // $(".job-search-form").on("submit", function(e) {
+  //   e.preventDefault();
+  //   const keywords = $(".job-search-input").val();
+  //   console.log(keywords);
+  //   $.ajax({
+  //     url: "http://openlibrary.org/search.json?q=" + keywords,
+  //     method: "GET"
+  //   })
+  //     .then(function(res) {
+  //       console.log(res);
+  //     })
+  //     .catch(function(err) {
+  //       console.log(err);
+  //     });
+  // });
 });

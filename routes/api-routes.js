@@ -1,7 +1,6 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
-var axios = require("axios");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -62,25 +61,23 @@ module.exports = function(app) {
   //     });
   //   });
 
-  app.get("/api/jobSearch/:keywords", function(req, res) {
-    var queryUrl = `
-    http://api.dataatwork.org/v1/jobs/autocomplete?begins_with=${req.params.keywords}
-    `;
+  // app.get("/api/jobSearch/:keywords", function(req, res) {
+  //   var queryUrl = `
+  //   http://openlibrary.org/search.json?q=${req.params.keywords}
+  //   `;
 
-    var jobSearchResults = axios
-      .get(queryUrl)
-      .then(function(res) {
-        console.log(res.data);
-        return res;
-      })
-      .catch(function(err) {
-        console.log(err);
-      });
-
-    // Otherwise send back the user's email and id
-    // Sending back a password, even a hashed password, isn't a good idea
-    res.json({
-      jobSearchResults
-    });
-  });
+  //   var jobSearchResults = axios
+  //     .get(queryUrl)
+  //     .then(function(res) {
+  //       return res.data.docs;
+  //     })
+  //     .catch(function(err) {
+  //       console.log(err);
+  //     });
+  //   // Otherwise send back the user's email and id
+  //   // Sending back a password, even a hashed password, isn't a good idea
+  //   res.json({
+  //     jobSearchResults
+  //   });
+  // });
 };
