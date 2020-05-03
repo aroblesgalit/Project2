@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Career Field Resource Wiki</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/css/uikit.min.css" />
+
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+    integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit-icons.min.js"></script>
+
+  <link href="stylesheets/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="uk-position-fixed uk-width-expand">
+    <!-- Nav bar -->
+    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar="mode: click">
+      <!-- Logo -->
+      <div class="uk-navbar-left">
+        <a class="logo-text uk-navbar-item uk-logo" href="/">Career Field Resource Wiki</a>
+      </div>
+      <!-- Menu -->
+      <div class="uk-navbar-right">
+        <!-- Menu for desktop size screens -->
+        <ul class="desktopMenu-toggle uk-navbar-nav">
+          <li><a class="nav-link" href="/resources">Resources</a></li>
+          <li><a class="nav-link" href="#">Book Search</a></li>
+          <div class="uk-navbar-item">
+            <a href="/login"><button class="uk-button uk-button-default" id="login">Log in</button></a>
+          </div>
+        </ul>
+        <!-- Menu for mobile size screens -->
+        <ul class="mobileMenu-toggle uk-navbar-nav">
+          <li class="mobile-menu">
+            <div class="menu-icon uk-flex uk-flex-center" uk-icon="icon: menu"></div>
+            <div class="uk-navbar-dropdown">
+              <ul class="uk-nav uk-navbar-dropdown-nav">
+                <li><a href="/resources">Resources</a></li>
+                <li><a href="#">Book Search</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a class="logoutLink" href="/login">Log in</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <section id="jobSearch" class="uk-height-1-1 uk-flex uk-flex-center">
+    <div class="wiki-container">
+      <!-- Page header -->
+      <div class="main-header uk-flex uk-flex-wrap uk-flex-middle uk-width-1-1">
+        <h1 class="main-heading">Book Search</h1>
+        <form class="job-search-form uk-search uk-search-default uk-width-1-2@s">
+          <span uk-search-icon></span>
+          <input class="job-search-input uk-search-input" type="search" placeholder="Search for a Book...">
+        </form>
+      </div>
+      <!-- Job search content -->
+      <div class="row">
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+          <div class="uk-card-media-left uk-cover-container">
+            <img src="https://via.placeholder.com/400x200" alt="" uk-cover>
+            <canvas width="400" height="200"></canvas>
+          </div>
+          <div>
+            <div class="uk-card-body">
+              <h3 class="uk-card-title">Media Left</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+          </div>
+        </div>
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+          <div class="uk-card-media-left uk-cover-container">
+            <img src="https://via.placeholder.com/400x200" alt="" uk-cover>
+            <canvas width="400" height="200"></canvas>
+          </div>
+          <div>
+            <div class="uk-card-body">
+              <h3 class="uk-card-title">Media Left</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+          </div>
+        </div>
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+          <div class="uk-card-media-left uk-cover-container">
+            <img src="https://via.placeholder.com/400x200" alt="" uk-cover>
+            <canvas width="400" height="200"></canvas>
+          </div>
+          <div>
+            <div class="uk-card-body">
+              <h3 class="uk-card-title">Media Left</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+          </div>
+        </div>
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+          <div class="uk-card-media-left uk-cover-container">
+            <img src="https://via.placeholder.com/400x200" alt="" uk-cover>
+            <canvas width="400" height="200"></canvas>
+          </div>
+          <div>
+            <div class="uk-card-body">
+              <h3 class="uk-card-title">Media Left</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+          </div>
+        </div>
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+          <div class="uk-card-media-left uk-cover-container">
+            <img src="https://via.placeholder.com/400x200" alt="" uk-cover>
+            <canvas width="400" height="200"></canvas>
+          </div>
+          <div>
+            <div class="uk-card-body">
+              <h3 class="uk-card-title">Media Left</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script> -->
+  <script type="text/javascript" src="js/jobSearch.js"></script>
+
+</body>
+
+</html>
