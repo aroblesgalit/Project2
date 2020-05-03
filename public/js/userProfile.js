@@ -118,14 +118,16 @@ $(document).ready(function() {
           alt: resource.title + " thumbnail."
         })
         .addClass("uk-width-responsive");
-      var bodyDiv = $("<div>").addClass("uk-card-body uk-flex uk-flex-column");
+      var bodyDiv = $("<div>").addClass(
+        "uk-card-body uk-flex uk-flex-column card-body"
+      );
       var cardTitle = $("<h3>")
         .addClass("card-title uk-card-title uk-text-break")
         .text(resource.title);
       var description = $("<p>")
         .addClass("card-description uk-overflow-hidden uk-text-break")
         .text(resource.description);
-      var linkUrl = $("<a>").attr("href", resource.link);
+      var linkUrl = $("<a>").attr({ href: resource.link, target: "_blank" });
       var resourceButton = $("<button>").addClass(
         "go-button uk-flex uk-flex-center uk-flex-middle uk-align-right"
       );
