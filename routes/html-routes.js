@@ -22,6 +22,15 @@ module.exports = function(app) {
     }
   });
 
+  /* Book Search path*/
+  app.get("/bookSearch", function(req, res) {
+    if (req.user) {
+      res.sendFile(path.join(__dirname, "../public/bookSearch-loggedIn.html"));
+    } else {
+      res.sendFile(path.join(__dirname, "../public/bookSearch.html"));
+    }
+  });
+
   app.get("/", function(req, res) {
     // If the user already has an account send them to the members page >> User profile
     if (req.user) {
