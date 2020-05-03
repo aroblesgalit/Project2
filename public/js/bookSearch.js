@@ -1,5 +1,6 @@
 $(document).ready(function() {
-  $(".book-search-form").on("sumbit", function() {
+  $(".book-search-form").on("submit", function(e) {
+    e.preventDefault();
     const userInput = $(".book-search-input")
       .val()
       .trim();
@@ -14,25 +15,24 @@ $(document).ready(function() {
       .catch(function(err) {
         console.log(err);
       });
-
-    //   var tBody = $("tbody");
-    //   var tRow = $("<tr>");
-    //   // Methods run on jQuery selectors return the selector they we run on
-    //   // This is why we can create and save a reference to a td in the same statement we update its text
-    //   var titleTd = $("<td>").text(response.Title);
-    //   var yearTd = $("<td>").text(response.Year);
-    //   var actorsTd = $("<td>").text(response.Actors);
-    //   // Append the newly created table data to the table row
-    //   tRow.append(titleTd, yearTd, actorsTd);
-    //   // Append the table row to the table body
-    //   tBody.append(tRow);
-    // });
   });
-  // $.get("http://openlibrary.org/search.json?q=" + user_input)
-  //   .then(function(data) {
-  //     console.log(data);
-  //   })
-  //   .catch(function(err) {
-  //     console.log(err);
   // });
+  // function bookSearch() {
+  //   console.log("this function runs");
+  //   // var search = document.getElementById("search").value;
+  //   // document.getElementById("results").innerHTML = "";
+  //   // console.log(search);
+
+  //   // $.ajax({
+  //   //   url: "https://www.googleapis.com/books/v1/volumes?q=" + search,
+  //   //   dataType: "json",
+
+  //   //   success: function(data) {
+  //   //     for (i = 0; i < data.items.length; i++) {
+  //   //       results.innerHTML += "<h2>" + data.items[i].volumeInfo.title + "</h2>";
+  // }
+  // //   },
+  // //   type: "GET"
+  // // });
+  // // document.getElementById("form").addEventListener("submit", bookSearch, false);
 });
