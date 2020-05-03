@@ -110,14 +110,14 @@ $(document).ready(function() {
       );
       var resourceCardWrapper = $("<div>").addClass("uk-card uk-card-default");
       var cardImageDiv = $("<div>").addClass(
-        "uk-card-media-top uk-flex uk-flex-center uk-flex-middle card-image"
+        "uk-card-media-top uk-flex uk-flex-center uk-flex-middle card-image-container"
       );
       var cardImage = $("<img>")
         .attr({
           src: resource.imageUrl,
           alt: resource.title + " thumbnail."
         })
-        .addClass("uk-width-responsive");
+        .addClass("card-image uk-width-expand");
       var bodyDiv = $("<div>").addClass(
         "uk-card-body uk-flex uk-flex-column card-body"
       );
