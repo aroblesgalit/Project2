@@ -241,13 +241,19 @@ form.login {
   padding: 20px;
 }
 
-#profileImage
-{
-    cursor: pointer;
+#profileImage {
+  cursor: pointer;
+  max-height: 200px;
+  width: auto;
 }
 
 #profile-container {
+  padding: 0;
   margin-bottom: 10px;
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  background-color: var(--color-blue);
 }
 
 /* Job Search */
