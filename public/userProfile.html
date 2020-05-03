@@ -18,7 +18,7 @@
 </head>
 
 <body>
-
+    <!-- Header -->
     <header class="uk-position-fixed uk-width-expand">
         <!-- Nav bar -->
         <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar="mode: click">
@@ -28,6 +28,7 @@
             </div>
             <!-- Menu -->
             <div class="uk-navbar-right">
+                <!-- Menu for desktop size screens -->
                 <ul class="desktopMenu-toggle uk-navbar-nav">
                     <li><a class="nav-link" href="/resources">Resources</a></li>
                     <li><a class="nav-link" href="/fields">Fields</a></li>
@@ -44,6 +45,7 @@
                         </div>
                     </div>
                 </ul>
+                <!-- Menu for mobile size screens -->
                 <ul class="mobileMenu-toggle uk-navbar-nav">
                     <li class="mobile-menu">
                         <div class="menu-icon uk-flex uk-flex-center" uk-icon="icon: menu"></div>
@@ -65,8 +67,9 @@
 
     <!-- User Profile Card-->
     <section id="userSection" class="uk-flex uk-flex-center">
-        <div class="wiki-container uk-flex">
-            <div class="uk-card uk-card-default uk-width-1-4@m userProfile">
+        <div class="wiki-container uk-grid-column-small" uk-grid>
+
+            <div class="uk-card uk-card-default uk-width-1-4@s userProfile">
                 <div class="uk-card-header">
                     <div class="uk-grid-small uk-flex-middle" uk-grid>
                         <div id="profile-container">
@@ -97,29 +100,82 @@
                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                 <!--<a href="./user-editForm.html"><button class="uk-button uk-button-default uk-flex-middle" id="editButton">Edit profile</button></a>-->
             </div>
-            <div class="resource-results uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-left"
-                uk-grid>
-                <!--<div>
-                    <div class="uk-card uk-card-default">
-                        <div class="uk-card-media-top">
-                            <img src="https://via.placeholder.com/400x200" alt="">
-                        </div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">Media Top</h3>
-                            <div class="descript-button uk-flex">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+
+            <div class="uk-width-expand">
+                <div class="resource-results uk-grid-column-small uk-grid-row-small uk-child-width-1-3@m uk-child-width-1-2@s uk-text-left"
+                    uk-grid>
+
+                    <div class="resource-card">
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-card-media-top uk-flex uk-flex-center uk-flex-middle card-image">
+                                <img src="https://via.placeholder.com/400x200" alt="" class="uk-width-responsive">
+                            </div>
+                            <div class="uk-card-body uk-flex uk-flex-column">
+                                <h3 class="card-title uk-card-title uk-text-truncate uk-overflow-hidden">Media Top</h3>
+                                <p class="card-description uk-overflow-hidden uk-text-break">Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit, sed do
                                     eiusmod tempor incididunt.</p>
-                                <a href="google.com">
-                                    <button class="go-button uk-flex uk-flex-center uk-flex-middle">
-                                        <span uk-icon="icon: chevron-right"></span>
-                                    </button>
-                                </a>
+                                <button class="go-button uk-flex uk-flex-center uk-flex-middle">
+                                    <span uk-icon="icon: chevron-right"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-card-media-top uk-flex uk-flex-center uk-flex-middle card-image">
+                                <img src="https://via.placeholder.com/200x400" alt="" class="uk-width-responsive">
+                            </div>
+                            <div class="uk-card-body uk-flex uk-flex-column">
+                                <h3 class="card-title uk-card-title uk-text-truncate uk-overflow-hidden">Media Top</h3>
+                                <p class="card-description uk-overflow-hidden uk-text-break">Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt.</p>
+                                <button class="go-button uk-flex uk-flex-center uk-flex-middle">
+                                    <span uk-icon="icon: chevron-right"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-card-media-top uk-flex uk-flex-center uk-flex-middle card-image">
+                                <img src="https://via.placeholder.com/300x300" alt="" class="uk-width-responsive">
+                            </div>
+                            <div class="uk-card-body uk-flex uk-flex-column">
+                                <h3 class="card-title uk-card-title uk-text-truncate uk-overflow-hidden">Media Top</h3>
+                                <p class="card-description uk-overflow-hidden uk-text-break">Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt.</p>
+                                <button class="go-button uk-flex uk-flex-center uk-flex-middle">
+                                    <span uk-icon="icon: chevron-right"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-card-media-top uk-flex uk-flex-center uk-flex-middle card-image">
+                                <img src="https://via.placeholder.com/100x400" alt="" class="uk-width-responsive">
+                            </div>
+                            <div class="uk-card-body uk-flex uk-flex-column">
+                                <h3 class="card-title uk-card-title uk-text-truncate uk-overflow-hidden">Media Top</h3>
+                                <p class="card-description uk-overflow-hidden uk-text-break">Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt.</p>
+                                <button class="go-button uk-flex uk-flex-center uk-flex-middle">
+                                    <span uk-icon="icon: chevron-right"></span>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
-        </div>-->
+        </div>
     </section>
     <!--Slider section for resources posted cards-->
     <!--<div uk-slider="center: true" class="uk-width-4-5@m">

@@ -102,32 +102,36 @@ $(document).ready(function() {
       // var formattedDate = new Date(resource.createdAt);
       // formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
       // Create the divs
-      var newResourceCard = $("<div>");
+      var newResourceCard = $("<div>").addClass(
+        "resource-card uk-overflow-hidden"
+      );
       var resourceCardWrapper = $("<div>").addClass("uk-card uk-card-default");
-      var cardImageDiv = $("<div>").addClass("uk-card-media-top");
-      var cardImage = $("<img>").attr({
-        src: resource.imageUrl,
-        alt: resource.title + " thumbnail."
-      });
-      var bodyDiv = $("<div>").addClass("uk-card-body");
+      var cardImageDiv = $("<div>").addClass(
+        "uk-card-media-top uk-flex uk-flex-center uk-flex-middle card-image"
+      );
+      var cardImage = $("<img>")
+        .attr({
+          src: resource.imageUrl,
+          alt: resource.title + " thumbnail."
+        })
+        .addClass("uk-width-responsive");
+      var bodyDiv = $("<div>").addClass("uk-card-body uk-flex uk-flex-column");
       var cardTitle = $("<h3>")
-        .addClass("uk-card-title")
+        .addClass("card-title uk-card-title uk-text-break")
         .text(resource.title);
-      var descriptionDiv = $("<div>").addClass("descript-button uk-flex");
-      var description = $("<p>").text(resource.description);
+      var description = $("<p>")
+        .addClass("card-description uk-overflow-hidden uk-text-break")
+        .text(resource.description);
       var linkUrl = $("<a>").attr("href", resource.link);
       var resourceButton = $("<button>").addClass(
-        "go-button uk-flex uk-flex-center uk-flex-middle"
+        "go-button uk-flex uk-flex-center uk-flex-middle uk-align-right"
       );
       var buttonIcon = $("<span>").attr("uk-icon", "icon: chevron-right");
       // Append to each other
       bodyDiv
         .append(cardTitle)
-        .append(
-          descriptionDiv
-            .append(description)
-            .append(linkUrl.append(resourceButton.append(buttonIcon)))
-        );
+        .append(description)
+        .append(linkUrl.append(resourceButton.append(buttonIcon)));
       newResourceCard.append(
         resourceCardWrapper
           .append(cardImageDiv.append(cardImage))
