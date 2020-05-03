@@ -99,7 +99,7 @@ $(document).ready(function() {
     var description = $("<p>")
       .addClass("card-description uk-overflow-hidden uk-text-break")
       .text(resource.description);
-    var linkUrl = $("<a>").attr("href", resource.link);
+    var linkUrl = $("<a>").attr({ href: resource.link, target: "_blank" });
     var resourceButton = $("<button>").addClass(
       "go-button uk-flex uk-flex-center uk-flex-middle uk-align-right"
     );
