@@ -2,6 +2,8 @@ $(document).ready(function() {
   // Target the table that will hold our data for fields
   var fieldTable = $("#fieldTable");
 
+  // formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
+
   // Function to render the data
   function getFields() {
     // Make a get request to /api/fields
@@ -16,8 +18,12 @@ $(document).ready(function() {
           var tdName = $("<td>").text(data[i].title);
           // var tdUsers = $("<td>").text(data[i].users);
           // var tdResources = $("<td>").text(data[i].resources);
-          var tdCreated = $("<td>").text(data[i].createdAt);
-          var tdUpdated = $("<td>").text(data[i].updatedAt);
+          var tdCreated = $("<td>").text(
+            moment(data[i].createdAt).format("MMM Do YYYY, h:mm a")
+          );
+          var tdUpdated = $("<td>").text(
+            moment(data[i].updatedAt).format("MMM Do YYYY, h:mm a")
+          );
           // Append them to each other
           tr.append(tdName)
             // .append(tdUsers)

@@ -4,18 +4,114 @@
   box-sizing: border-box;
 }
 
+
+/* Theme colors */
+html {
+  --color-dark: #12141f;
+  --color-blue: #3d5af1;
+  --color-lightblue: #22d1ee;
+  --color-light: #e2f3f5;
+}
+
 body {
   background-color: #f2f2f2;
   min-height: 100vh;
 }
 
+
+/* Header */
 header {
   margin-bottom: 60px;
+  background-color: var(--color-dark);
+  z-index: 1;
+  padding-right: 20px;
+}
+
+#login {
+  color: var(--color-lightblue);
+  border: 1px solid var(--color-lightblue);
+}
+#login:hover {
+  background-color: var(--color-blue);
+  color: white;
+  border: 1px solid var(--color-blue);
+}
+
+.logo-text {
+  color: var(--color-light)
+}
+
+a.nav-link:link, a.nav-link:visited, a.logo-text:link, a.logo-text:visited {
+  color: var(--color-light)
+}
+
+.mobileMenu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border: 1px solid var(--color-lightblue);
+  cursor: pointer;
+  color: var(--color-lightblue);
+}
+
+.menu-icon:hover {
+  color: var(--color-light);
+  background-color: var(--color-blue);
+  border: none;
 }
 
 .main-menu {
   width: 100%;
 }
+
+#settings {
+  height: 40px;
+  width: 40px;
+  background-color: var(--color-lightblue);
+  border-radius: 20px;
+  color: var(--color-dark);
+  cursor: pointer;
+}
+
+#settings:hover {
+  background-color: var(--color-blue);
+}
+
+a.logout:link, a.logout:visited {
+  color: #666;
+}
+
+
+/* Hero image */
+.tagline {
+  font-size: 22px;
+}
+
+.banner-img {
+  height: 600px;
+  padding: 20px;
+}
+
+
+/* Home page */
+a.home-card-link:link {
+  text-decoration: none;
+}
+
+.home-card {
+  border: 1px solid white;
+}
+
+.home-card:hover {
+  border: 1px solid var(--color-lightblue);
+}
+
+
+/* On every page */
 
 .main-header {
   margin-bottom: 40px;
@@ -26,6 +122,7 @@ header {
 }
 
 .wiki-container {
+  width: 1200px;
   max-width: 1200px;
 }
 
@@ -33,30 +130,78 @@ header {
   width: 100%;
 }
 
+section {
+  padding: 20px;
+}
+
+section h2 {
+  margin-bottom: 40px;
+}
+
+
+/* Login */
+.loginForm {
+  padding-top: 140px;
+}
+
+a.signUpLink:link, a.signUpLink:visited, a.loginLink:link, a.loginLink:visited {
+  color: var(--color-blue)
+}
+
 form.signup,
 form.login {
   margin-top: 50px;
 }
 
-#settings {
-  height: 40px;
-  width: 40px;
-  background-color: #333;
-  border-radius: 20px;
-  color: white;
-  cursor: pointer;
-}
-
-
 
 /* Resources */
+#resources {
+  padding-top: 140px;
+}
+
+.empty-message {
+  font-size: 16px;
+}
+
+.card-image-container {
+  background-color: var(--color-blue);
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image {
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  height: 40px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  height: 120px;
+  margin-top: 0;
+  overflow: hidden;
+}
+
 .go-button {
   height: 32px;
-  width: 52px;
-  background-color: #333;
+  width: 32px;
+  background-color: var(--color-lightblue);
   color: white;
   padding: 6px;
   border: none;
+  margin: 0;
+}
+
+.go-button:hover {
+  background-color: var(--color-blue);
 }
 
 #resource-select {
@@ -65,35 +210,83 @@ form.login {
 
 #addButton {
   float: right;
+  color: white;
+  background-color: var(--color-lightblue);
+  border: none;
+}
+
+#addButton:hover {
+  background-color: var(--color-blue);
 }
 
 #addResource, #addField {
-  min-width: 600px;
+  max-width: 600px;
 }
 
 
 /* Fields */
+#fields {
+  padding-top: 140px;
+}
+
 #fieldTable {
   width: 100%;
 }
 
 
 /* User Profile */
-.userProfile {
-  margin-right: 20px;
+#userSection {
+  padding-top: 140px;
 }
 
+.userProfile {
+  padding: 0;
+}
+/*Book Search */
+#bookSearch {
+  padding-top: 140px;
+}
+
+.user-card-header, .user-card-body, .user-card-footer {
+  padding: 20px;
+}
+
+#profileImage {
+  cursor: pointer;
+  max-height: 200px;
+  width: auto;
+}
+
+#profile-container {
+  padding: 0;
+  margin-bottom: 10px;
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  background-color: var(--color-blue);
+}
+
+.book-search-form {
+  background-color: white;
+}
 
 /* Job Search */
-#jobsearchbody{
-  text-align:center;
-  font-family: 'ABeeZee';
-  font-size: 20px;
-  color:#fff;
-  background:#50394c;
+#jobSearch {
+  padding-top: 140px;
 }
 
-#heading{
+.job-search-form {
+  background-color: white;
+}
+
+/* #jobsearchbody{
+  text-align:center;
+  font-size: 20px;
+  color:#333;
+  background:#f2f2f2;
+} */
+
+/* #heading{
   padding-top:5%;
 }
 
@@ -104,10 +297,11 @@ form.login {
 #search-bar{
   padding:0 0 2% 0;
   margin-left:25%;
-  margin-right:25%;  
+  margin-right:25%; 
+  color:#333;  
 }
+ */
 
-a:link,a:visited{text-decoration:none; color:#50394c;} 
 
 /* USER PROFILE EDIT */
 
@@ -116,23 +310,49 @@ a:link,a:visited{text-decoration:none; color:#50394c;}
     display: none;
 }
 
-#profileImage
-{
-    cursor: pointer;
+
+
+
+/* Media Queries */
+/* Small devices (Tablets and mobile, 768px and below) */
+@media only screen and (max-width: 768px) {
+
+  .desktopMenu-toggle {
+    display: none;
+  }
+
+  .mobileMenu-toggle {
+    display: block;
+  }
+
+#resources, .loginForm, #jobSearch, #fields, #bookSearch {
+  padding-top: 110px;
 }
 
-#profile-container {
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
+  .fields-select {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .job-search-form {
+    margin-top: 10px;
+  }
+
 }
 
-#profile-container img {
-    width: 150px;
-    height: 150px;
+.book-search-form {
+  margin-top: 10px;
+}
+
+/* Smaller devices (Mobile, 768px and below) */
+@media only screen and (max-width: 639px) {
+
+  .card-title {
+    height: auto;
+  }
+  
+  .card-description {
+    height: auto;
+  }
+
 }

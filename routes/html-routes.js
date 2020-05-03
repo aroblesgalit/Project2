@@ -15,7 +15,20 @@ module.exports = function(app) {
 
   /* Job Search path*/
   app.get("/jobsearch", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/jobSearch.html"));
+    if (req.user) {
+      res.sendFile(path.join(__dirname, "../public/jobSearch-loggedIn.html"));
+    } else {
+      res.sendFile(path.join(__dirname, "../public/jobSearch.html"));
+    }
+  });
+
+  /* Book Search path*/
+  app.get("/bookSearch", function(req, res) {
+    if (req.user) {
+      res.sendFile(path.join(__dirname, "../public/bookSearch-loggedIn.html"));
+    } else {
+      res.sendFile(path.join(__dirname, "../public/bookSearch.html"));
+    }
   });
 
   app.get("/", function(req, res) {
@@ -35,6 +48,10 @@ module.exports = function(app) {
   });
 
   app.get("/signup", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      return res.redirect("/userProfile");
+    }
     res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
 

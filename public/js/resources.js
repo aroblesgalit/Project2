@@ -8,6 +8,8 @@ $(document).ready(function() {
 
   // Render fields select options
   getFields();
+  // Render resources based on the first option
+  getResources(1);
 
   // Add an change event to the fieldsSelect dropdown
   fieldsSelect.change(function() {
@@ -76,36 +78,39 @@ $(document).ready(function() {
 
   // This function constructs a resource's HTML
   function createNewCard(resource) {
-    // Get the date and format it
-    // var formattedDate = new Date(resource.createdAt);
-    // formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
     // Create the divs
-    var newResourceCard = $("<div>");
+    var newResourceCard = $("<div>").addClass(
+      "resource-card uk-overflow-hidden"
+    );
     var resourceCardWrapper = $("<div>").addClass("uk-card uk-card-default");
-    var cardImageDiv = $("<div>").addClass("uk-card-media-top");
-    var cardImage = $("<img>").attr({
-      src: resource.imageUrl,
-      alt: resource.title + " thumbnail."
-    });
-    var bodyDiv = $("<div>").addClass("uk-card-body");
+    var cardImageDiv = $("<div>").addClass(
+      "uk-card-media-top uk-flex uk-flex-center uk-flex-middle card-image-container"
+    );
+    var cardImage = $("<img>")
+      .attr({
+        src: resource.imageUrl,
+        alt: resource.title + " thumbnail."
+      })
+      .addClass("card-image uk-width-expand");
+    var bodyDiv = $("<div>").addClass(
+      "uk-card-body uk-flex uk-flex-column card-body"
+    );
     var cardTitle = $("<h3>")
-      .addClass("uk-card-title")
+      .addClass("card-title uk-card-title uk-text-break")
       .text(resource.title);
-    var descriptionDiv = $("<div>").addClass("descript-button uk-flex");
-    var description = $("<p>").text(resource.description);
-    var linkUrl = $("<a>").attr("href", resource.link);
+    var description = $("<p>")
+      .addClass("card-description uk-overflow-hidden uk-text-break")
+      .text(resource.description);
+    var linkUrl = $("<a>").attr({ href: resource.link, target: "_blank" });
     var resourceButton = $("<button>").addClass(
-      "go-button uk-flex uk-flex-center uk-flex-middle"
+      "go-button uk-flex uk-flex-center uk-flex-middle uk-align-right"
     );
     var buttonIcon = $("<span>").attr("uk-icon", "icon: chevron-right");
     // Append to each other
     bodyDiv
       .append(cardTitle)
-      .append(
-        descriptionDiv
-          .append(description)
-          .append(linkUrl.append(resourceButton.append(buttonIcon)))
-      );
+      .append(description)
+      .append(linkUrl.append(resourceButton.append(buttonIcon)));
     newResourceCard.append(
       resourceCardWrapper.append(cardImageDiv.append(cardImage)).append(bodyDiv)
     );
@@ -116,7 +121,7 @@ $(document).ready(function() {
   // This will display a message if there's no data
   function displayEmpty() {
     resourceResults.html(
-      "<p>No resources posted for this field yet. Sign up or Log in to add.</p>"
+      "<p class='empty-message uk-text-muted uk-text-italic uk-text-nowrap'>No resources posted for this field yet. <a href='/signup'>Sign up</a> or <a href='/login'>Log in</a> to add.</p>"
     );
   }
 });

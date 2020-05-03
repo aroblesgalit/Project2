@@ -5,7 +5,7 @@ module.exports = function(sequelize, Datatypes) {
       type: Datatypes.STRING,
       allowNull: false,
       validate: {
-        len: [1, 160]
+        len: [1]
       }
     },
     //changed this to be a .text type, maximum characters 500
@@ -13,21 +13,21 @@ module.exports = function(sequelize, Datatypes) {
       type: Datatypes.TEXT,
       allowNull: false,
       validate: {
-        len: [1, 500]
+        len: [1]
       }
     },
     link: {
       type: Datatypes.STRING,
       allowNull: false,
       validate: {
-        len: [1, 160]
+        len: [1]
       }
     },
     imageUrl: {
       type: Datatypes.STRING,
       allowNull: false,
       validate: {
-        len: [1, 160]
+        len: [1]
       }
     }
   });
