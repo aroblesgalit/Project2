@@ -10,8 +10,31 @@ $(document).ready(function() {
       method: "GET"
     })
       .then(function(result) {
-        console.log(result);
+        // var bookTitle = $("<h1>").text(result.docs[0].title);
+        // $(".row").append(bookTitle);
+        // console.log(result);
+        var coverId = result.docs[0].cover_i;
+        var newCard = $("<div>")
+          .addClass(
+            "uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin"
+          )
+          .attr("uk-grid", true);
+        var cardMedia = $("<div>").addClass(
+          "uk-card-media-left uk-cover-container"
+        );
+        var cardImage = $("<img>").attr({
+          src: `http://covers.openlibrary.org/b/id/${coverId}-M.jpg`,
+          alt: "Book Cover",
+          "uk-cover": true
+        });
+        var cardCanvas = $("<canvas>").attr({ width: "400", height: "200" });
+
+        cardMedia.append(cardImage).append(cardCanvas);
+
+        newCard.append(cardMedia);
+        $(".row").append(newCard);
       })
+
       .catch(function(err) {
         console.log(err);
       });
