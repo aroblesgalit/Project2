@@ -237,6 +237,10 @@ form.login {
 .userProfile {
   padding: 0;
 }
+/*Book Search */
+#bookSearch {
+  padding-top: 140px;
+}
 
 .user-card-header, .user-card-body, .user-card-footer {
   padding: 20px;
@@ -255,6 +259,10 @@ form.login {
   width: 200px;
   border-radius: 100px;
   background-color: var(--color-blue);
+}
+
+.book-search-form {
+  background-color: white;
 }
 
 /* Job Search */
@@ -312,9 +320,9 @@ form.login {
     display: block;
   }
 
-  #resources, .loginForm, #jobSearch, #fields {
-    padding-top: 110px;
-  }
+#resources, .loginForm, #jobSearch, #fields, #bookSearch {
+  padding-top: 110px;
+}
 
   .fields-select {
     margin-top: 10px;
@@ -325,6 +333,10 @@ form.login {
     margin-top: 10px;
   }
 
+}
+
+.book-search-form {
+  margin-top: 10px;
 }
 
 /* Smaller devices (Mobile, 768px and below) */
