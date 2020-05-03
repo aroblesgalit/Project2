@@ -140,7 +140,7 @@ $(document).ready(function() {
     // This will display a message if there's no data
     function displayEmpty() {
       resourceResults.html(
-        "<p>No resources posted for this field yet. Sign up or Log in to add.</p>"
+        "<p>You have not added any resources. Go to <a href='/resources'>Resources</a> to make your first post.</p>"
       );
     }
   });
