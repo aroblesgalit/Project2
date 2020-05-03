@@ -163,13 +163,25 @@ form.login {
   font-size: 16px;
 }
 
+.card-image {
+  background-color: var(--color-blue);
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 20px;
+}
+
 .card-title {
-  max-height: 40px;
+  height: 40px;
+  overflow: hidden;
 }
 
 .card-description {
-  max-height: 80px;
+  height: 120px;
   margin-top: 0;
+  overflow: hidden;
 }
 
 .go-button {
@@ -222,9 +234,21 @@ form.login {
 }
 
 .userProfile {
-  margin-right: 20px;
+  padding: 0;
 }
 
+.user-card-header, .user-card-body, .user-card-footer {
+  padding: 20px;
+}
+
+#profileImage
+{
+    cursor: pointer;
+}
+
+#profile-container {
+  margin-bottom: 10px;
+}
 
 /* Job Search */
 #jobSearch {
@@ -266,28 +290,6 @@ form.login {
     display: none;
 }
 
-#profileImage
-{
-    cursor: pointer;
-}
-
-#profile-container {
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
-}
-
-#profile-container img {
-    width: 150px;
-    height: 150px;
-}
-
-
 
 
 
@@ -295,25 +297,38 @@ form.login {
 /* Small devices (Tablets and mobile, 768px and below) */
 @media only screen and (max-width: 768px) {
 
-.desktopMenu-toggle {
-  display: none;
+  .desktopMenu-toggle {
+    display: none;
+  }
+
+  .mobileMenu-toggle {
+    display: block;
+  }
+
+  #resources, .loginForm, #jobSearch, #fields {
+    padding-top: 110px;
+  }
+
+  .fields-select {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .job-search-form {
+    margin-top: 10px;
+  }
+
 }
 
-.mobileMenu-toggle {
-  display: block;
-}
+/* Smaller devices (Mobile, 768px and below) */
+@media only screen and (max-width: 639px) {
 
-#resources, .loginForm, #jobSearch, #fields {
-  padding-top: 110px;
-}
-
-.fields-select {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.job-search-form {
-  margin-top: 10px;
-}
+  .card-title {
+    height: auto;
+  }
+  
+  .card-description {
+    height: auto;
+  }
 
 }

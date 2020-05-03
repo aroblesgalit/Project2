@@ -78,22 +78,23 @@ $(document).ready(function() {
 
   // This function constructs a resource's HTML
   function createNewCard(resource) {
-    // Get the date and format it
-    // var formattedDate = new Date(resource.createdAt);
-    // formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
     // Create the divs
-    var newResourceCard = $("<div>");
+    var newResourceCard = $("<div>").addClass(
+      "resource-card uk-overflow-hidden"
+    );
     var resourceCardWrapper = $("<div>").addClass("uk-card uk-card-default");
-    var cardImageDiv = $("<div>").addClass("uk-card-media-top");
+    var cardImageDiv = $("<div>").addClass(
+      "uk-card-media-top uk-flex uk-flex-center uk-flex-middle card-image"
+    );
     var cardImage = $("<img>")
       .attr({
         src: resource.imageUrl,
         alt: resource.title + " thumbnail."
       })
-      .addClass("uk-responsive-width");
+      .addClass("uk-width-responsive");
     var bodyDiv = $("<div>").addClass("uk-card-body uk-flex uk-flex-column");
     var cardTitle = $("<h3>")
-      .addClass("card-title uk-card-title uk-overflow-hidden")
+      .addClass("card-title uk-card-title uk-text-break")
       .text(resource.title);
     var description = $("<p>")
       .addClass("card-description uk-overflow-hidden uk-text-break")
@@ -118,7 +119,7 @@ $(document).ready(function() {
   // This will display a message if there's no data
   function displayEmpty() {
     $(".main-content").html(
-      "<p class='empty-message uk-text-muted uk-text-italic'>No resources posted for this field yet. Sign up or Log in to add.</p>"
+      "<p class='empty-message uk-text-muted uk-text-italic'>No resources posted for this field yet. <a href='/signup'>Sign up</a> or <a href='/login'>Log in</a> to add.</p>"
     );
   }
 });
