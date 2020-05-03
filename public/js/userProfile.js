@@ -45,6 +45,9 @@ $(document).ready(function() {
     fasterPreview(this);
   });
 
+  // Add current date
+  $(".currentDate").append(moment().format("MMM Do YYYY"));
+
   $.get("/api/user_data").then(function(data) {
     $("#userProfileEmailRender").append(data.email);
     // Target div that will contain the results for resources
