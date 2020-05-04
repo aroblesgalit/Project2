@@ -11,6 +11,7 @@ html {
   --color-blue: #3d5af1;
   --color-lightblue: #22d1ee;
   --color-light: #e2f3f5;
+  --font-special: 'Abril Fatface', cursive;
 }
 
 body {
@@ -38,7 +39,12 @@ header {
 }
 
 .logo-text {
-  color: var(--color-light)
+  color: var(--color-light);
+  font-family: var(--font-special);
+}
+
+.blueAnd {
+  color: var(--color-lightblue);
 }
 
 a.nav-link:link, a.nav-link:visited, a.logo-text:link, a.logo-text:visited {
@@ -94,6 +100,10 @@ a.logout:link, a.logout:visited {
 .banner-img {
   height: 600px;
   padding: 20px;
+}
+
+.banner-img h1 {
+  font-family: var(--font-special);
 }
 
 
