@@ -241,7 +241,10 @@ form.login {
 
 .userProfile {
   padding: 0;
+  margin-left: 15px;
 }
+
+
 /*Book Search */
 #bookSearch {
   padding-top: 140px;
@@ -269,6 +272,7 @@ form.login {
 .book-search-form {
   background-color: white;
 }
+
 
 /* Job Search */
 #jobSearch {

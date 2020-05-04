@@ -35,9 +35,17 @@
         <!-- Menu for desktop size screens -->
         <ul class="desktopMenu-toggle uk-navbar-nav">
           <li><a class="nav-link" href="/resources">Resources</a></li>
+          <li><a class="nav-link" href="/fields">Fields</a></li>
           <li><a class="nav-link" href="#">Book Search</a></li>
-          <div class="uk-navbar-item">
-            <a href="/login"><button class="uk-button uk-button-default" id="login">Log in</button></a>
+          <div class="uk-navbar-item" id="loginAvatar">
+            <div id="settings" class="uk-flex uk-flex-center uk-flex-middle"><span uk-icon="icon:  user"></span></div>
+            <div uk-dropdown="mode: click">
+              <ul class="uk-nav uk-dropdown-nav">
+                <li class="uk-active"><a href="/userProfile">User Profile</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a class="logoutLink" href="/logout">Logout</a></li>
+              </ul>
+            </div>
           </div>
         </ul>
         <!-- Menu for mobile size screens -->
@@ -47,9 +55,11 @@
             <div class="uk-navbar-dropdown">
               <ul class="uk-nav uk-navbar-dropdown-nav">
                 <li><a href="/resources">Resources</a></li>
+                <li><a href="/fields">Fields</a></li>
                 <li><a href="#">Book Search</a></li>
+                <li><a href="/userProfile">User Profile</a></li>
                 <li class="uk-nav-divider"></li>
-                <li><a class="logoutLink" href="/login">Log in</a></li>
+                <li><a class="logoutLink" href="/logout">Logout</a></li>
               </ul>
             </div>
           </li>
@@ -71,7 +81,7 @@
       </div>
       <!-- Book search content -->
       <div class="book-results">
-    
+
         <!-- 
         <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
           
@@ -144,7 +154,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/bookSearch.js"></script>
-  
+
 </body>
 
 </html>
