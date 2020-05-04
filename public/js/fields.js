@@ -2,8 +2,6 @@ $(document).ready(function() {
   // Target the table that will hold our data for fields
   var fieldTable = $("#fieldTable");
 
-  // formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
-
   // Function to render the data
   function getFields() {
     // Make a get request to /api/fields
