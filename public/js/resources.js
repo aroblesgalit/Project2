@@ -6,7 +6,7 @@ $(document).ready(function() {
   // Get reference to our form and inputs
   var fieldsSelect = $("#fieldsSelect");
 
-  // Render fields select options
+  // Render selection
   getFields();
   // Render resources based on the first option
   // getResources(1);
@@ -40,10 +40,17 @@ $(document).ready(function() {
 
   // Function render the first field option
   function renderFirstField() {
-    // Get the id of the first option
-    var firstId = fieldsSelect.children("option:selected").val();
-    // Call the function to grab the resources and pass in the id to render the result
-    getResources(firstId);
+    // Make a get request to get the fields
+    $.get("/api/fields")
+      .then(function(data) {
+        // Get the id of the first option
+        var firstId = data[0].id;
+        // Render its resources
+        getResources(firstId);
+      })
+      .catch(function(err) {
+        console.log(err);
+      });
   }
 
   // This function grabs resources from the database and updates the view based on a field id
