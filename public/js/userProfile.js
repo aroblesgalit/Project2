@@ -63,7 +63,7 @@ $(document).ready(function() {
     // This function grabs resources from the database and updates the view based on a field id
     function getResources(userId) {
       // Make a get request to /api/resources/ plust the field id
-      $.get("/api/resources/" + userId)
+      $.get("/api/resources/user/" + userId)
         // Then use the data from the request
         .then(function(data) {
           console.log("Resources", data);
