@@ -2,10 +2,13 @@
 <html lang="en">
 
 <head>
-    <title>Career Field Resource Wiki</title>
+    <title>Career Resources & Wiki</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/css/uikit.min.css" />
@@ -24,7 +27,7 @@
         <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar="mode: click">
             <!-- Logo -->
             <div class="uk-navbar-left">
-                <a class="logo-text uk-navbar-item uk-logo" href="/">Career Field Resource Wiki</a>
+                <a class="logo-text uk-navbar-item uk-logo" href="/">Career Resources <span class="blueAnd">&</span> Wiki</a>
             </div>
             <!-- Menu -->
             <div class="uk-navbar-right">
@@ -33,7 +36,8 @@
                     <li><a class="nav-link" href="/fields">Fields</a></li>
                     <li><a class="nav-link" href="/bookSearch">Book Search</a></li>
                     <div class="uk-navbar-item" id="loginAvatar">
-                        <div id="settings" class="uk-flex uk-flex-center uk-flex-middle"><span uk-icon="icon:  user"></span></div>
+                        <div id="settings" class="uk-flex uk-flex-center uk-flex-middle"><span
+                                uk-icon="icon:  user"></span></div>
                         <div uk-dropdown="mode: click">
                             <ul class="uk-nav uk-dropdown-nav">
                                 <li class="uk-active"><a href="/userProfile">User Profile</a></li>
@@ -75,7 +79,7 @@
                         <input class="uk-input" id="form-title" type="text" placeholder="Title">
                     </div>
                 </div>
-                
+
                 <!-- Image Url -->
                 <!-- <div class="uk-margin">
                     <label class="uk-form-label" for="form-imageUrl">Thumbnail url:</label>
@@ -84,8 +88,10 @@
                     </div>
                 </div>        -->
                 <div class="uk-flex uk-flex-right">
-                    <button id="cancelFieldButton" class="uk-button uk-button-danger uk-margin-right">Cancel</button><button type="submit" id="addFieldButton" class="uk-button uk-button-primary">Add</button>  
-                </div>                   
+                    <button id="cancelFieldButton"
+                        class="uk-button uk-button-danger uk-margin-right">Cancel</button><button type="submit"
+                        id="addFieldButton" class="uk-button uk-button-primary">Add</button>
+                </div>
             </form>
         </div>
     </section>
