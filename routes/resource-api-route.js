@@ -21,11 +21,11 @@ module.exports = function(app) {
       res.json(dbResource);
     });
   });
-
+  // gets the resources for the specfic user
   app.get("/api/resources/:userId", function(req, res) {
     db.Resource.findAll({
       where: {
-        userId: req.params.userId
+        UserId: req.params.userId
       },
       include: [
         {
@@ -36,7 +36,8 @@ module.exports = function(app) {
         {
           model: db.User
         }
-      ]
+      ],
+      order: [["createdAt", "DESC"]]
     }).then(function(dbResource) {
       res.json(dbResource);
     });

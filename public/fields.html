@@ -18,31 +18,48 @@
 </head>
 
 <body>
-
-    <header>
+    <!-- Header -->
+    <header class="uk-position-fixed uk-width-expand">
         <!-- Nav bar -->
-        <nav class="main-menu uk-navbar-container" uk-navbar>
+        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar="mode: click">
             <!-- Logo -->
             <div class="uk-navbar-left">
-                <a class="uk-navbar-item uk-logo" href="#">Career Field Resource Wiki</a>
+                <a class="logo-text uk-navbar-item uk-logo" href="/">Career Field Resource Wiki</a>
             </div>
             <!-- Menu -->
             <div class="uk-navbar-right">
-                <ul class="uk-navbar-nav">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/resources">Resources</a></li>
-                    <li class="uk-active"><a href="/fields">Fields</a></li>
-                    <li><a href="/jobsearch">Job Search</a></li>
+                <!-- Menu for desktop size screens -->
+                <ul class="desktopMenu-toggle uk-navbar-nav">
+                    <li><a class="nav-link" href="/resources">Resources</a></li>
+                    <li><a class="nav-link" href="#">Fields</a></li>
+                    <li><a class="nav-link" href="/jobsearch">Job Search</a></li>
                     <div class="uk-navbar-item" id="loginAvatar">
-                        <div id="settings" class="uk-flex uk-flex-center uk-flex-middle"><span uk-icon="icon:  user"></span></div>
-                        <div uk-dropdown>
+                        <div id="settings" class="uk-flex uk-flex-center uk-flex-middle"><span
+                                uk-icon="icon:  user"></span></div>
+                        <div uk-dropdown="mode: click">
                             <ul class="uk-nav uk-dropdown-nav">
                                 <li class="uk-active"><a href="/userProfile">User Profile</a></li>
                                 <li class="uk-nav-divider"></li>
-                                <li><a href="/logout">Logout</a></li>
+                                <li><a class="logoutLink" href="/logout">Logout</a></li>
                             </ul>
                         </div>
                     </div>
+                </ul>
+                <!-- Menu for mobile size screens -->
+                <ul class="mobileMenu-toggle uk-navbar-nav">
+                    <li class="mobile-menu">
+                        <div class="menu-icon uk-flex uk-flex-center" uk-icon="icon: menu"></div>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li><a href="/resources">Resources</a></li>
+                                <li><a href="#">Fields</a></li>
+                                <li><a href="/jobsearch">Job Search</a></li>
+                                <li><a href="/userProfile">User Profile</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li><a class="logoutLink" href="/logout">Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -51,62 +68,39 @@
     <!-- Main content -->
     <section id="fields" class="uk-height-1-1 uk-flex uk-flex-center">
         <div class="wiki-container">
-            <div class="main-header uk-flex uk-flex-between">
-                <div class="uk-flex uk-flex-middle">
-                    <h1 class="main-heading">Fields</h1>
-                </div>
+            <!-- Page header -->
+            <div class="main-header uk-flex uk-flex-between uk-flex-middle">
+                <h1 class="main-heading">Fields</h1>
                 <a href="/fields/addForm"><button class="uk-button uk-button-default" id="addButton">Add</button></a>
             </div>
-            <!-- Content -->
+            <!-- Fields content -->
             <div class="main-content">
                 <div class="field-results uk-overflow-auto">
                     <table id="fieldTable" class="uk-table uk-table-striped uk-table-hover uk-table-middle">
+                        <!-- Fields table head -->
                         <thead>
                             <tr>
-                                <th class="uk-width-small">Avatar</th>
+                                <!-- <th class="uk-width-small">Avatar</th> -->
                                 <th class="uk-width-large">Title</th>
-                                <th class="uk-width-small"># of users</th>
-                                <th class="uk-width-small"># of resources</th>
+                                <!-- <th class="uk-width-small"># of users</th>
+                                <th class="uk-width-small"># of resources</th> -->
                                 <th class="uk-width-small">Created at</th>
                                 <th class="uk-width-small">Updated at</th>
                             </tr>
                         </thead>
+                        <!-- Fields table body -->
                         <tbody>
                             <tr>
-                                <td><img class="uk-preserve-width uk-border-circle" src="https://via.placeholder.com/40" alt=""></td>
-                                <td>Front-End Web Development</td>
-                                <td class="uk-table-link">
+                                <!-- <td><img class="uk-preserve-width uk-border-circle" src="https://via.placeholder.com/40" alt=""></td> -->
+                                <!-- <td>Front-End Web Development</td> -->
+                                <!-- <td class="uk-table-link">
                                     <a class="uk-link-reset" href="">231</a>
                                 </td>
                                 <td class="uk-table-link">
                                     <a class="uk-link-reset" href="">682</a>
-                                </td>
-                                <td>4/29/2020</td>
-                                <td>4/29/2020</td>
-                            </tr>
-                            <tr>
-                                <td><img class="uk-preserve-width uk-border-circle" src="https://via.placeholder.com/40" alt=""></td>
-                                <td>Game Designer</td>
-                                <td class="uk-table-link">
-                                    <a class="uk-link-reset" href="">231</a>
-                                </td>
-                                <td class="uk-table-link">
-                                    <a class="uk-link-reset" href="">682</a>
-                                </td>
-                                <td>4/29/2020</td>
-                                <td>4/29/2020</td>
-                            </tr>
-                            <tr>
-                                <td><img class="uk-preserve-width uk-border-circle" src="https://via.placeholder.com/40" alt=""></td>
-                                <td>UX/UI Designer</td>
-                                <td class="uk-table-link">
-                                    <a class="uk-link-reset" href="">231</a>
-                                </td>
-                                <td class="uk-table-link">
-                                    <a class="uk-link-reset" href="">682</a>
-                                </td>
-                                <td>4/29/2020</td>
-                                <td>4/29/2020</td>
+                                </td> -->
+                                <!-- <td>4/29/2020</td>
+                                <td>4/29/2020</td> -->
                             </tr>
                         </tbody>
                     </table>
@@ -116,6 +110,7 @@
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment.min.js"></script>
     <script type="text/javascript" src="js/fields.js"></script>
     <!-- <script type="text/javascript" src="js/loginButton.js"></script> -->
 

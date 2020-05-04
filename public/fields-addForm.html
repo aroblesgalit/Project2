@@ -19,30 +19,44 @@
 
 <body>
 
-    <header>
+    <header class="uk-position-fixed uk-width-expand">
         <!-- Nav bar -->
-        <nav class="main-menu uk-navbar-container" uk-navbar>
+        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar="mode: click">
             <!-- Logo -->
             <div class="uk-navbar-left">
-                <a class="uk-navbar-item uk-logo" href="#">Career Field Resource Wiki</a>
+                <a class="logo-text uk-navbar-item uk-logo" href="/">Career Field Resource Wiki</a>
             </div>
             <!-- Menu -->
             <div class="uk-navbar-right">
-                <ul class="uk-navbar-nav">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/resources">Resources</a></li>
-                    <li class="uk-active"><a href="/fields">Fields</a></li>
-                    <li><a href="/jobsearch">Job Search</a></li>
+                <ul class="desktopMenu-toggle uk-navbar-nav">
+                    <li><a class="nav-link" href="/resources">Resources</a></li>
+                    <li><a class="nav-link" href="/fields">Fields</a></li>
+                    <li><a class="nav-link" href="/jobsearch">Job Search</a></li>
                     <div class="uk-navbar-item" id="loginAvatar">
                         <div id="settings" class="uk-flex uk-flex-center uk-flex-middle"><span uk-icon="icon:  user"></span></div>
-                        <div uk-dropdown>
+                        <div uk-dropdown="mode: click">
                             <ul class="uk-nav uk-dropdown-nav">
                                 <li class="uk-active"><a href="/userProfile">User Profile</a></li>
                                 <li class="uk-nav-divider"></li>
-                                <li><a href="/logout">Logout</a></li>
+                                <li><a class="logoutLink" href="/logout">Logout</a></li>
                             </ul>
                         </div>
                     </div>
+                </ul>
+                <ul class="mobileMenu-toggle uk-navbar-nav">
+                    <li class="mobile-menu">
+                        <div class="menu-icon uk-flex uk-flex-center" uk-icon="icon: menu"></div>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li><a href="/resources">Resources</a></li>
+                                <li><a href="/fields">Fields</a></li>
+                                <li><a href="/jobsearch">Job Search</a></li>
+                                <li><a href="/userProfile">User Profile</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li><a class="logoutLink" href="/logout">Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -50,34 +64,34 @@
 
     <!-- Main content -->
     <section id="fields" class="uk-height-1-1 uk-flex uk-flex-center">
-        <div class="wiki-container">
-            <form id="addField" class="uk-form-stacked">
+        <div class="wiki-container uk-flex uk-flex-center">
+            <form id="addField" class="uk-form-stacked uk-width-expand">
                 <legend class="uk-legend">Add a field</legend>
 
                 <!-- Title -->
                 <div class="uk-margin">
                     <label class="uk-form-label" for="form-title">Title:</label>
                     <div class="uk-form-controls">
-                        <input class="uk-input" id="form-title" type="text" placeholder="Some text...">
+                        <input class="uk-input" id="form-title" type="text" placeholder="Title">
                     </div>
                 </div>
                 
                 <!-- Image Url -->
-                <div class="uk-margin">
+                <!-- <div class="uk-margin">
                     <label class="uk-form-label" for="form-imageUrl">Thumbnail url:</label>
                     <div class="uk-form-controls">
                         <input class="uk-input" id="form-imageUrl" type="text" placeholder="Some text...">
                     </div>
-                </div>       
+                </div>        -->
                 <div class="uk-flex uk-flex-right">
-                    <button id="cancelFieldButton" class="uk-button uk-button-danger uk-margin-right">Cancel</button><button id="addFieldButton" class="uk-button uk-button-primary">Add</button>  
+                    <button id="cancelFieldButton" class="uk-button uk-button-danger uk-margin-right">Cancel</button><button type="submit" id="addFieldButton" class="uk-button uk-button-primary">Add</button>  
                 </div>                   
             </form>
         </div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/resources.js"></script>
+    <script type="text/javascript" src="/js/fields-addForm.js"></script>
     <!-- <script type="text/javascript" src="js/loginButton.js"></script> -->
 
 </body>

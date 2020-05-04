@@ -2,8 +2,11 @@ USE resources_db;
 
 -- FIELD
 INSERT INTO fields (title, createdAt, updatedAt)
-VALUES ("Front-end Web Dev", NOW(), NOW()),
- ("Graphic Designer", NOW(), NOW());
+VALUES ("Web Development", NOW(), NOW()),
+ ("Graphic Design", NOW(), NOW()),
+ ("Animation", NOW(), NOW()),
+ ("Game Design", NOW(), NOW()),
+ ("UX/UI Design", NOW(), NOW());
  
 -- USER
 INSERT INTO users (email, password, createdAt, updatedAt, FieldId)

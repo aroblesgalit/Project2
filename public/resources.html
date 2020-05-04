@@ -18,23 +18,37 @@
 </head>
 
 <body>
-
-    <header>
+    <!-- Header -->
+    <header class="uk-position-fixed uk-width-expand">
         <!-- Nav bar -->
-        <nav class="main-menu uk-navbar-container" uk-navbar>
+        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar="mode: click">
             <!-- Logo -->
             <div class="uk-navbar-left">
-                <a class="uk-navbar-item uk-logo" href="#">Career Field Resource Wiki</a>
+                <a class="logo-text uk-navbar-item uk-logo" href="/">Career Field Resource Wiki</a>
             </div>
             <!-- Menu -->
             <div class="uk-navbar-right">
-                <ul class="uk-navbar-nav">
-                    <li><a href="/">Home</a></li>
-                    <li class="uk-active"><a href="#">Resources</a></li>
-                    <li><a href="/jobsearch">Job Search</a></li>
+                <!-- Menu for desktop size screens -->
+                <ul class="desktopMenu-toggle uk-navbar-nav">
+                    <li><a class="nav-link" href="#">Resources</a></li>
+                    <li><a class="nav-link" href="/jobsearch">Job Search</a></li>
                     <div class="uk-navbar-item">
                         <a href="/login"><button class="uk-button uk-button-default" id="login">Log in</button></a>
                     </div>
+                </ul>
+                <!-- Menu for mobile size screens -->
+                <ul class="mobileMenu-toggle uk-navbar-nav">
+                    <li class="mobile-menu">
+                        <div class="menu-icon uk-flex uk-flex-center" uk-icon="icon: menu"></div>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li><a href="#">Resources</a></li>
+                                <li><a href="/jobsearch">Job Search</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li><a class="logoutLink" href="/login">Log in</a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -43,23 +57,26 @@
     <!-- Main content -->
     <section id="resources" class="uk-height-1-1 uk-flex uk-flex-center">
         <div class="wiki-container">
-            <div class="main-header uk-flex uk-flex-middle">
+            <!-- Page header -->
+            <div class="main-header uk-flex uk-flex-wrap uk-flex-middle uk-width-1-1">
                 <h1 class="main-heading">Resources</h1>
-                <form>
+                <form class="fields-select">
                     <fieldset id="resource-select" class="uk-fieldset">
-                        <!-- Get data from a get request to the /fields endpoint -->
+                        <!-- Render data from a get request to the /fields endpoint -->
                         <select id="fieldsSelect" class="uk-select">
-                            <option>--Select a field to view resources--</option>
-                            <!-- <option>Option 02</option> -->
+                            <!-- <option>Option 01</option>
+                            <option>Option 02</option> -->
                         </select>
                     </fieldset>
                 </form>
             </div>
-            <!-- Content -->
+            <!-- Resources content -->
             <div class="main-content">
-                <div class="resource-results uk-grid-column-small uk-grid-row-large uk-child-width-1-4@s uk-text-left" uk-grid>
-                    <!-- Get data from a get request to the /resources endpoint -->
-                    <p>Select a field to view resources.</p>
+                <div class="resource-results uk-grid-column-small uk-grid-row-small uk-child-width-1-3@s uk-child-width-1-4@m uk-text-left"
+                    uk-grid>
+                    <!-- Render data from a get request to the /resources endpoint -->
+                    <!-- <p class="uk-text-muted">Select a field to view resources.</p> -->
+
                     <!-- <div>
                         <div class="uk-card uk-card-default">
                             <div class="uk-card-media-top">
@@ -89,9 +106,11 @@
                                 <div class="descript-button uk-flex">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                         eiusmod tempor incididunt.</p>
-                                    <button class="go-button uk-flex uk-flex-center uk-flex-middle">
-                                        <span uk-icon="icon: chevron-right"></span>
-                                    </button>
+                                    <a href="google.com">
+                                        <button class="go-button uk-flex uk-flex-center uk-flex-middle">
+                                            <span uk-icon="icon: chevron-right"></span>
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -106,9 +125,11 @@
                                 <div class="descript-button uk-flex">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                         eiusmod tempor incididunt.</p>
-                                    <button class="go-button uk-flex uk-flex-center uk-flex-middle">
-                                        <span uk-icon="icon: chevron-right"></span>
-                                    </button>
+                                    <a href="google.com">
+                                        <button class="go-button uk-flex uk-flex-center uk-flex-middle">
+                                            <span uk-icon="icon: chevron-right"></span>
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -120,16 +141,19 @@
                             </div>
                             <div class="uk-card-body">
                                 <h3 class="uk-card-title">Media Top</h3>
-                                <div class="descript-button uk-flex">
+                                <div class="descript-button uk-flex uk-flex-middle">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                         eiusmod tempor incididunt.</p>
-                                    <button class="go-button uk-flex uk-flex-center uk-flex-middle">
-                                        <span uk-icon="icon: chevron-right"></span>
-                                    </button>
+                                    <a href="google.com">
+                                        <button class="go-button uk-flex uk-flex-center uk-flex-middle">
+                                            <span uk-icon="icon: chevron-right"></span>
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div> -->
+
                 </div>
             </div>
         </div>
@@ -137,7 +161,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/resources.js"></script>
-    <!-- <script type="text/javascript" src="js/loginButton.js"></script> -->
 
 </body>
 
