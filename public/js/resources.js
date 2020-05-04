@@ -9,7 +9,8 @@ $(document).ready(function() {
   // Render fields select options
   getFields();
   // Render resources based on the first option
-  getResources(1);
+  // getResources(1);
+  renderFirstField();
 
   // Add an change event to the fieldsSelect dropdown
   fieldsSelect.change(function() {
@@ -35,6 +36,14 @@ $(document).ready(function() {
       .catch(function(err) {
         console.log(err);
       });
+  }
+
+  // Function render the first field option
+  function renderFirstField() {
+    // Get the id of the first option
+    var firstId = fieldsSelect.children("option:selected").val();
+    // Call the function to grab the resources and pass in the id to render the result
+    getResources(firstId);
   }
 
   // This function grabs resources from the database and updates the view based on a field id
