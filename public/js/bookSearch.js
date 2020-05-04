@@ -1,19 +1,22 @@
 $(document).ready(function() {
+  // Add a submit event to the book search form
   $(".book-search-form").on("submit", function(e) {
     e.preventDefault();
-    $(".row").empty();
-    const userInput = $(".book-search-input")
+    // Target the div that will contain the rendered data
+    var bookResults = $(".book-results");
+    // Empty out the div
+    bookResults.empty();
+    // Get the value from the search input
+    var userInput = $(".book-search-input")
       .val()
       .trim();
-    // console.log(userInput);
+    // Use ajax to make a get request to the open library api
     $.ajax({
       url: `http://openlibrary.org/search.json?q=${userInput}`,
       method: "GET"
     })
       .then(function(result) {
-        // var bookTitle = $("<h1>").text(result.docs[0].title);
-        // $(".row").append(bookTitle);
-        // console.log(result);
+        //
         for (i = 0; i < 10; i++) {
           var coverId = result.docs[i].isbn[0];
           var bookTitle = result.docs[i].title;
@@ -49,7 +52,7 @@ $(document).ready(function() {
           bodyCardDiv.append(bodyCard);
 
           newCard.append(cardMedia).append(bodyCardDiv);
-          $(".row").append(newCard);
+          bookResults.append(newCard);
         }
       })
 
