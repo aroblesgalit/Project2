@@ -40,7 +40,7 @@ module.exports = function(app) {
   //   });
   // });
 
-  //   creates and saves new fields
+  // creates and saves new fields
   app.post("/api/fields", function(req, res) {
     db.Field.create(req.body)
       .then(function(dbField) {
