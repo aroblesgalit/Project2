@@ -12,7 +12,7 @@ $(document).ready(function() {
       .trim();
     // Use ajax to make a get request to the open library api
     $.ajax({
-      url: `http://openlibrary.org/search.json?q=${userInput}`,
+      url: `https://openlibrary.org/search.json?q=${userInput}`,
       method: "GET"
     })
       .then(function(result) {
