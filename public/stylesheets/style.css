@@ -260,6 +260,19 @@ form.login {
   padding-top: 140px;
 }
 
+.bookImageBg {
+  background-color: var(--color-blue);
+}
+
+.bookData {
+  font-size: 18px;
+}
+
+.bookResultIntro {
+  font-style: italic;
+  font-size: 18px;
+}
+
 .user-card-header, .user-card-body, .user-card-footer {
   padding: 20px;
 }

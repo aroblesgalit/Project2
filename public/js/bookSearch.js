@@ -16,67 +16,176 @@ $(document).ready(function() {
       method: "GET"
     })
       .then(function(result) {
-        //
-        for (i = 0; i < 10; i++) {
-          var coverId = result.docs[i].isbn[0];
-          var bookTitle = result.docs[i].title;
-          var bookAuthor = result.docs[i].author_name[0];
-          var publishYear = result.docs[i].publish_year[0];
-          var newCard = $("<div>")
-            .addClass(
-              "uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin"
-            )
-            .attr("uk-grid", true);
-          var cardMedia = $("<div>").addClass(
-            "uk-card-media-left uk-cover-container"
+        console.log(result);
+        for (let i = 0; i < 10; i++) {
+          render10(i);
+        }
+        renderPagination();
+
+        $(document).on("click", ".pg1", function() {
+          console.log("pg1 clicked");
+          bookResults.empty();
+          for (let i = 1; i < 10; i++) {
+            render10(i);
+          }
+          renderPagination();
+        });
+        $(document).on("click", ".pg2", function() {
+          console.log("pg2 clicked");
+          bookResults.empty();
+          for (let i = 10; i < 19; i++) {
+            render10(i);
+          }
+          renderPagination();
+        });
+        $(document).on("click", ".pg3", function() {
+          console.log("pg3 clicked");
+          bookResults.empty();
+          for (let i = 19; i < 28; i++) {
+            render10(i);
+          }
+          renderPagination();
+        });
+        $(document).on("click", ".pg4", function() {
+          console.log("pg4 clicked");
+          bookResults.empty();
+          for (let i = 28; i < 37; i++) {
+            render10(i);
+          }
+          renderPagination();
+        });
+        $(document).on("click", ".pg5", function() {
+          console.log("pg5 clicked");
+          bookResults.empty();
+          for (let i = 37; i < 46; i++) {
+            render10(i);
+          }
+          renderPagination();
+        });
+        $(document).on("click", ".pg6", function() {
+          console.log("pg6 clicked");
+          bookResults.empty();
+          for (let i = 46; i < 55; i++) {
+            render10(i);
+          }
+          renderPagination();
+        });
+        $(document).on("click", ".pg7", function() {
+          console.log("pg7 clicked");
+          bookResults.empty();
+          for (let i = 55; i < 64; i++) {
+            render10(i);
+          }
+          renderPagination();
+        });
+        $(document).on("click", ".pg8", function() {
+          console.log("pg8 clicked");
+          bookResults.empty();
+          for (let i = 64; i < 73; i++) {
+            render10(i);
+          }
+          renderPagination();
+        });
+        $(document).on("click", ".pg9", function() {
+          console.log("pg9 clicked");
+          bookResults.empty();
+          for (let i = 73; i < 82; i++) {
+            render10(i);
+          }
+          renderPagination();
+        });
+        $(document).on("click", ".pg10", function() {
+          console.log("pg10 clicked");
+          bookResults.empty();
+          for (let i = 82; i < 91; i++) {
+            render10(i);
+          }
+          renderPagination();
+        });
+        $(document).on("click", ".pg11", function() {
+          console.log("pg11 clicked");
+          bookResults.empty();
+          for (let i = 91; i < 100; i++) {
+            render10(i);
+          }
+          renderPagination();
+        });
+
+        function renderPagination() {
+          bookResults.append(`
+            <ul id="bookPagination" class="uk-pagination uk-flex-center" uk-margin>
+              <li><a class="pg1" href="#">1</a></li>
+              <li><a class="pg2" href="#">2</a></li>
+              <li><a class="pg3" href="#">3</a></li>
+              <li><a class="pg4" href="#">4</a></li>
+              <li><a class="pg5" href="#">5</a></li>
+              <li><a class="pg6" href="#">6</a></li>
+              <li><a class="pg7" href="#">7</a></li>
+              <li><a class="pg8" href="#">8</a></li>
+              <li><a class="pg9" href="#">9</a></li>
+              <li><a class="pg10" href="#">10</a></li>
+              <li><a class="pg11" href="#">11</a></li>
+            </ul>
+          `);
+        }
+
+        function render10(i) {
+          var book = result.docs[i];
+          var bookAuthor;
+          if (book.author_name) {
+            bookAuthor = book.author_name[0];
+          } else {
+            bookAuthor = "<span class='uk-text-warning uk-text-small'>No author found.</span>";
+          }
+          var bookCover;
+          if (book.cover_i) {
+            bookCover = "http://covers.openlibrary.org/b/id/" + book.cover_i + "-M.jpg";
+          } else {
+            bookCover = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTi4ib-a5nE5I_-dNhV7mYgu4ENJYctW-EbAkxO4d4gwDcfC_-F&usqp=CAU";
+          }
+          var bookPublisher;
+          if (book.publisher) {
+            bookPublisher = book.publisher[0];
+          } else if (book.publish_place) {
+            bookPublisher = book.publish_place[0];
+          } else {
+            bookPublisher = "<span class='uk-text-warning uk-text-small'>No publisher found.</span>";
+          }
+          var published;
+          if (book.publish_date) {
+            published = book.publish_date[0];
+          } else if (book.publish_year) {
+            published = book.publish_year[0];
+          } else {
+            published = "<span class='uk-text-warning uk-text-small'>No publish date found.</span>";
+          }
+
+          bookResults.append(
+            `
+            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+            <div class="uk-card-media-left uk-cover-container uk-flex uk-flex-center bookImageBg">
+                <img src="${bookCover}" 
+    alt="Random GitHub image" class="uk-height-responsive uk-height-1-1 uk-center">
+            </div>
+            <div>
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title uk-margin-small-bottom">${book.title}</h3>
+                    <p class="uk-text-meta uk-margin-remove-bottom">Author:</p>
+                    <p class="uk-margin-remove-top bookData">${bookAuthor}</p>
+                    <p class="uk-text-meta uk-margin-remove-bottom">Published:</p>
+                    <p class="uk-margin-remove-top bookData">${published}</p>
+                    <p class="uk-text-meta uk-margin-remove-bottom">Publisher:</p>
+                    <p class="uk-margin-remove-top bookData">${bookPublisher}</p>
+                    <p class="uk-label">${book.type}</p>
+                </div>
+            </div>
+        </div>
+            `
           );
-          var cardImage = $("<img>").attr({
-            src: `http://covers.openlibrary.org/b/isbn/${coverId}-M.jpg`,
-            alt: "Book Cover",
-            "uk-cover": true
-          });
-          var cardCanvas = $("<canvas>").attr({ width: "400", height: "200" });
-          var bodyCardDiv = $("<div>");
-          var bodyCard = $("<div>").addClass("uk-card-body");
-          var cardTitle = $("<h3>")
-            .addClass("uk-card-title")
-            .text(bookTitle);
-          var cardAuthor = $("<p>").text(bookAuthor);
-          var cardPublish = $("<p>").text(publishYear);
-
-          cardMedia.append(cardImage).append(cardCanvas);
-          bodyCard
-            .append(cardTitle)
-            .append(cardAuthor)
-            .append(cardPublish);
-          bodyCardDiv.append(bodyCard);
-
-          newCard.append(cardMedia).append(bodyCardDiv);
-          bookResults.append(newCard);
         }
       })
-
       .catch(function(err) {
         console.log(err);
       });
   });
-  // });
-  // function bookSearch() {
-  //   console.log("this function runs");
-  //   // var search = document.getElementById("search").value;
-  //   // document.getElementById("results").innerHTML = "";
-  //   // console.log(search);
-
-  //   // $.ajax({
-  //   //   url: "https://www.googleapis.com/books/v1/volumes?q=" + search,
-  //   //   dataType: "json",
-
-  //   //   success: function(data) {
-  //   //     for (i = 0; i < data.items.length; i++) {
-  //   //       results.innerHTML += "<h2>" + data.items[i].volumeInfo.title + "</h2>";
-  // }
-  // //   },
-  // //   type: "GET"
-  // // });
-  // // document.getElementById("form").addEventListener("submit", bookSearch, false);
 });
