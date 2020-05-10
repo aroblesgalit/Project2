@@ -16,120 +16,146 @@ $(document).ready(function() {
       method: "GET"
     })
       .then(function(result) {
-        console.log(result);
+        console.log(result.docs);
+        // Loop through the first 10 results and render
         for (let i = 0; i < 10; i++) {
           render10(i);
         }
+        // Render pagination
         renderPagination();
+        $(".pg1")
+          .parent()
+          .addClass("uk-active");
 
+        // Add click events on each page
         $(document).on("click", ".pg1", function() {
-          console.log("pg1 clicked");
           bookResults.empty();
           for (let i = 1; i < 10; i++) {
             render10(i);
           }
           renderPagination();
+          $(".pg1")
+            .parent()
+            .addClass("uk-active");
         });
         $(document).on("click", ".pg2", function() {
-          console.log("pg2 clicked");
           bookResults.empty();
           for (let i = 10; i < 19; i++) {
             render10(i);
           }
           renderPagination();
+          $(".pg2")
+            .parent()
+            .addClass("uk-active");
         });
         $(document).on("click", ".pg3", function() {
-          console.log("pg3 clicked");
           bookResults.empty();
           for (let i = 19; i < 28; i++) {
             render10(i);
           }
           renderPagination();
+          $(".pg3")
+            .parent()
+            .addClass("uk-active");
         });
         $(document).on("click", ".pg4", function() {
-          console.log("pg4 clicked");
           bookResults.empty();
           for (let i = 28; i < 37; i++) {
             render10(i);
           }
           renderPagination();
+          $(".pg4")
+            .parent()
+            .addClass("uk-active");
         });
         $(document).on("click", ".pg5", function() {
-          console.log("pg5 clicked");
           bookResults.empty();
           for (let i = 37; i < 46; i++) {
             render10(i);
           }
           renderPagination();
+          $(".pg5")
+            .parent()
+            .addClass("uk-active");
         });
         $(document).on("click", ".pg6", function() {
-          console.log("pg6 clicked");
           bookResults.empty();
           for (let i = 46; i < 55; i++) {
             render10(i);
           }
           renderPagination();
+          $(".pg6")
+            .parent()
+            .addClass("uk-active");
         });
         $(document).on("click", ".pg7", function() {
-          console.log("pg7 clicked");
           bookResults.empty();
           for (let i = 55; i < 64; i++) {
             render10(i);
           }
           renderPagination();
+          $(".pg7")
+            .parent()
+            .addClass("uk-active");
         });
         $(document).on("click", ".pg8", function() {
-          console.log("pg8 clicked");
           bookResults.empty();
           for (let i = 64; i < 73; i++) {
             render10(i);
           }
           renderPagination();
+          $(".pg8")
+            .parent()
+            .addClass("uk-active");
         });
         $(document).on("click", ".pg9", function() {
-          console.log("pg9 clicked");
           bookResults.empty();
           for (let i = 73; i < 82; i++) {
             render10(i);
           }
           renderPagination();
+          $(".pg9")
+            .parent()
+            .addClass("uk-active");
         });
         $(document).on("click", ".pg10", function() {
-          console.log("pg10 clicked");
           bookResults.empty();
           for (let i = 82; i < 91; i++) {
             render10(i);
           }
           renderPagination();
+          $(".pg10")
+            .parent()
+            .addClass("uk-active");
         });
         $(document).on("click", ".pg11", function() {
-          console.log("pg11 clicked");
           bookResults.empty();
           for (let i = 91; i < 100; i++) {
             render10(i);
           }
           renderPagination();
+          $(".pg11")
+            .parent()
+            .addClass("uk-active");
         });
 
+        // function setActivePg(activePg) {
+        //   activePg.parent().addClass("uk-active");
+        // }
+
         function renderPagination() {
+          const totalPages = result.docs.length / 9;
           bookResults.append(`
-            <ul id="bookPagination" class="uk-pagination uk-flex-center" uk-margin>
-              <li><a class="pg1" href="#">1</a></li>
-              <li><a class="pg2" href="#">2</a></li>
-              <li><a class="pg3" href="#">3</a></li>
-              <li><a class="pg4" href="#">4</a></li>
-              <li><a class="pg5" href="#">5</a></li>
-              <li><a class="pg6" href="#">6</a></li>
-              <li><a class="pg7" href="#">7</a></li>
-              <li><a class="pg8" href="#">8</a></li>
-              <li><a class="pg9" href="#">9</a></li>
-              <li><a class="pg10" href="#">10</a></li>
-              <li><a class="pg11" href="#">11</a></li>
-            </ul>
-          `);
+          <ul id="bookPagination" class="uk-pagination uk-flex-center" uk-margin></ul>`);
+          for (let i = 1; i < totalPages; i++) {
+            $("#bookPagination").append(`
+            <li><a class="pg${i}" href="#">${i}</a></li>
+            `);
+          }
         }
 
         function render10(i) {
+          // Grab all necessary data from result
           var book = result.docs[i];
           var bookAuthor;
           if (book.author_name) {
@@ -164,6 +190,17 @@ $(document).ready(function() {
             published =
               "<span class='uk-text-warning uk-text-small'>No publish date found.</span>";
           }
+          var labels;
+          if (book.language) {
+            labels =
+              "<p class='uk-text-meta uk-margin-remove-bottom'>Language(s):</p>";
+            for (var i = 0; i < book.language.length; i++) {
+              labels += `<p class="uk-label uk-float-left uk-margin-small-right uk-margin-small-top uk-margin-remove-bottom">${book.language[i]}</p>`;
+            }
+          } else {
+            labels = `<p class="uk-text-meta uk-margin-remove-bottom">Type:</p>
+            <p class="uk-label uk-margin-small-top">${book.type}</p>`;
+          }
 
           bookResults.append(
             `
@@ -181,7 +218,7 @@ $(document).ready(function() {
                     <p class="uk-margin-remove-top bookData">${published}</p>
                     <p class="uk-text-meta uk-margin-remove-bottom">Publisher:</p>
                     <p class="uk-margin-remove-top bookData">${bookPublisher}</p>
-                    <p class="uk-label">${book.type}</p>
+                    ${labels}
                 </div>
             </div>
         </div>
