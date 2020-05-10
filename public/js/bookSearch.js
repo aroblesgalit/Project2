@@ -135,13 +135,16 @@ $(document).ready(function() {
           if (book.author_name) {
             bookAuthor = book.author_name[0];
           } else {
-            bookAuthor = "<span class='uk-text-warning uk-text-small'>No author found.</span>";
+            bookAuthor =
+              "<span class='uk-text-warning uk-text-small'>No author found.</span>";
           }
           var bookCover;
           if (book.cover_i) {
-            bookCover = "http://covers.openlibrary.org/b/id/" + book.cover_i + "-M.jpg";
+            bookCover =
+              "http://covers.openlibrary.org/b/id/" + book.cover_i + "-M.jpg";
           } else {
-            bookCover = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTi4ib-a5nE5I_-dNhV7mYgu4ENJYctW-EbAkxO4d4gwDcfC_-F&usqp=CAU";
+            bookCover =
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTi4ib-a5nE5I_-dNhV7mYgu4ENJYctW-EbAkxO4d4gwDcfC_-F&usqp=CAU";
           }
           var bookPublisher;
           if (book.publisher) {
@@ -149,7 +152,8 @@ $(document).ready(function() {
           } else if (book.publish_place) {
             bookPublisher = book.publish_place[0];
           } else {
-            bookPublisher = "<span class='uk-text-warning uk-text-small'>No publisher found.</span>";
+            bookPublisher =
+              "<span class='uk-text-warning uk-text-small'>No publisher found.</span>";
           }
           var published;
           if (book.publish_date) {
@@ -157,7 +161,8 @@ $(document).ready(function() {
           } else if (book.publish_year) {
             published = book.publish_year[0];
           } else {
-            published = "<span class='uk-text-warning uk-text-small'>No publish date found.</span>";
+            published =
+              "<span class='uk-text-warning uk-text-small'>No publish date found.</span>";
           }
 
           bookResults.append(
