@@ -23,6 +23,9 @@ $(document).ready(function() {
         }
         // Render pagination
         renderPagination();
+        $(".pg1")
+          .parent()
+          .addClass("uk-active");
 
         // Add click events on each page
         $(document).on("click", ".pg1", function() {
@@ -31,6 +34,9 @@ $(document).ready(function() {
             render10(i);
           }
           renderPagination();
+          $(".pg1")
+            .parent()
+            .addClass("uk-active");
         });
         $(document).on("click", ".pg2", function() {
           bookResults.empty();
@@ -38,6 +44,9 @@ $(document).ready(function() {
             render10(i);
           }
           renderPagination();
+          $(".pg2")
+            .parent()
+            .addClass("uk-active");
         });
         $(document).on("click", ".pg3", function() {
           bookResults.empty();
@@ -45,6 +54,9 @@ $(document).ready(function() {
             render10(i);
           }
           renderPagination();
+          $(".pg3")
+            .parent()
+            .addClass("uk-active");
         });
         $(document).on("click", ".pg4", function() {
           bookResults.empty();
@@ -52,6 +64,9 @@ $(document).ready(function() {
             render10(i);
           }
           renderPagination();
+          $(".pg4")
+            .parent()
+            .addClass("uk-active");
         });
         $(document).on("click", ".pg5", function() {
           bookResults.empty();
@@ -59,6 +74,9 @@ $(document).ready(function() {
             render10(i);
           }
           renderPagination();
+          $(".pg5")
+            .parent()
+            .addClass("uk-active");
         });
         $(document).on("click", ".pg6", function() {
           bookResults.empty();
@@ -66,6 +84,9 @@ $(document).ready(function() {
             render10(i);
           }
           renderPagination();
+          $(".pg6")
+            .parent()
+            .addClass("uk-active");
         });
         $(document).on("click", ".pg7", function() {
           bookResults.empty();
@@ -73,6 +94,9 @@ $(document).ready(function() {
             render10(i);
           }
           renderPagination();
+          $(".pg7")
+            .parent()
+            .addClass("uk-active");
         });
         $(document).on("click", ".pg8", function() {
           bookResults.empty();
@@ -80,6 +104,9 @@ $(document).ready(function() {
             render10(i);
           }
           renderPagination();
+          $(".pg8")
+            .parent()
+            .addClass("uk-active");
         });
         $(document).on("click", ".pg9", function() {
           bookResults.empty();
@@ -87,6 +114,9 @@ $(document).ready(function() {
             render10(i);
           }
           renderPagination();
+          $(".pg9")
+            .parent()
+            .addClass("uk-active");
         });
         $(document).on("click", ".pg10", function() {
           bookResults.empty();
@@ -94,6 +124,9 @@ $(document).ready(function() {
             render10(i);
           }
           renderPagination();
+          $(".pg10")
+            .parent()
+            .addClass("uk-active");
         });
         $(document).on("click", ".pg11", function() {
           bookResults.empty();
@@ -101,7 +134,14 @@ $(document).ready(function() {
             render10(i);
           }
           renderPagination();
+          $(".pg11")
+            .parent()
+            .addClass("uk-active");
         });
+
+        // function setActivePg(activePg) {
+        //   activePg.parent().addClass("uk-active");
+        // }
 
         function renderPagination() {
           const totalPages = result.docs.length / 9;
@@ -150,17 +190,16 @@ $(document).ready(function() {
             published =
               "<span class='uk-text-warning uk-text-small'>No publish date found.</span>";
           }
-          var languages;
+          var labels;
           if (book.language) {
-            var langArr = [];
+            labels =
+              "<p class='uk-text-meta uk-margin-remove-bottom'>Language(s):</p>";
             for (var i = 0; i < book.language.length; i++) {
-              langArr.push(
-                `<p class="uk-label uk-float-left uk-margin-small-right">${book.language[i]}</p>`
-              );
+              labels += `<p class="uk-label uk-float-left uk-margin-small-right uk-margin-small-top uk-margin-remove-bottom">${book.language[i]}</p>`;
             }
-            languages = langArr.join("");
           } else {
-            languages = book.type;
+            labels = `<p class="uk-text-meta uk-margin-remove-bottom">Type:</p>
+            <p class="uk-label uk-margin-small-top">${book.type}</p>`;
           }
 
           bookResults.append(
@@ -179,7 +218,7 @@ $(document).ready(function() {
                     <p class="uk-margin-remove-top bookData">${published}</p>
                     <p class="uk-text-meta uk-margin-remove-bottom">Publisher:</p>
                     <p class="uk-margin-remove-top bookData">${bookPublisher}</p>
-                    ${languages}
+                    ${labels}
                 </div>
             </div>
         </div>
